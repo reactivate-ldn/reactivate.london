@@ -29,14 +29,24 @@ var developmentPlugins = [
   new webpack.HotModuleReplacementPlugin()
 ]
 
-var loaders = [{
+var rules = [{
   test: /\.jsx?$/,
   loader: 'babel-loader',
   include: path.join(__dirname, 'src'),
   exclude: /node_modules/
 }, {
   test: /\.css$/,
-  loader: ['style-loader', 'css-loader']
+  use: [{
+    loader: 'style-loader'
+  }, {
+    loader: 'css-loader',
+    options: {
+      minimize: PRODUCTION
+    }
+  }],
+  query: {
+    minimize: PRODUCTION
+  }
 }]
 
 module.exports = {
@@ -49,7 +59,7 @@ module.exports = {
   plugins: plugins
     .concat(PRODUCTION ? productionPlugins : developmentPlugins),
   module: {
-    loaders: loaders
+    rules: rules
   },
   output: {
     path: path.join(__dirname, 'www'),
