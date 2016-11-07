@@ -7,11 +7,11 @@ export const regularWeight = 400;
 export const boldWeight = 700;
 
 export const fontSizes = [
-  '14px', // p
-  '16px', // h4
-  '18px', // h3
-  '24px', // h2
-  '64px'  // h1
+  '1rem', // p
+  '1.143rem', // h4
+  '1.286rem', // h3
+  '1.714rem', // h2
+  '4.571rem'  // h1
 ];
 
 export const lineHeights = [
