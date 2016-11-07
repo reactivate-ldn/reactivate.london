@@ -25,6 +25,7 @@
     "eslint-config-excellence": "^1.17.1",
     "eslint-plugin-react": "^6.6.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "happypack": "^2.2.1",
     "react-hot-loader": "^3.0.0-beta.5",
     "redbox-react": "^1.3.1",
     "style-loader": "^0.13.1",

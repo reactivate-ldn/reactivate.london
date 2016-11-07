@@ -1,7 +1,8 @@
 /*eslint-disable */
 var webpack = require('webpack')
 var path = require('path')
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var HappyPack = require('happypack')
 
 var PRODUCTION = process.env.NODE_ENV === 'production'
 
@@ -33,12 +34,17 @@ var productionPlugins = [
 ]
 
 var developmentPlugins = [
-  new webpack.HotModuleReplacementPlugin()
+  new webpack.HotModuleReplacementPlugin(),
+  new HappyPack({
+    verbose: false,
+    threads: 4,
+    loaders: ['babel-loader']
+  })
 ]
 
 var rules = [{
   test: /\.jsx?$/,
-  loader: 'babel-loader',
+  loader: PRODUCTION ? 'babel-loader' : 'happypack/loader',
   include: path.join(__dirname, 'src'),
   exclude: /node_modules/
 }, {
