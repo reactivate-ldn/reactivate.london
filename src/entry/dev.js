@@ -18,9 +18,9 @@ function entry() {
 entry()
 
 if (module.hot) {
-  module.hot.accept('./app', () => {
+  module.hot.accept('../app', () => {
     // NOTE: Circumvent webpack only considering modules accepted after a require
-    const NewApp = require('./app')
+    const NewApp = require('../app')
 
     entry()
   })
