@@ -43,10 +43,7 @@ var rules = [{
     options: {
       minimize: PRODUCTION
     }
-  }],
-  query: {
-    minimize: PRODUCTION
-  }
+  }]
 }]
 
 module.exports = {
@@ -67,3 +64,4 @@ module.exports = {
     publicPath: '/static/'
   }
 }
+
