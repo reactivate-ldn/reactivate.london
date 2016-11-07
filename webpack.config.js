@@ -1,6 +1,7 @@
 /*eslint-disable */
 var webpack = require('webpack')
 var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var PRODUCTION = process.env.NODE_ENV === 'production'
 
@@ -15,7 +16,10 @@ for (var key in process.env) {
   }
 }
 
-var plugins = [ new webpack.DefinePlugin(replace) ]
+var plugins = [
+  new ExtractTextPlugin('styles.css'),
+  new webpack.DefinePlugin(replace)
+]
 
 var productionPlugins = [
   new webpack.optimize.DedupePlugin(),
@@ -39,14 +43,10 @@ var rules = [{
   exclude: /node_modules/
 }, {
   test: /\.css$/,
-  use: [{
-    loader: 'style-loader'
-  }, {
-    loader: 'css-loader',
-    options: {
-      minimize: PRODUCTION
-    }
-  }]
+  loader: ExtractTextPlugin.extract({
+    fallbackLoader: 'style-loader',
+    loader: 'css-loader'
+  })
 }]
 
 module.exports = {
