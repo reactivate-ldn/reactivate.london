@@ -5,8 +5,6 @@ import Redbox from 'redbox-react'
 
 import App from '../app'
 
-import 'sanitize.css/sanitize.css'
-
 function entry() {
   const root = document.getElementById('root')
 
