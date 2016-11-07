@@ -1,24 +1,19 @@
 import React, { Component, PropTypes } from 'react'
-import styled from 'styled-components'
-import { white, black } from './styles/colors';
-import { sansSerif, regularWeight, fontSizes, lineHeights } from './styles/fonts';
 
 import 'sanitize.css/sanitize.css'
 import './main.css'
 
-const Container = styled.div`
-  background: ${white};
-  color: ${black};
-  font-family: ${sansSerif};
-  font-weight: ${regularWeight};
-  font-size: ${fontSizes[0]};
-  line-height: ${lineHeights[0]};
-`
+import Container from './components/container'
+import Section from './components/section'
+import Header1 from './components/h1'
 
 export default class App extends Component {
   render() {
     return (
       <Container>
+        <Section>
+          <Header1>The Futuractive London Meetup</Header1>
+        </Section>
       </Container>
     )
   }

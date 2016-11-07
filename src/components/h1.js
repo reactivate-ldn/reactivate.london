@@ -1,11 +1,13 @@
 import styled from 'styled-components'
-import { white } from '../styles/colors'
+import { serif, regularWeight, fontSizes } from '../styles/fonts'
 
-const h1 = styled.h1`
-  font-size: 64px;
-  line-height: 78px;
-  color: ${white};
+const Header1 = styled.h1`
+  font-family: ${serif};
+  font-size: ${fontSizes[4]};
+  font-weight: ${regularWeight};
+  text-align: center;
+  margin: 3.857rem 0;
 `
 
-export default h1
+export default Header1
 
