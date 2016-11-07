@@ -18,7 +18,10 @@ for (var key in process.env) {
 var plugins = [ new webpack.DefinePlugin(replace) ]
 
 var productionPlugins = [
+  new webpack.optimize.DedupePlugin(),
   new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
+    minimize: true,
     compress: {
       warnings: false
     }
