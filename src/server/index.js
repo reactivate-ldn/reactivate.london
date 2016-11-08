@@ -5,7 +5,7 @@ import webpackConfig from '../../webpack.config'
 import webpack from 'webpack'
 import renderHtml from './htmlRenderer'
 
-import App from '~/app'
+import App from '../client/app'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const PORT = process.env.PORT || 8080
