@@ -59,6 +59,6 @@ app.listen(PORT, 'localhost', err => {
     throw err
   }
 
-  console.log('☕️  Server is listening on localhost:' + PORT);
+  console.log(`\n☕  Hooray! The server is running. Navigate to http://localhost:${PORT} to access it.\n`);
 })
 
