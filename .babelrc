@@ -5,5 +5,19 @@
   "ignore": [
     "/node_modules/"
   ],
-  "plugins": []
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src/client"],
+      "alias": {
+        "~": "."
+      }
+    }]
+  ],
+  "env": {
+    "commonjs": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }

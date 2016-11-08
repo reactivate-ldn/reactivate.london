@@ -1,0 +1,16 @@
+#!/bin/sh
+
+export NODE_ENV=production
+
+echo "Build Assets..."
+npm run build:assets > /dev/null
+
+echo "Build Server..."
+npm run build:server > /dev/null
+
+echo "Build Client..."
+npm run build:client > /dev/null
+
+echo "Start Server..."
+node lib/server/index
+

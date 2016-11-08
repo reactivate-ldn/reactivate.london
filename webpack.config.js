@@ -45,7 +45,7 @@ var developmentPlugins = [
 var rules = [{
   test: /\.jsx?$/,
   loader: PRODUCTION ? 'babel-loader' : 'happypack/loader',
-  include: path.join(__dirname, 'src'),
+  include: path.join(__dirname, 'src', 'client'),
   exclude: /node_modules/
 }, {
   test: /\.css$/,
@@ -63,12 +63,9 @@ var rules = [{
 module.exports = {
   cache: !PRODUCTION,
   resolve: {
-    extensions: [ '.js' ],
-    alias: {
-      '~': path.join(__dirname, 'src')
-    }
+    extensions: [ '.js' ]
   },
-  entry: [ './src/index' ],
+  entry: [ './src/client/index' ],
   devtool: 'source-map',
   plugins: plugins
     .concat(PRODUCTION ? productionPlugins : developmentPlugins),
@@ -76,7 +73,7 @@ module.exports = {
     rules: rules
   },
   output: {
-    path: path.join(__dirname, 'www'),
+    path: path.join(__dirname, 'static'),
     filename: 'bundle.js',
     publicPath: '/static/'
   }

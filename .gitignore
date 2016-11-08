@@ -4,6 +4,7 @@ node_modules
 lib/
 es/
 dist/
+static/
 npm-debug.log
 _book/
 

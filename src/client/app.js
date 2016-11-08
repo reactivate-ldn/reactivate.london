@@ -1,6 +1,3 @@
-import 'sanitize.css/sanitize.css'
-import './main.css'
-
 import React, { Component, PropTypes } from 'react'
 import Cover from './cover';
 
