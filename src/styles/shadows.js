@@ -1,8 +1,9 @@
 import rem from './rem'
 import { black } from './colors'
 
-const shadowColor = black.opacity(0.35)
+const baseShallowShadow = `0 0 ${rem(24)} ${black.opacity(.22)}`
+const baseDiffuseShadow = `0 ${rem(24)} ${rem(24)} ${black.opacity(.3)}`
 
-export const defaultShadow = `0 ${rem(35)} ${rem(60)} ${shadowColor}`
-export const smallShadow = `0 ${rem(5)} ${rem(15)} ${shadowColor}`
+export const diffuseShadow = `${baseShallowShadow}, ${baseDiffuseShadow}`;
+export const lightShadow = `0 ${rem(2)} ${rem(4)} ${black.opacity(.5)}`;
 

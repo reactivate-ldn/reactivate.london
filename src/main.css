@@ -1,28 +1,29 @@
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'TLCircular Book';
+  src: url('/static/TLCircular-Book.eot');
+  src: url('/static/TLCircular-Book.eot?#iefix') format('embedded-opentype'),
+    url('/static/TLCircular-Book.woff2') format('woff2'),
+    url('/static/TLCircular-Book.woff') format('woff'),
+    url('/static/TLCircular-Book.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'TLCircular';
+  src: url('/static/TLCircular-Bold.eot');
+  src: url('/static/TLCircular-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/static/TLCircular-Bold.woff2') format('woff2'),
+    url('/static/TLCircular-Bold.woff') format('woff'),
+    url('/static/TLCircular-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-@font-face {
-  font-family: 'Vidaloka';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Vidaloka'), local('Vidaloka-Regular'), url(https://fonts.gstatic.com/s/vidaloka/v8/eFa9T8RYEkXovE5TBdfY-XYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 html, body {
   font-size: 14px;
+  font-family: "TLCircular", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: normal;
+  font-style: normal;
 }
 

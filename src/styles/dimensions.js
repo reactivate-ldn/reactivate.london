@@ -1,2 +1,2 @@
-export const borderRadius = '3px'
+export const borderRadius = '4px'
 
