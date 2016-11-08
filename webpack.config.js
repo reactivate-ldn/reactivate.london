@@ -51,7 +51,12 @@ var rules = [{
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
     fallbackLoader: 'style-loader',
-    loader: 'css-loader'
+    loader: {
+      loader: 'css-loader',
+      query: {
+        minimize: PRODUCTION
+      }
+    }
   })
 }]
 
