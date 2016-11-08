@@ -13,9 +13,9 @@ const PATH = join(__dirname, '../../static')
 
 const app = express()
 
-if (PRODUCTION) {
-  app.use('/static', express.static(PATH))
-} else {
+app.use('/static', express.static(PATH))
+
+if (!PRODUCTION) {
   webpackConfig.watch = true
   webpackConfig.entry = [
     'react-hot-loader/patch',
