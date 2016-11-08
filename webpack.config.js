@@ -58,7 +58,10 @@ var rules = [{
 module.exports = {
   cache: !PRODUCTION,
   resolve: {
-    extensions: [ '.js' ]
+    extensions: [ '.js' ],
+    alias: {
+      '~': path.join(__dirname, 'src')
+    }
   },
   entry: [ './src/index' ],
   devtool: 'source-map',
