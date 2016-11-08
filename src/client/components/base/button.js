@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components';
 
 const Button = styled.a`
-  backgroundColor: green;
-  color: white;
+  backgroundColor: blue;
+  color: black;
   height: 40px;
   width: 100px;
   padding: 20px 40px;

@@ -1,15 +1,11 @@
 import { renderToString } from 'react-dom/server'
 import styleSheet from 'styled-components/lib/models/StyleSheet'
 
-const renderHtml = (element) => {
-  let html = '';
-  let css = '';
-
-  if (element) {
-    styleSheet.flush() // NOTE: Flush old rules before render
-    html = renderToString(element)
-    css = styleSheet.rules().map(rule => rule.cssText).join('\n')
-  }
+const renderHtml = renderToString => {
+  const {
+    html,
+    css
+  } = renderToString()
 
   return `
     <!DOCTYPE html>
@@ -27,6 +23,11 @@ const renderHtml = (element) => {
       <body>
         <div id="root">${html}</div>
         <script type="text/javascript" src="/static/bundle.js"></script>
+        <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function() {
+            render()
+          })
+        </script>
       </body>
     </html>
   `;

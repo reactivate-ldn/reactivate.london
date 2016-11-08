@@ -65,7 +65,10 @@ module.exports = {
   resolve: {
     extensions: [ '.js' ]
   },
-  entry: [ './src/client/index' ],
+  entry: {
+    bundle: './src/client/index',
+    serverBundle: './src/client/server'
+  },
   devtool: 'source-map',
   plugins: plugins
     .concat(PRODUCTION ? productionPlugins : developmentPlugins),
@@ -74,8 +77,10 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'static'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    filename: '[name].js',
+    publicPath: '/static/',
+    library: 'render',
+    libraryTarget: 'umd'
   }
 }
 
