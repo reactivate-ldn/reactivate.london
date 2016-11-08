@@ -1,6 +1,7 @@
 import express from 'express'
 import { join } from 'path'
 import webpackMiddleware from 'webpack-dev-middleware'
+import hotMiddleware from 'webpack-hot-middleware'
 import webpackConfig from '../../webpack.config'
 import webpack from 'webpack'
 import renderHtml from './htmlRenderer'
@@ -19,11 +20,13 @@ if (!PRODUCTION) {
   webpackConfig.watch = true
   webpackConfig.entry = [
     'react-hot-loader/patch',
-    'webpack-hot-middleware/client?path=http://localhost:' + PORT,
+    `webpack-hot-middleware/client?path=http://localhost:${PORT}/__webpack_hmr?reload=false`,
     'webpack/hot/only-dev-server'
   ].concat(webpackConfig.entry)
 
-  app.use(webpackMiddleware(webpack(webpackConfig), {
+  const compiler = webpack(webpackConfig)
+
+  app.use(webpackMiddleware(compiler, {
     publicPath: webpackConfig.output.publicPath,
     hot: true,
     noInfo: false,
@@ -36,6 +39,12 @@ if (!PRODUCTION) {
       chunkModules: false,
       colors: true
     }
+  }))
+
+  app.use(hotMiddleware(compiler, {
+    log: console.log,
+    path: '/__webpack_hmr',
+    heartbeat: 10 * 1000
   }))
 }
 
