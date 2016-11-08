@@ -2,9 +2,14 @@ import { renderToString } from 'react-dom/server'
 import styleSheet from 'styled-components/lib/models/StyleSheet'
 
 const renderHtml = (element) => {
-  styleSheet.flush() // NOTE: Flush old rules before render
-  const html = !element ? '' : renderToString(element)
-  const css = styleSheet.rules().map(rule => rule.cssText).join('\n')
+  let html = '';
+  let css = '';
+
+  if (element) {
+    styleSheet.flush() // NOTE: Flush old rules before render
+    html = renderToString(element)
+    css = styleSheet.rules().map(rule => rule.cssText).join('\n')
+  }
 
   return `
     <!DOCTYPE html>
@@ -17,7 +22,7 @@ const renderHtml = (element) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
         <link rel="stylesheet" type="text/css" href="/static/styles.css"/>
-        <style>${css}</style>
+        ${css ? `<style type="text/css">${css}</style>` : ''}
       </head>
       <body>
         <div id="root">${html}</div>
