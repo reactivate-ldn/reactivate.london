@@ -6,6 +6,7 @@ import webpackConfig from '../../webpack.config'
 import webpack from 'webpack'
 import renderHtml from './htmlRenderer'
 
+import { createElement } from 'react'
 import App from '../client/app'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
@@ -49,7 +50,7 @@ if (!PRODUCTION) {
 }
 
 app.get('*', (req, res) => {
-  const page = renderHtml(PRODUCTION ? <App/> : undefined)
+  const page = renderHtml(PRODUCTION ? createElement(App) : undefined)
   res.status(200).send(page)
 })
 
