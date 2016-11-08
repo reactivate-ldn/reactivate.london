@@ -1,11 +1,18 @@
+import { createElement } from 'react'
 import { renderToString } from 'react-dom/server'
 import styleSheet from 'styled-components/lib/models/StyleSheet'
 
-const renderHtml = renderToString => {
-  const {
-    html,
-    css
-  } = renderToString()
+const renderHtml = getApp => {
+  if (!styleSheet.sheet) {
+    styleSheet.sheet = {}
+  }
+
+  styleSheet.flush()
+
+  const App = getApp()
+
+  const html = renderToString(createElement(App))
+  const css = styleSheet.rules().map(rule => rule.cssText).join('\n')
 
   return `
     <!DOCTYPE html>
@@ -23,11 +30,6 @@ const renderHtml = renderToString => {
       <body>
         <div id="root">${html}</div>
         <script type="text/javascript" src="/static/bundle.js"></script>
-        <script type="text/javascript">
-          document.addEventListener("DOMContentLoaded", function() {
-            render()
-          })
-        </script>
       </body>
     </html>
   `;

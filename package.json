@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf lib static .happypack",
     "build:assets": "mkdir -p static || true; cp -R src/assets/* static/",
-    "build:server": "BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:server": "BABEL_ENV=commonjs babel src/server --out-dir lib/server",
     "build:client": "webpack --config webpack.config.js",
     "build": "npm run build:assets && npm run build:server",
     "production": "./scripts/build-production",

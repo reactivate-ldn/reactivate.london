@@ -1,3 +1,4 @@
+import { watchFile } from 'fs'
 import express from 'express'
 import { join } from 'path'
 import webpackMiddleware from 'webpack-dev-middleware'
@@ -12,27 +13,28 @@ import { createElement } from 'react'
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const PORT = process.env.PORT || 8080
 const PATH = join(__dirname, '../../static')
-const SERVER_BUNDLE = join(PATH, 'serverBundle.js')
+const SERVER_BUNDLE = join(PATH, 'bundle.js')
 
 let bundleValid
-let renderToString
+let bundle
 
 const app = express()
 
 app.use('/static', express.static(PATH))
 
 if (PRODUCTION) {
-  renderToString = require(SERVER_BUNDLE)
+  bundle = require(SERVER_BUNDLE)
 } else {
   webpackConfig.watch = true
-  webpackConfig.entry.bundle = [
+  webpackConfig.entry = [
     'react-hot-loader/patch',
     `webpack-hot-middleware/client?path=http://localhost:${PORT}/__webpack_hmr?reload=false`,
     'webpack/hot/only-dev-server'
-  ].concat(webpackConfig.entry.bundle)
+  ].concat(webpackConfig.entry)
+
   webpackConfig.plugins = webpackConfig.plugins.concat([
     new WriteFilePlugin({
-      test: /serverBundle\.js$/,
+      test: /^bundle\.js$/,
       log: false,
       force: true
     })
@@ -62,15 +64,25 @@ if (PRODUCTION) {
     heartbeat: 10 * 1000
   }))
 
+  function updateBundle() {
+    if (bundle) {
+      delete require.cache[require.resolve(SERVER_BUNDLE)]
+    }
+
+    bundle = require(SERVER_BUNDLE)
+  }
+
   // Add watcher for bundle changes
   bundleValid = new Promise(resolve => {
     webpackMiddlewareInstance.waitUntilValid(() => {
-      if (renderToString) {
-        delete require.cache[require.resolve(SERVER_BUNDLE)]
-      }
-
-      renderToString = require(SERVER_BUNDLE)
+      updateBundle()
       resolve()
+    })
+  })
+
+  bundleValid.then(() => {
+    watchFile(SERVER_BUNDLE, () => {
+      updateBundle()
     })
   })
 }
@@ -79,10 +91,10 @@ app.get('*', (req, res) => {
   try {
     if (bundleValid) {
       bundleValid.then(() => {
-        res.status(200).send(renderHtml(renderToString))
+        res.status(200).send(renderHtml(global.getApp ? global.getApp : bundle.getApp))
       })
     } else {
-      res.status(200).send(renderHtml(renderToString))
+      res.status(200).send(renderHtml(global.getApp ? global.getApp : bundle.getApp))
     }
   } catch (err) {
     res.status(500).send(err.message ? err.message : err)

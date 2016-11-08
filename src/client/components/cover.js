@@ -3,7 +3,7 @@ import Button from './base/button';
 import styled from 'styled-components';
 
 const JoinButton = styled(Button)`
-  backgroundColor: 'green'
+  background: yellow
 `;
 
 export default class Cover extends React.PureComponent {
