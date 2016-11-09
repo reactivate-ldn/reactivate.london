@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components'
 
 import rem from '../styles/rem'
-import { shallowShadow } from '../styles/shadows'
+import { insetShadow, shallowShadow } from '../styles/shadows'
 import { regularWeight, fontSizes, boldWeight } from '../styles/fonts'
 import { citymapper, white, black } from '../styles/colors';
 
@@ -14,9 +14,9 @@ import { colorButton } from './base/button';
 const FooterCard = styled(Card)`
   width: ${rem(270)};
   position: absolute;
-  top: ${rem(60)};
+  top: ${rem(85)};
   left: ${rem(60)};
-  bottom: ${rem(60)};
+  bottom: ${rem(85)};
   z-index: 1;
 
   display: flex;
@@ -34,9 +34,24 @@ const FooterList = styled.ul`
 `;
 
 const FooterWrapper = styled.div`
+  margin-top: ${rem(70)};
   position: relative;
-  height: ${rem(400)};
+  height: ${rem(450)};
+  max-height: ${rem(450)};
+  overflow: hidden;
 `;
+
+const Shadow = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: ${insetShadow};
+`
 
 const TrainlineLogo = styled(Trainline)`
   width: ${rem(128)};
@@ -91,7 +106,7 @@ class Footer extends React.Component {
       <Map
         accessToken="pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A"
         style="mapbox://styles/mapbox/streets-v8"
-        containerStyle={{ height: "100%", width: "100%" }}
+        containerStyle={{ height: rem(470), width: "100%" }}
         scrollZoom={false}
         zoom={[12]}
         center={location}>
@@ -99,12 +114,6 @@ class Footer extends React.Component {
         <Marker coordinates={location}>
           <EmojiPin/>
         </Marker>
-
-        <ZoomControl onControlClick={(map, zoomDiff) => {
-          const animateOptions = { animate: true }
-          zoomDiff > 0 ? map.zoomIn(animateOptions) : map.zoomOut(animateOptions)
-        }}/>
-
       </Map>
     );
   }
@@ -114,6 +123,10 @@ class Footer extends React.Component {
 
     return (
       <FooterWrapper>
+        { !initial && this.renderMap() }
+
+        <Shadow/>
+
         <FooterCard>
           <TrainlineLogo/>
 
@@ -127,8 +140,6 @@ class Footer extends React.Component {
             Get Directions
           </CityMapper>
         </FooterCard>
-
-        { !initial && this.renderMap() }
       </FooterWrapper>
     )
   }

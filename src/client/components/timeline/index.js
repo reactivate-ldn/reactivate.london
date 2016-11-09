@@ -11,7 +11,7 @@ import Container from '../base/container'
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: ${rem(48)} 0;
+  padding: ${rem(48)} 0 ${rem(68)};
 `
 
 const InnerWrapper = styled.div`
