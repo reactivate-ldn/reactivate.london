@@ -8,6 +8,7 @@ import { boldWeight, fontSizes } from '../styles/fonts'
 import Strip from './base/strip'
 import Container from './base/container'
 import Card from './base/card'
+import Slot from './base/slot'
 
 const SpeakersH1 = styled.h1`
   font-size: ${fontSizes[6]};
@@ -20,6 +21,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
   margin: ${rem(30)} ${rem(-15)};
 `
 
@@ -27,6 +29,28 @@ const TalkContainer = styled(Card)`
   flex-basis: 0;
   flex-grow: 1;
   margin: 0 ${rem(15)};
+`
+
+const SlotContainer = styled(Slot)`
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 0 ${rem(15)};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`
+
+const SlotTitle = styled.h1`
+  font-size: ${fontSizes[6]};
+  margin: 0;
+`
+
+const SlotText = styled.h4`
+  font-size: ${fontSizes[3]};
+  text-align: center;
+  margin: 0;
 `
 
 const Avatar = styled.img`
@@ -84,11 +108,13 @@ const data = [{
   title: 'My year in open source at Formidable',
   text: 'In this talk Ken will detail his year in open source at Formidable.\nHe will be showing demos of the fun stuff they are building at Formidable and speaking to what we can expect from them in the future.'
 }, {
+  tba: true,
   avatar: 'https://pbs.twimg.com/profile_images/792591170899681280/uUXOGmgo.jpg',
   name: 'Ken Wheeler',
   title: 'My year in open source at Formidable',
   text: 'In this talk Ken will detail his year in open source at Formidable.\nHe will be showing demos of the fun stuff they are building at Formidable and speaking to what we can expect from them in the future.'
 }, {
+  free: true,
   avatar: 'https://pbs.twimg.com/profile_images/792591170899681280/uUXOGmgo.jpg',
   name: 'Ken Wheeler',
   title: 'My year in open source at Formidable',
@@ -102,9 +128,29 @@ const Speakers = () => (
 
     <Row>
       {
-        data.map((item, key) => (
-          <Talk {...item} key={key}/>
-        ))
+        data.map((item, key) => {
+          if (item.free) {
+            return (
+              <SlotContainer key={key}>
+                <SlotTitle>?</SlotTitle>
+                <SlotText>
+                  Are you interested in speaking? This slot could be yours!
+                </SlotText>
+              </SlotContainer>
+            )
+          } else if (item.tba) {
+            return (
+              <SlotContainer key={key}>
+                <SlotTitle>TBA</SlotTitle>
+                <SlotText>
+                  Someone is preparing an awesome talk, but it isn't quite ready yet...
+                </SlotText>
+              </SlotContainer>
+            )
+          }
+
+          return <Talk {...item} key={key}/>
+        })
       }
     </Row>
   </Container>

@@ -93,6 +93,7 @@ class Footer extends React.Component {
         style="mapbox://styles/mapbox/streets-v8"
         containerStyle={{ height: "100%", width: "100%" }}
         scrollZoom={false}
+        zoom={[12]}
         center={location}>
 
         <Marker coordinates={location}>
