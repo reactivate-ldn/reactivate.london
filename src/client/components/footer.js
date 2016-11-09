@@ -1,7 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components'
+
+import rem from '../styles/rem'
 import { fontSizes, boldWeight } from '../styles/fonts'
 import { black } from '../styles/colors';
+
+import Trainline from './svgs/trainline';
 import Container from './base/container';
 
 const FooterCard = styled.div`
@@ -23,6 +27,11 @@ const FooterList = styled.ul`
 const FooterWrapper = styled.div`
   height: 730px;
 `;
+
+const TrainlineLogo = styled(Trainline)`
+  width: ${rem(128)};
+  height: ${rem(30)};
+`
 
 class Footer extends React.Component {
   state = {
@@ -62,7 +71,9 @@ class Footer extends React.Component {
         <Container>
           <FooterCard>
             <FooterList>
-              <li><img src=""/></li>
+              <li>
+                <TrainlineLogo/>
+              </li>
               <li>3rd Floor</li>
               <li>120 Holborn</li>
               <li>EC1N 2TD London</li>

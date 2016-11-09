@@ -1,5 +1,5 @@
 import InlineSVG from '../base/inline-svg'
-import src from '../../../assets/Train.svg'
+import src from '../../../assets/Trainline.svg'
 
 export default InlineSVG(src)
 
