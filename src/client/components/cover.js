@@ -83,11 +83,11 @@ const Cover = () => (
       <Column>
         <Strip/>
         <List>
-          <li>6pm - 10pm</li>
-          <li>(doors open 18:45)</li>
+          <li>7pm - 8pm</li>
+          <li>(doors open 6pm)</li>
           <li>Tuesday, December 6th</li>
           <li>Trainline HQ</li>
-          <LastListItem>120 Holborn, Floor 3, EC1N 2TD</LastListItem>
+          <LastListItem>Floor 3, 120 Holborn, EC1N 2TD</LastListItem>
         </List>
       </Column>
     </ColumnWrapper>
