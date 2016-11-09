@@ -16,6 +16,7 @@
     "goethe": "^1.2.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-mapbox-gl": "^0.17.0",
     "sanitize.css": "^4.1.0",
     "styled-components": "^1.0.10"
   },

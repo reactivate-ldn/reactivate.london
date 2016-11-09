@@ -1,10 +1,17 @@
-import { createElement } from 'react'
+import { createElement, PropTypes } from 'react'
 import { renderToString } from 'react-dom/server'
 
 const renderHtml = getBundle => {
   const { App, StyleSheet } = getBundle()
 
-  const html = renderToString(createElement(App))
+  let html
+  try {
+    html = renderToString(createElement(App))
+  } catch(err) {
+    console.error('Error on renderToString:', err)
+    throw new Error(err)
+  }
+
   const css = StyleSheet.rules().map(rule => rule.cssText).join('\n')
 
   return `

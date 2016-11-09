@@ -84,17 +84,13 @@ if (PRODUCTION) {
 const respond = res => res.status(200).send(renderHtml(global.getBundle))
 
 app.get('*', (req, res) => {
-  try {
-    if (bundleValid) {
-      bundleValid.then(() => {
-        respond(res)
-      })
-    } else {
+  (bundleValid || Promise.resolve())
+    .then(() => {
       respond(res)
-    }
-  } catch (err) {
-    res.status(500).send(err.message ? err.message : err)
-  }
+    })
+    .catch(err => {
+      res.status(500).send(err.message ? err.message : err)
+    })
 })
 
 app.listen(PORT, err => {
