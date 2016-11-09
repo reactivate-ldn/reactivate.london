@@ -46,10 +46,17 @@ const CoverH2 = styled.h2`
   color: ${navy.lighten(0.2).toString('hex')};
 `;
 
+const BackgroundImage = styled.img`
+  position: absolute;
+  right: 0px;
+  top: 20px;
+`;
+
 export default class Cover extends React.PureComponent {
   render() {
     return (
       <CoverWrapper>
+        <BackgroundImage src="/static/Bitmap.svg"/>
         <CoverH2>The Futuractive London Meetup</CoverH2>
         <ColumnWrapper>
           <FirstColumn>
