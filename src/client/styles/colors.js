@@ -15,7 +15,7 @@ export const navy = Color('#21314D')
 export const darth = Color('#13181A')
 export const moria = Color('#323E42')
 export const slate = Color('#647479')
-export const stom = Color('#8C9DA1')
+export const storm = Color('#8C9DA1')
 export const steel = Color('#C0C9CC')
 export const marble = Color('#DCE3E6')
 
