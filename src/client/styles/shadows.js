@@ -5,5 +5,5 @@ const baseShallowShadow = `0 0 ${rem(24)} ${black.opacity(.22)}`
 const baseDiffuseShadow = `0 ${rem(24)} ${rem(24)} ${black.opacity(.3)}`
 
 export const diffuseShadow = `${baseShallowShadow}, ${baseDiffuseShadow}`;
-export const lightShadow = `0 ${rem(2)} ${rem(4)} ${black.opacity(.5)}`;
+export const ligthShadow = `0 ${rem(2)} ${rem(4)} ${black.opacity(.5)}`;
 

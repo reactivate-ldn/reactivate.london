@@ -13,7 +13,6 @@ const ColumnWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   margin-bottom: ${rem(30)};
-  z-index: 2;
 `
 
 const Column = styled.div`
@@ -58,7 +57,7 @@ const BackgroundImage = styled.div`
   width: 100%;
   opacity: 0.2;
   user-select: none;
-  z-index: 1;
+  pointer-events: none;
 
   background-image: url('/static/Logo.png');
   background-repeat: no-repeat;
