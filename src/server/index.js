@@ -11,7 +11,7 @@ import WriteFilePlugin from 'write-file-webpack-plugin'
 import { createElement } from 'react'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || (process.env.PORT = 8080)
 const PATH = join(__dirname, '../../static')
 const SERVER_BUNDLE = join(PATH, 'bundle.js')
 
@@ -26,12 +26,6 @@ if (PRODUCTION) {
   bundle = require(SERVER_BUNDLE)
 } else {
   webpackConfig.watch = true
-  webpackConfig.entry = [
-    'react-hot-loader/patch',
-    `webpack-hot-middleware/client?path=http://localhost:${PORT}/__webpack_hmr?reload=false`,
-    'webpack/hot/only-dev-server'
-  ].concat(webpackConfig.entry)
-
   webpackConfig.plugins = webpackConfig.plugins.concat([
     new WriteFilePlugin({
       test: /^bundle\.js$/,
