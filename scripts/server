@@ -1,15 +1,15 @@
 #!/bin/sh
 
-export NODE_ENV=production
-
 echo "Build Assets..."
 npm run build:assets > /dev/null
 
 echo "Build Server..."
 npm run build:server > /dev/null
 
-echo "Build Client..."
-npm run build:client > /dev/null
+if [ "$NODE_ENV" = "production" ]; then
+  echo "Build Client..."
+  npm run build:client > /dev/null
+fi
 
 echo "Start Server..."
 node lib/server/index
