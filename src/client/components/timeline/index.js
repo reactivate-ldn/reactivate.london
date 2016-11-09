@@ -6,21 +6,21 @@ import rem from '../../styles/rem'
 
 import TimelineItem from './item'
 import Train from '../svgs/train'
+import Container from '../base/container'
 
-const Container = styled.div`
+const Wrapper = styled.div`
   position: relative;
+  width: 100%;
 `
 
-const Row = styled.div`
+const Row = styled(Container)`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: flex-end;
-  width: 100%;
 
   max-width: ${containerWidth};
-  width: ${containerWidth};
   margin: 0 auto;
+  padding: 0 ${rem(170)};
 `
 
 const Line = styled.div`
@@ -61,7 +61,7 @@ const data = [{
 }]
 
 const Timeline = () => (
-  <Container>
+  <Wrapper>
     <TrainTrack/>
 
     <Row>
@@ -71,7 +71,7 @@ const Timeline = () => (
         ))
       }
     </Row>
-  </Container>
+  </Wrapper>
 )
 
 export default Timeline

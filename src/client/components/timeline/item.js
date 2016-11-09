@@ -29,17 +29,21 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
 `
 
 const ItemLabel = styled.h4`
   font-size: ${fontSizes[3]};
   font-weight: ${boldWeight};
+  text-align: center;
   margin-bottom: 10px;
 `
 
 const ItemTime = styled.span`
   font-size: ${fontSizes[2]};
   font-weight: ${boldWeight};
+  text-align: center;
   margin-bottom: 20px;
 `
 

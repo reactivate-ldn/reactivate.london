@@ -1,7 +1,7 @@
 import Color from 'goethe'
 
-export const black = Color('#000000')
-export const white = Color('#ffffff')
+export const black = Color('#191B1F')
+export const white = Color('#FFFFFF')
 
 export const mint = Color('#01C3A7')
 export const fern = Color('#14B69F')

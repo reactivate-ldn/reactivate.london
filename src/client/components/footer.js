@@ -7,30 +7,32 @@ import { black } from '../styles/colors';
 
 import Trainline from './svgs/trainline';
 import Container from './base/container';
+import Card from './base/card';
 
-const FooterCard = styled.div`
-  width: 250px;
-  height: 350px;
-  margin-top: 60px;
-  background-color: white;
+const FooterCard = styled(Card)`
+  width: ${rem(250)};
   position: absolute;
+  top: ${rem(60)};
   z-index: 1;
-  color: ${black.lighten(0.2).toString('hex')};
 `;
 
 const FooterList = styled.ul`
   list-style-type: none;
   font-weight: ${boldWeight};
   font-size: ${fontSizes[2]}
+  margin: 0;
+  padding: 0;
 `;
 
 const FooterWrapper = styled.div`
-  height: 730px;
+  position: relative;
+  height: ${rem(700)};
 `;
 
 const TrainlineLogo = styled(Trainline)`
   width: ${rem(128)};
   height: ${rem(30)};
+  margin-bottom: ${rem(10)};
 `
 
 class Footer extends React.Component {
