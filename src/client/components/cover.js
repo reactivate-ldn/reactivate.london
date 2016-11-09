@@ -17,10 +17,12 @@ const ColumnWrapper = styled.div`
 
 const Column = styled.div`
   flex: 1;
+  margin-left: 20px;
 `;
 
 const FirstColumn = styled(Column)`
   max-width: 200px;
+  margin-left: 0px;
 `;
 
 const List = styled.ul`
@@ -41,6 +43,12 @@ const CoverH1 = styled.h1`
   margin: 0px;
 `;
 
+const Strip = styled.div`
+  width: 30px;
+  borderTop: 1px solid white;
+  margin-bottom: 20px;
+`;
+
 const CoverH2 = styled.h2`
   max-width: 160px;
   color: ${navy.lighten(0.2).toString('hex')};
@@ -50,6 +58,11 @@ const BackgroundImage = styled.img`
   position: absolute;
   right: 0px;
   top: 20px;
+  height: 65%;
+`;
+
+const LastListItem = styled.li`
+  text-decoration: underline;
 `;
 
 export default class Cover extends React.PureComponent {
@@ -64,12 +77,13 @@ export default class Cover extends React.PureComponent {
             <CoverH1>6th</CoverH1>
           </FirstColumn>
           <Column>
+            <Strip/>
             <List>
               <li>6pm - 10pm</li>
               <li>(doors open 18:45)</li>
               <li>Tuesday, December 6th</li>
               <li>Trainline HQ</li>
-              <li>120 Holborn, Floor 3, EC1N 2TD</li>
+              <LastListItem>120 Holborn, Floor 3, EC1N 2TD</LastListItem>
             </List>
           </Column>
         </ColumnWrapper>
