@@ -46,7 +46,7 @@ const CoverH1 = styled.h1`
 
 const CoverH2 = styled.h2`
   max-width: ${rem(160)};
-  color: ${navy.lighten(0.2)};
+  color: ${navy.lighten(0.25)};
 `
 
 const BackgroundImage = styled.div`
@@ -65,8 +65,9 @@ const BackgroundImage = styled.div`
   background-position: 100% 0%;
 `
 
-const LastListItem = styled.li`
+const Link = styled.a`
   text-decoration: underline;
+  color: inherit;
 `
 
 const Cover = () => (
@@ -86,7 +87,11 @@ const Cover = () => (
           <li>(doors open 6pm)</li>
           <li>Tuesday, December 6th</li>
           <li>Trainline HQ</li>
-          <LastListItem>Floor 3, 120 Holborn, EC1N 2TD</LastListItem>
+          <li>
+            <Link href="https://citymapper.com/go/gvab8p" target="_blank">
+              Floor 3, 120 Holborn, EC1N 2TD
+            </Link>
+          </li>
         </List>
       </Column>
     </ColumnWrapper>

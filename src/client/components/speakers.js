@@ -60,7 +60,8 @@ const Avatar = styled.img`
   margin-bottom: ${rem(9)};
 `
 
-const Name = styled.h4`
+const Name = styled.a`
+  display: block;
   font-size: ${fontSizes[3]};
   font-weight: ${boldWeight};
   text-decoration: underline;
@@ -81,10 +82,10 @@ const Text = styled.p`
   margin: 0;
 `
 
-const Talk = ({ avatar, name, title, text }) => (
+const Talk = ({ avatar, name, title, text, link }) => (
   <TalkContainer>
     <Avatar src={avatar}/>
-    <Name>{name}</Name>
+    <Name href={link} target="_blank">{name}</Name>
     <Title>{title}</Title>
     <Text>
       {
@@ -104,21 +105,14 @@ const Talk = ({ avatar, name, title, text }) => (
 
 const data = [{
   avatar: 'https://pbs.twimg.com/profile_images/792591170899681280/uUXOGmgo.jpg',
+  link: 'https://twitter.com/ken_wheeler',
   name: 'Ken Wheeler',
   title: 'My year in open source at Formidable',
   text: 'In this talk Ken will detail his year in open source at Formidable.\nHe will be showing demos of the fun stuff they are building at Formidable and speaking to what we can expect from them in the future.'
 }, {
-  tba: true,
-  avatar: 'https://pbs.twimg.com/profile_images/792591170899681280/uUXOGmgo.jpg',
-  name: 'Ken Wheeler',
-  title: 'My year in open source at Formidable',
-  text: 'In this talk Ken will detail his year in open source at Formidable.\nHe will be showing demos of the fun stuff they are building at Formidable and speaking to what we can expect from them in the future.'
+  tba: true
 }, {
-  free: true,
-  avatar: 'https://pbs.twimg.com/profile_images/792591170899681280/uUXOGmgo.jpg',
-  name: 'Ken Wheeler',
-  title: 'My year in open source at Formidable',
-  text: 'In this talk Ken will detail his year in open source at Formidable.\nHe will be showing demos of the fun stuff they are building at Formidable and speaking to what we can expect from them in the future.'
+  free: true
 }]
 
 const Speakers = () => (
