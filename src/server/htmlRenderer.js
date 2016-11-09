@@ -18,7 +18,7 @@ const renderHtml = getBundle => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
         <link rel="stylesheet" type="text/css" href="/static/styles.css"/>
-        ${css ? `<style type="text/css">${css}</style>` : ''}
+        <style type="text/css">${css}</style>
       </head>
       <body>
         <div id="root">${html}</div>
