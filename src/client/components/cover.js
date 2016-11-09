@@ -36,7 +36,8 @@ const List = styled.ul`
 
 const Description = styled.div`
   font-size: ${fontSizes[4]};
-  max-width: ${rem(600)};
+  max-width: 70%;
+  min-width: ${rem(550)};
   font-weight: ${regularWeight};
   margin-top: ${rem(60)};
 `
