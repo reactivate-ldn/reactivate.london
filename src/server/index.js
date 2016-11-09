@@ -97,7 +97,7 @@ app.get('*', (req, res) => {
   }
 })
 
-app.listen(PORT, 'localhost', err => {
+app.listen(PORT, err => {
   if (err) {
     throw err
   }
