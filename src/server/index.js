@@ -68,10 +68,14 @@ if (PRODUCTION) {
   }
 
   // Add watcher for bundle changes
-  bundleValid = new Promise(resolve => {
+  bundleValid = new Promise((resolve, reject) => {
     webpackMiddlewareInstance.waitUntilValid(() => {
-      updateBundle()
-      resolve()
+      try {
+        updateBundle()
+        resolve()
+      } catch (err) {
+        reject(err)
+      }
     })
   })
 
