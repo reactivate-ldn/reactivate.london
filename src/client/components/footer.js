@@ -84,6 +84,12 @@ const CityMapper = styled(colorButton(citymapper))`
   margin-top: ${rem(15)};
 `
 
+const Link = styled.a`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+`
+
 const location = [-0.1090978, 51.5181061]
 
 class Footer extends React.Component {
@@ -128,7 +134,9 @@ class Footer extends React.Component {
         <Shadow/>
 
         <FooterCard>
-          <TrainlineLogo/>
+          <Link href="https://thetrainline.com" target="_blank">
+            <TrainlineLogo/>
+          </Link>
 
           <FooterList>
             <li>3rd Floor</li>
