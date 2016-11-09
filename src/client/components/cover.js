@@ -53,14 +53,20 @@ const CoverH2 = styled.h2`
   color: ${navy.lighten(0.2)};
 `
 
-const BackgroundImage = styled.img`
+const BackgroundImage = styled.div`
   position: absolute;
   right: 0px;
   top: 20px;
   height: 65%;
+  width: 100%;
   opacity: 0.2;
   user-select: none;
   z-index: 1;
+
+  background-image: url('/static/Logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 0%;
 `
 
 const LastListItem = styled.li`
@@ -69,7 +75,8 @@ const LastListItem = styled.li`
 
 const Cover = () => (
   <CoverWrapper>
-    <BackgroundImage src="/static/Logo.png"/>
+    <BackgroundImage/>
+
     <CoverH2>The Futuractive London Meetup</CoverH2>
     <ColumnWrapper>
       <FirstColumn>

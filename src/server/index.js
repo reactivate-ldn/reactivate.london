@@ -1,4 +1,4 @@
-import { watchFile } from 'fs'
+import { readFileSync, watchFile } from 'fs'
 import express from 'express'
 import { join } from 'path'
 import webpackMiddleware from 'webpack-dev-middleware'
@@ -16,8 +16,11 @@ const PORT = process.env.PORT || (process.env.PORT = 8080)
 const PATH = join(__dirname, '../../static')
 const SERVER_BUNDLE = join(PATH, 'bundle.js')
 
+const loadStaticCSS = () => readFileSync(join(PATH, 'styles.css'))
+
 let bundleValid
 let bundle
+let head = '<link rel="stylesheet" type="text/css" href="/static/styles.css"/>'
 
 const app = express()
 
@@ -25,6 +28,7 @@ app.use('/static', express.static(PATH))
 
 if (PRODUCTION) {
   bundle = require(SERVER_BUNDLE)
+  head = `<style type="text/css">${loadStaticCSS()}</style>`
 } else {
   webpackConfig.watch = true
   webpackConfig.plugins = webpackConfig.plugins.concat([
@@ -86,7 +90,7 @@ if (PRODUCTION) {
   })
 }
 
-const respondWithPage = res => res.status(200).send(renderHtml(global.getBundle))
+const respondWithPage = res => res.status(200).send(renderHtml(global.getBundle, head))
 const respondWithError = (res, error) => res.status(500).send(renderError(error))
 
 app.get('*', (req, res) => {
