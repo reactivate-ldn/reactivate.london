@@ -35,3 +35,5 @@ export const sam = Color('#E02007')
 export const lichen = Color('#F2F8EC')
 export const leaf = Color('#90C25B')
 
+export const citymapper = Color('#37ab2e')
+

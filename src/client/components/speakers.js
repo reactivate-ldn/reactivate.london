@@ -20,7 +20,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: ${rem(30)} ${rem(-15)} 0;
+  margin: ${rem(30)} ${rem(-15)};
 `
 
 const TalkContainer = styled(Card)`

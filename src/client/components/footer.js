@@ -2,12 +2,14 @@ import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components'
 
 import rem from '../styles/rem'
-import { fontSizes, boldWeight } from '../styles/fonts'
-import { black } from '../styles/colors';
+import { shallowShadow } from '../styles/shadows'
+import { regularWeight, fontSizes, boldWeight } from '../styles/fonts'
+import { citymapper, white, black } from '../styles/colors';
 
 import Trainline from './svgs/trainline';
 import Container from './base/container';
 import Card from './base/card';
+import { colorButton } from './base/button';
 
 const FooterCard = styled(Card)`
   width: ${rem(270)};
@@ -16,13 +18,18 @@ const FooterCard = styled(Card)`
   left: ${rem(60)};
   bottom: ${rem(60)};
   z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 const FooterList = styled.ul`
   list-style-type: none;
   font-weight: ${boldWeight};
   font-size: ${fontSizes[2]}
-  margin: 0;
+  margin: ${rem(10)} 0;
   padding: 0;
 `;
 
@@ -37,6 +44,33 @@ const TrainlineLogo = styled(Trainline)`
   margin-bottom: ${rem(10)};
 `
 
+const EmojiPin = styled.div`
+  width: ${rem(36)};
+  height: ${rem(36)};
+  margin-left: ${rem(-18)};
+  margin-top: ${rem(-18)};
+  border-radius: 50%;
+
+  background-color: ${white};
+  background-image: url('/static/Marker.png');
+  background-size: ${rem(24)} ${rem(24)};
+  background-position: center;
+  box-shadow: ${shallowShadow};
+`
+
+const CityMapper = styled(colorButton(citymapper))`
+  font-size: ${fontSizes[2]};
+  font-weight: ${regularWeight};
+  padding: 0 ${rem(20)};
+  line-height: ${rem(45)};
+  height: ${rem(45)};
+  min-width: ${rem(150)};
+  box-shadow: none;
+  margin-top: ${rem(15)};
+`
+
+const location = [-0.1090978, 51.5181061]
+
 class Footer extends React.Component {
   state = {
     initial: true
@@ -47,23 +81,30 @@ class Footer extends React.Component {
   }
 
   renderMap() {
-    const ReactMapboxGlTool = require('react-mapbox-gl')
-    const ReactMapboxGl = ReactMapboxGlTool.default;
-    const { Layer, Feature } = ReactMapboxGlTool;
+    const {
+      default: Map,
+      ZoomControl,
+      Marker
+    } = require('react-mapbox-gl')
 
     return (
-      <ReactMapboxGl
+      <Map
         accessToken="pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A"
-        style="mapbox://styles/mapbox/light-v8"
+        style="mapbox://styles/mapbox/streets-v8"
         containerStyle={{ height: "100%", width: "100%" }}
-        center={[-0.1090978, 51.5181061]}>
-        <Layer
-          type="symbol"
-          layout={{ "icon-image": "harbor-15" }}>
-          <Feature
-            coordinates={[-0.1090978, 51.5181061]}/>
-        </Layer>
-      </ReactMapboxGl>
+        scrollZoom={false}
+        center={location}>
+
+        <Marker coordinates={location}>
+          <EmojiPin/>
+        </Marker>
+
+        <ZoomControl onControlClick={(map, zoomDiff) => {
+          const animateOptions = { animate: true }
+          zoomDiff > 0 ? map.zoomIn(animateOptions) : map.zoomOut(animateOptions)
+        }}/>
+
+      </Map>
     );
   }
 
@@ -73,14 +114,17 @@ class Footer extends React.Component {
     return (
       <FooterWrapper>
         <FooterCard>
+          <TrainlineLogo/>
+
           <FooterList>
-            <li>
-              <TrainlineLogo/>
-            </li>
             <li>3rd Floor</li>
             <li>120 Holborn</li>
             <li>EC1N 2TD London</li>
           </FooterList>
+
+          <CityMapper href="https://citymapper.com/go/gvab8p" target="_blank">
+            Get Directions
+          </CityMapper>
         </FooterCard>
 
         { !initial && this.renderMap() }

@@ -5,7 +5,7 @@ import rem from '../../styles/rem'
 import { white, mint, fern, ivy } from '../../styles/colors'
 import { borderRadius } from '../../styles/dimensions'
 import { boldWeight, fontSizes } from '../../styles/fonts'
-import { ligthShadow } from '../../styles/shadows'
+import { shallowShadow } from '../../styles/shadows'
 
 const Button = styled.a`
   display: inline-block;
@@ -22,10 +22,11 @@ const Button = styled.a`
   font-weight: ${boldWeight};
   line-height: ${rem(70)};
   vertical-align: middle;
+  text-decoration: none;
 
   border-bottom: 3px solid ${ivy};
   border-radius: ${borderRadius};
-  box-shadow: ${ligthShadow};
+  box-shadow: ${shallowShadow};
   user-select: none;
 
   &:hover {
@@ -38,3 +39,17 @@ const Button = styled.a`
 `
 
 export default Button
+
+export const colorButton = color => styled(Button)`
+  background-color: ${color};
+  border-bottom: 3px solid ${color.darken(.2)};
+
+  &:hover {
+    background-color: ${color.darken(.1)};
+  }
+
+  &:active {
+    border-bottom: 0 solid ${color.darken(.2)};
+  }
+`
+
