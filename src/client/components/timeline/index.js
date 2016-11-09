@@ -26,7 +26,7 @@ const Row = styled(Container)`
 
   max-width: ${containerWidth};
   margin: 0 auto;
-  padding: 0 ${rem(170)};
+  padding: 0 ${rem(70)};
 `
 
 const Line = styled.div`
