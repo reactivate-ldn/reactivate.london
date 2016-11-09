@@ -3,6 +3,7 @@ import Button from './base/button';
 import styled from 'styled-components';
 import { fontSizes, regularWeight } from '../styles/fonts';
 import { navy } from '../styles/colors';
+import Strip from './base/strip';
 
 const CoverWrapper = styled.div`
   color: white;
@@ -41,12 +42,6 @@ const CoverH1 = styled.h1`
   font-size: ${fontSizes[6]};
   line-height: ${fontSizes[6]};
   margin: 0px;
-`;
-
-const Strip = styled.div`
-  width: 30px;
-  borderTop: 1px solid white;
-  margin-bottom: 20px;
 `;
 
 const CoverH2 = styled.h2`

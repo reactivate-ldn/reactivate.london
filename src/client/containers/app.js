@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Cover from '../components/cover';
+import Speakers from '../components/speakers';
 import styled from 'styled-components';
 import { navy } from '../styles/colors';
 
@@ -21,6 +22,7 @@ export default class App extends Component {
       <Background>
         <Container>
           <Cover/>
+          <Speakers/>
         </Container>
       </Background>
     )
