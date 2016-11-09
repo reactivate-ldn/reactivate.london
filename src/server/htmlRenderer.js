@@ -1,18 +1,11 @@
 import { createElement } from 'react'
 import { renderToString } from 'react-dom/server'
-import styleSheet from 'styled-components/lib/models/StyleSheet'
 
-const renderHtml = getApp => {
-  if (!styleSheet.sheet) {
-    styleSheet.sheet = {}
-  }
-
-  styleSheet.flush()
-
-  const App = getApp()
+const renderHtml = getBundle => {
+  const { App, StyleSheet } = getBundle()
 
   const html = renderToString(createElement(App))
-  const css = styleSheet.rules().map(rule => rule.cssText).join('\n')
+  const css = StyleSheet.rules().map(rule => rule.cssText).join('\n')
 
   return `
     <!DOCTYPE html>

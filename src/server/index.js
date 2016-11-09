@@ -87,14 +87,16 @@ if (PRODUCTION) {
   })
 }
 
+const respond = res => res.status(200).send(renderHtml(global.getBundle))
+
 app.get('*', (req, res) => {
   try {
     if (bundleValid) {
       bundleValid.then(() => {
-        res.status(200).send(renderHtml(global.getApp ? global.getApp : bundle.getApp))
+        respond(res)
       })
     } else {
-      res.status(200).send(renderHtml(global.getApp ? global.getApp : bundle.getApp))
+      respond(res)
     }
   } catch (err) {
     res.status(500).send(err.message ? err.message : err)

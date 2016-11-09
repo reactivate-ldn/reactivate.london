@@ -63,7 +63,15 @@ var rules = [{
 module.exports = {
   cache: !PRODUCTION,
   resolve: {
-    extensions: [ '.js' ]
+    extensions: [ '.js' ],
+    alias: {
+      'styled-components': path.resolve(
+        'node_modules/styled-components/lib/index'
+      ),
+      'styled-components-stylesheet': path.resolve(
+        'node_modules/styled-components/lib/models/StyleSheet'
+      )
+    }
   },
   entry: [ './src/client/index' ],
   devtool: 'source-map',

@@ -8,8 +8,11 @@ if (typeof document === 'object') {
     require('./entry/dev')
   }
 } else if (typeof global === 'object') {
-  global.getApp = function getApp() {
-    return require('./containers/app').default
+  global.getBundle = function getBundle() {
+    const StyleSheet = require('styled-components-stylesheet')
+    const App = require('./containers/app').default
+
+    return { App, StyleSheet }
   }
 }
 
