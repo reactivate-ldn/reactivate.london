@@ -95,10 +95,12 @@ app.get('*', (req, res) => {
       respondWithPage(res)
     })
     .catch(err => {
-      respondWithError(res, err)
-    })
-    .catch(err => {
-      res.status(500).send(err.message ? err.message : err)
+      try {
+        respondWithError(res, err)
+      } catch (err) {
+        console.error(err)
+        res.status(500).send(err.message ? err.message : err)
+      }
     })
 })
 
