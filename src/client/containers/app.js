@@ -21,15 +21,9 @@ export default class App extends Component {
   render() {
     return (
       <Background>
-        <Container>
-          <Cover/>
-        </Container>
-
+        <Cover/>
         <Timeline/>
-
-        <Container>
-          <Speakers/>
-        </Container>
+        <Speakers/>
         <Footer/>
       </Background>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { slate, kevin } from '../../styles/colors'
 import { containerWidth } from '../../styles/dimensions'
 import rem from '../../styles/rem'
@@ -9,6 +10,11 @@ import Train from '../svgs/train'
 import Container from '../base/container'
 
 const Wrapper = styled.div`
+  width: 100%;
+  padding: ${rem(48)} 0;
+`
+
+const InnerWrapper = styled.div`
   position: relative;
   width: 100%;
 `
@@ -62,15 +68,17 @@ const data = [{
 
 const Timeline = () => (
   <Wrapper>
-    <TrainTrack/>
+    <InnerWrapper>
+      <TrainTrack/>
 
-    <Row>
-      {
-        data.map((item, key) => (
-          <TimelineItem {...item} key={key}/>
-        ))
-      }
-    </Row>
+      <Row>
+        {
+          data.map((item, key) => (
+            <TimelineItem {...item} key={key}/>
+          ))
+        }
+      </Row>
+    </InnerWrapper>
   </Wrapper>
 )
 

@@ -10,9 +10,11 @@ import Container from './base/container';
 import Card from './base/card';
 
 const FooterCard = styled(Card)`
-  width: ${rem(250)};
+  width: ${rem(270)};
   position: absolute;
   top: ${rem(60)};
+  left: ${rem(60)};
+  bottom: ${rem(60)};
   z-index: 1;
 `;
 
@@ -26,7 +28,7 @@ const FooterList = styled.ul`
 
 const FooterWrapper = styled.div`
   position: relative;
-  height: ${rem(700)};
+  height: ${rem(400)};
 `;
 
 const TrainlineLogo = styled(Trainline)`
@@ -70,18 +72,17 @@ class Footer extends React.Component {
 
     return (
       <FooterWrapper>
-        <Container>
-          <FooterCard>
-            <FooterList>
-              <li>
-                <TrainlineLogo/>
-              </li>
-              <li>3rd Floor</li>
-              <li>120 Holborn</li>
-              <li>EC1N 2TD London</li>
-            </FooterList>
-          </FooterCard>
-        </Container>
+        <FooterCard>
+          <FooterList>
+            <li>
+              <TrainlineLogo/>
+            </li>
+            <li>3rd Floor</li>
+            <li>120 Holborn</li>
+            <li>EC1N 2TD London</li>
+          </FooterList>
+        </FooterCard>
+
         { !initial && this.renderMap() }
       </FooterWrapper>
     )

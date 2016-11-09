@@ -7,10 +7,7 @@ import { navy } from '../styles/colors'
 
 import Button from './base/button'
 import Strip from './base/strip'
-
-const CoverWrapper = styled.div`
-  margin-top: ${rem(80)};
-`
+import Container from './base/container'
 
 const ColumnWrapper = styled.div`
   display: flex;
@@ -74,7 +71,7 @@ const LastListItem = styled.li`
 `
 
 const Cover = () => (
-  <CoverWrapper>
+  <Container>
     <BackgroundImage/>
 
     <CoverH2>The Futuractive London Meetup</CoverH2>
@@ -99,7 +96,7 @@ const Cover = () => (
       Join us for our first meetup with talks ranging from React all the way to JavaScript and Functional Programming.
       Pizza and drinks on the house, of course!
     </Description>
-  </CoverWrapper>
+  </Container>
 )
 
 export default Cover
