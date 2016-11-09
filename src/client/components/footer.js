@@ -90,7 +90,7 @@ const Link = styled.a`
   color: inherit;
 `
 
-const location = [-0.1090978, 51.5181061]
+const location = [ -0.10818421840667725, 51.51801416452366 ]
 
 class Footer extends React.Component {
   state = {
