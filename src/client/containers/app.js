@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components'
+import { containerWidth } from '../styles/dimensions'
 import { white, navy } from '../styles/colors'
 
 import Cover from '../components/cover'
@@ -14,9 +15,10 @@ const Background = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
-  width: 1200px;
-  margin: 0px auto;
+  max-width: ${containerWidth};
+  width: ${containerWidth};
+  margin: 0 auto;
+  padding: 0 40px;
 `;
 
 export default class App extends Component {
@@ -47,10 +49,13 @@ export default class App extends Component {
       <Background>
         <Container>
           <Cover/>
-          <Speakers/>
         </Container>
 
         <Timeline/>
+
+        <Container>
+          <Speakers/>
+        </Container>
 
         {!initial && this.renderMap()}
 

@@ -58,6 +58,9 @@ var rules = [{
       }
     }
   })
+}, {
+  test: /\.svg$/,
+  loader: 'svg-inline'
 }]
 
 module.exports = {

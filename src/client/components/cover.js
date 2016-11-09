@@ -7,7 +7,6 @@ import Strip from './base/strip'
 
 const CoverWrapper = styled.div`
   margin-top: 80px;
-  padding: 0px 40px;
 `
 
 const ColumnWrapper = styled.div`
