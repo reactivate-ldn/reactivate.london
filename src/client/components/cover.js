@@ -1,27 +1,31 @@
 import React, { Component, PropTypes } from 'react'
-import Button from './base/button'
 import styled from 'styled-components'
+
+import rem from '../styles/rem'
 import { fontSizes, regularWeight } from '../styles/fonts'
 import { navy } from '../styles/colors'
+
+import Button from './base/button'
 import Strip from './base/strip'
 
 const CoverWrapper = styled.div`
-  margin-top: 80px;
+  margin-top: ${rem(80)};
 `
 
 const ColumnWrapper = styled.div`
   display: flex;
   align-items: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: ${rem(30)};
+  z-index: 2;
 `
 
 const Column = styled.div`
-  flex: 1;
+  flex-grow: 1;
   margin-left: 20px;
 `
 
 const FirstColumn = styled(Column)`
-  max-width: 200px;
+  max-width: ${rem(200)};
   margin-left: 0px;
 `
 
@@ -32,20 +36,20 @@ const List = styled.ul`
 
 const Description = styled.div`
   font-size: ${fontSizes[4]};
-  max-width: 800px;
+  max-width: ${rem(600)};
   font-weight: ${regularWeight};
-  margin-top: 60px;
+  margin-top: ${rem(60)};
 `
 
 const CoverH1 = styled.h1`
   font-size: ${fontSizes[6]};
   line-height: ${fontSizes[6]};
-  margin: 0px;
+  margin: 0;
 `
 
 const CoverH2 = styled.h2`
-  max-width: 160px;
-  color: ${navy.lighten(0.2).toString('hex')};
+  max-width: ${rem(160)};
+  color: ${navy.lighten(0.2)};
 `
 
 const BackgroundImage = styled.img`
@@ -53,6 +57,9 @@ const BackgroundImage = styled.img`
   right: 0px;
   top: 20px;
   height: 65%;
+  opacity: 0.2;
+  user-select: none;
+  z-index: 1;
 `
 
 const LastListItem = styled.li`
@@ -61,7 +68,7 @@ const LastListItem = styled.li`
 
 const Cover = () => (
   <CoverWrapper>
-    <BackgroundImage src="/static/Bitmap.svg"/>
+    <BackgroundImage src="/static/Logo.png"/>
     <CoverH2>The Futuractive London Meetup</CoverH2>
     <ColumnWrapper>
       <FirstColumn>
