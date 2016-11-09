@@ -1,19 +1,22 @@
 import React, { Component, PropTypes } from 'react'
-import Cover from '../components/cover';
-import Speakers from '../components/speakers';
 import styled from 'styled-components';
-import { navy } from '../styles/colors';
+import { white, navy } from '../styles/colors';
+
+import Cover from '../components/cover';
+import Timeline from '../components/timeline';
+import Speakers from '../components/speakers';
 
 const Background = styled.div`
-  background-color: ${navy.toString('hex')}
+  background-color: ${navy};
+  color: ${white};
   overflow: auto;
   min-height: 100vh;
 `;
 
 const Container = styled.div`
   max-width: 1200px;
+  width: 1200px;
   margin: 0px auto;
-  padding: 0px 40px;
 `;
 
 export default class App extends Component {
@@ -46,9 +49,11 @@ export default class App extends Component {
           <Cover/>
           <Speakers/>
         </Container>
-        {
-          !initial && this.renderMap()
-        }
+
+        <Timeline/>
+
+        {!initial && this.renderMap()}
+
       </Background>
     )
   }

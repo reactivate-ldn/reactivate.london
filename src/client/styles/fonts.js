@@ -12,7 +12,7 @@ export const fontSizes = [
   rem(16),
   rem(18),
   rem(24),
-  rem(30),
+  rem(34),
   rem(64),
   rem(100)
 ];

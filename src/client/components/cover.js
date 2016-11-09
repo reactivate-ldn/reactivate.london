@@ -6,8 +6,8 @@ import { navy } from '../styles/colors';
 import Strip from './base/strip';
 
 const CoverWrapper = styled.div`
-  color: white;
   margin-top: 80px;
+  padding: 0px 40px;
 `;
 
 const ColumnWrapper = styled.div`

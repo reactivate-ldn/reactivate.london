@@ -25,4 +25,6 @@ html, body {
   font-family: "TLCircular", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
   font-style: normal;
+  padding: 0;
+  margin: 0;
 }
