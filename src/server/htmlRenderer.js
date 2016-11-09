@@ -1,4 +1,4 @@
-import { createElement, PropTypes } from 'react'
+import { createElement } from 'react'
 import { renderToString } from 'react-dom/server'
 
 const renderHtml = getBundle => {
@@ -32,7 +32,7 @@ const renderHtml = getBundle => {
         <script type="text/javascript" src="/static/bundle.js"></script>
       </body>
     </html>
-  `;
+  `
 }
 
 export default renderHtml

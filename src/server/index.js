@@ -6,6 +6,7 @@ import hotMiddleware from 'webpack-hot-middleware'
 import webpackConfig from '../../webpack.config'
 import webpack from 'webpack'
 import renderHtml from './htmlRenderer'
+import renderError from './errorRenderer'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
 import { createElement } from 'react'
@@ -81,12 +82,16 @@ if (PRODUCTION) {
   })
 }
 
-const respond = res => res.status(200).send(renderHtml(global.getBundle))
+const respondWithPage = res => res.status(200).send(renderHtml(global.getBundle))
+const respondWithError = (res, error) => res.status(500).send(renderError(error))
 
 app.get('*', (req, res) => {
   (bundleValid || Promise.resolve())
     .then(() => {
-      respond(res)
+      respondWithPage(res)
+    })
+    .catch(err => {
+      respondWithError(res, err)
     })
     .catch(err => {
       res.status(500).send(err.message ? err.message : err)
