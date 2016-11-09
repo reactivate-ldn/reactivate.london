@@ -1,7 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { white } from '../../styles/colors'
 
-export default styled.div`
+const Strip = styled.div`
   width: 30px;
-  borderTop: 1px solid white;
+  borderTop: 1px solid ${white};
   margin-bottom: 20px;
-`;
+`
+
+export default Strip
+

@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
-import styled from 'styled-components';
-import { white, navy } from '../styles/colors';
+import styled from 'styled-components'
+import { white, navy } from '../styles/colors'
 
-import Cover from '../components/cover';
-import Timeline from '../components/timeline';
-import Speakers from '../components/speakers';
+import Cover from '../components/cover'
+import Timeline from '../components/timeline'
+import Speakers from '../components/speakers'
 
 const Background = styled.div`
   background-color: ${navy};

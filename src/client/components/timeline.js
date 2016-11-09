@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { slate, kevin } from '../styles/colors';
-import { boldWeight, fontSizes } from '../styles/fonts';
+import { slate, kevin } from '../styles/colors'
+import { boldWeight, fontSizes } from '../styles/fonts'
 
 const Container = styled.div`
   position: relative;
