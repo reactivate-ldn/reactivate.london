@@ -46,15 +46,30 @@ const TrainTrack = () => (
   </Line>
 )
 
+const data = [{
+  label: 'Doors Opening',
+  time: '6 PM'
+}, {
+  label: 'Kickoff',
+  time: '7 PM'
+}, {
+  label: 'Talks',
+  time: '7:15 PM'
+}, {
+  label: 'Mingling',
+  time: '8 PM'
+}]
+
 const Timeline = () => (
   <Container>
     <TrainTrack/>
 
     <Row>
-      <TimelineItem/>
-      <TimelineItem/>
-      <TimelineItem/>
-      <TimelineItem/>
+      {
+        data.map((item, key) => (
+          <TimelineItem {...item} key={key}/>
+        ))
+      }
     </Row>
   </Container>
 )

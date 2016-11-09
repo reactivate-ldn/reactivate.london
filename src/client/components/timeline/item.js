@@ -43,10 +43,10 @@ const ItemTime = styled.span`
   margin-bottom: 20px;
 `
 
-const TimelineItem = () => (
+const TimelineItem = ({ label, time }) => (
   <Item>
-    <ItemLabel>Doors Opening</ItemLabel>
-    <ItemTime>6 PM</ItemTime>
+    <ItemLabel>{label}</ItemLabel>
+    <ItemTime>{time}</ItemTime>
     <Dot/>
   </Item>
 )
