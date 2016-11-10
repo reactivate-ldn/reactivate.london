@@ -5,11 +5,21 @@ import rem from '../styles/rem'
 import { mint, navy } from '../styles/colors'
 import { regularWeight, boldWeight, fontSizes } from '../styles/fonts'
 
+import Button from './base/button'
 import Headline from './base/headline'
 import Strip from './base/strip'
 import Container from './base/container'
 import Card from './base/card'
 import Slot from './base/slot'
+
+const SubmitTalk = styled(Button)`
+  font-size: ${fontSizes[2]};
+  font-weight: ${regularWeight};
+  padding: 0 ${rem(20)};
+  line-height: ${rem(45)};
+  height: ${rem(45)};
+  min-width: ${rem(150)};
+`
 
 const Row = styled.div`
   display: flex;
@@ -145,6 +155,9 @@ const Speakers = () => (
                 <SlotText>
                   Are you interested in speaking? This slot could be yours!
                 </SlotText>
+                <SubmitTalk href="https://www.papercall.io/reactivate-london" target="_blank">
+                  Submit your talk
+                </SubmitTalk>
               </SlotContainer>
             )
           } else if (item.tba) {
