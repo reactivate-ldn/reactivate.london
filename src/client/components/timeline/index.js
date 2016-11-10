@@ -42,6 +42,10 @@ const Line = styled.div`
   height: 3px;
   background: ${slate};
   z-index: 1;
+
+  @media (max-width: 450px) {
+    bottom: 14px;
+  }
 `
 
 const TrainDecoration = styled(Train)`

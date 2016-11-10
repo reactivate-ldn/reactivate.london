@@ -10,6 +10,12 @@ const OuterDot = styled.div`
   height: 51px;
   padding: 17px;
   z-index: 2;
+
+  @media (max-width: 450px) {
+    padding: 9px;
+    width: 31px;
+    height: 31px;
+  }
 `
 
 const InnerDot = styled.div`
@@ -17,6 +23,11 @@ const InnerDot = styled.div`
   border-radius: 50%;
   width: 17px;
   height: 17px;
+
+  @media (max-width: 450px) {
+    width: 13px;
+    height: 13px;
+  }
 `
 
 const Dot = () => (
