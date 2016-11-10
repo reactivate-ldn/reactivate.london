@@ -7,12 +7,14 @@ import webpackConfig from '../../webpack.config'
 import webpack from 'webpack'
 import renderHtml from './htmlRenderer'
 import renderError from './errorRenderer'
+import noRenderer from './noRenderer'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
 import { createElement } from 'react'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const PORT = process.env.PORT || (process.env.PORT = 8080)
+const NOSSR = !!process.env.NOSSR
 const PATH = join(__dirname, '../../static')
 const SERVER_BUNDLE = join(PATH, 'bundle.js')
 
@@ -91,9 +93,14 @@ if (PRODUCTION) {
 }
 
 const respondWithPage = res => res.status(200).send(renderHtml(global.getBundle, head))
+const respondWithStatic = res => res.status(200).send(noRenderer(head))
 const respondWithError = (res, error) => res.status(500).send(renderError(error))
 
 app.get('*', (req, res) => {
+  if (NOSSR) {
+    return respondWithStatic(res)
+  }
+
   (bundleValid || Promise.resolve())
     .then(() => {
       respondWithPage(res)
