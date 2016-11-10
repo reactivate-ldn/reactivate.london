@@ -22,8 +22,7 @@ const SubmitTalk = styled(Button)`
 `
 
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: flex; flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   margin: ${rem(30)} ${rem(-15)};
@@ -107,6 +106,16 @@ const Text = styled.p`
   margin: 0;
 `
 
+const Contact = styled.p`
+  font-size: ${fontSizes[2]};
+  margin: ${rem(35)} 0 ${rem(25)};
+`
+
+const Link = styled.a`
+  color: inherit;
+  text-decoration: underline;
+`
+
 const Talk = ({ avatar, name, title, text, link }) => (
   <TalkContainer>
     <Avatar src={avatar}/>
@@ -144,6 +153,13 @@ const Speakers = () => (
   <Container>
     <Headline>Speakers</Headline>
     <Strip/>
+
+    <Contact>
+      We're always stoked to listen to great talks.<br/>
+      <Link href="https://www.papercall.io/reactivate-london" target="_blank">
+        If you want to become a speaker, submit your talk to us!
+      </Link>
+    </Contact>
 
     <Row>
       {
