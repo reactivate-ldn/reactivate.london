@@ -43,12 +43,15 @@ const Line = styled.div`
 const TrainDecoration = styled(Train)`
   position: absolute;
   bottom: 0;
-  left: ${rem(-28)};
+  left: ${rem(-20)};
+
+  width: ${rem(153)};
+  height: ${rem(83)};
 `
 
 const TrainTrack = () => (
   <Line>
-    <TrainDecoration width="183px" height="83px"/>
+    <TrainDecoration/>
   </Line>
 )
 
