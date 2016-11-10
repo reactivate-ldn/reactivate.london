@@ -14,7 +14,7 @@ const Background = styled.div`
   color: ${white};
   overflow: auto;
   min-height: 100vh;
-  z-index: -2;
+  z-index: 0;
 `;
 
 export default class App extends Component {
