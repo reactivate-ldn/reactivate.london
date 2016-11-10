@@ -1,3 +1,4 @@
+import { config } from 'dotenv'
 import { readFileSync, watchFile } from 'fs'
 import express from 'express'
 import { join } from 'path'
@@ -11,6 +12,8 @@ import noRenderer from './noRenderer'
 import DiskPlugin from 'webpack-disk-plugin'
 
 import { createElement } from 'react'
+
+config({ silent: true }) // dotenv
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const PORT = process.env.PORT || (process.env.PORT = 8080)
