@@ -72,10 +72,11 @@ const SlotTitle = styled.h1`
 `
 
 const SlotText = styled.h4`
+  color: ${white.opacity(.75)};
   font-size: ${fontSizes[3]};
   font-weight: ${regularWeight};
   text-align: center;
-  margin: 0;
+  margin: 0 0 ${rem(10)};
 `
 
 const Avatar = styled.img`
