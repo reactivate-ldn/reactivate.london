@@ -27,6 +27,10 @@ const Row = styled(Container)`
   max-width: ${containerWidth};
   margin: 0 auto;
   padding: 0 ${rem(70)};
+
+  @media (max-width: 450px) {
+    padding: 0 ${rem(20)};
+  }
 `
 
 const Line = styled.div`
@@ -47,6 +51,10 @@ const TrainDecoration = styled(Train)`
 
   width: ${rem(153)};
   height: ${rem(83)};
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `
 
 const TrainTrack = () => (

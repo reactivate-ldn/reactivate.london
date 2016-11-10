@@ -38,6 +38,10 @@ const ItemLabel = styled.h4`
   font-weight: ${regularWeight};
   text-align: center;
   margin-bottom: 10px;
+
+  @media (max-width: 350px) {
+    font-size: ${fontSizes[2]};
+  }
 `
 
 const ItemTime = styled.span`
@@ -45,6 +49,10 @@ const ItemTime = styled.span`
   font-weight: ${regularWeight};
   text-align: center;
   margin-bottom: 20px;
+
+  @media (max-width: 350px) {
+    font-size: ${fontSizes[1]};
+  }
 `
 
 const TimelineItem = ({ label, time }) => (
