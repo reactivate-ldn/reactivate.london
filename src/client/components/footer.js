@@ -23,6 +23,11 @@ const FooterCard = styled(Card)`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 750px) {
+    left: 50%;
+    margin-left: ${rem(-135)};
+  }
 `;
 
 const FooterList = styled.ul`

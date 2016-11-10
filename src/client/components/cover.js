@@ -11,13 +11,26 @@ import Container from './base/container'
 
 const ColumnWrapper = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-end;
   margin-bottom: ${rem(30)};
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `
 
 const Column = styled.div`
   flex-grow: 1;
   margin-left: 20px;
+
+  @media (max-width: 450px) {
+    margin-top: 20px;
+    margin-left: 0;
+  }
 `
 
 const FirstColumn = styled(Column)`
@@ -37,6 +50,11 @@ const Description = styled.div`
   min-width: ${rem(550)};
   font-weight: ${regularWeight};
   margin-top: ${rem(60)};
+
+  @media (max-width: 750px) {
+    min-width: 100%;
+    width: 100%;
+  }
 `
 
 const CoverH1 = styled.h1`

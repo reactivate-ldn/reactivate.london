@@ -14,7 +14,7 @@ const SpeakersH1 = styled.h1`
   font-size: ${fontSizes[6]};
   line-height: ${fontSizes[6]};
   margin: 0;
-  margin-bottom: ${rem(30)};
+  margin-bottom: ${rem(25)};
 `
 
 const Row = styled.div`
@@ -23,18 +23,31 @@ const Row = styled.div`
   justify-content: space-between;
   align-items: stretch;
   margin: ${rem(30)} ${rem(-15)};
+
+  @media (min-width: 751px) {
+    > div {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+  }
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `
 
 const TalkContainer = styled(Card)`
-  flex-basis: 0;
-  flex-grow: 1;
-  margin: 0 ${rem(15)};
+  margin: 0 ${rem(15)} ${rem(25)};
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `
 
 const SlotContainer = styled(Slot)`
-  flex-basis: 0;
-  flex-grow: 1;
-  margin: 0 ${rem(15)};
+  margin: 0 ${rem(15)} ${rem(25)};
 
   display: flex;
   flex-direction: column;
