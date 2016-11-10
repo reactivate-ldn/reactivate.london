@@ -19,6 +19,7 @@ const SubmitTalk = styled(Button)`
   line-height: ${rem(45)};
   height: ${rem(45)};
   min-width: ${rem(150)};
+  margin-top: ${rem(10)};
 `
 
 const Row = styled.div`
