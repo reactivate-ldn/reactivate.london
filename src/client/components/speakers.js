@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import rem from '../styles/rem'
 import { mint, navy } from '../styles/colors'
-import { boldWeight, fontSizes } from '../styles/fonts'
+import { regularWeight, boldWeight, fontSizes } from '../styles/fonts'
 
 import Strip from './base/strip'
 import Container from './base/container'
@@ -49,6 +49,7 @@ const SlotTitle = styled.h1`
 
 const SlotText = styled.h4`
   font-size: ${fontSizes[3]};
+  font-weight: ${regularWeight};
   text-align: center;
   margin: 0;
 `
