@@ -6,12 +6,7 @@
     "/node_modules/"
   ],
   "plugins": [
-    ["module-resolver", {
-      "root": ["./src/client"],
-      "alias": {
-        "~": "."
-      }
-    }]
+    "react-hot-loader/babel"
   ],
   "env": {
     "commonjs": {
