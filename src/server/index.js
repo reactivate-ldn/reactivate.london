@@ -8,7 +8,7 @@ import webpack from 'webpack'
 import renderHtml from './htmlRenderer'
 import renderError from './errorRenderer'
 import noRenderer from './noRenderer'
-import WriteFilePlugin from 'write-file-webpack-plugin'
+import DiskPlugin from 'webpack-disk-plugin'
 
 import { createElement } from 'react'
 
@@ -34,10 +34,13 @@ if (PRODUCTION) {
 } else {
   webpackConfig.watch = true
   webpackConfig.plugins = webpackConfig.plugins.concat([
-    new WriteFilePlugin({
-      test: /^bundle\.js$/,
-      log: false,
-      force: true
+    new DiskPlugin({
+      output: {
+        path: PATH
+      },
+      files: [
+        { asset: "bundle.js" }
+      ]
     })
   ])
 

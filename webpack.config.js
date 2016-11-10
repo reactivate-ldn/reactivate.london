@@ -77,7 +77,7 @@ module.exports = {
     }
   },
   entry: [ './src/client/index' ],
-  devtool: 'source-map',
+  devtool: PRODUCTION ? 'cheap-module-source-map' : 'source-map',
   plugins: plugins
     .concat(PRODUCTION ? productionPlugins : developmentPlugins),
   module: {
