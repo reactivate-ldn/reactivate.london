@@ -12,6 +12,10 @@ const Headline = styled.h1`
   @media (max-width: 400px) {
     font-size: ${rem(75)};
   }
+
+  @media (max-width: 350px) {
+    font-size: ${rem(70)};
+  }
 `
 
 export default Headline

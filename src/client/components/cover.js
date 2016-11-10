@@ -57,6 +57,10 @@ const Description = styled.div`
     min-width: 100%;
     width: 100%;
   }
+
+  @media (max-width: 350px) {
+    font-size: ${rem(30)};
+  }
 `
 
 const CoverHeadline = styled(Headline)`
