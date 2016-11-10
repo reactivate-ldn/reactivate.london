@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { kevin } from '../../styles/colors'
-import { boldWeight, fontSizes } from '../../styles/fonts'
+import { regularWeight, fontSizes } from '../../styles/fonts'
 
 const OuterDot = styled.div`
   background: ${kevin.opacity(.2)};
@@ -35,14 +35,14 @@ const Item = styled.div`
 
 const ItemLabel = styled.h4`
   font-size: ${fontSizes[3]};
-  font-weight: ${boldWeight};
+  font-weight: ${regularWeight};
   text-align: center;
   margin-bottom: 10px;
 `
 
 const ItemTime = styled.span`
   font-size: ${fontSizes[2]};
-  font-weight: ${boldWeight};
+  font-weight: ${regularWeight};
   text-align: center;
   margin-bottom: 20px;
 `
