@@ -27,7 +27,8 @@ const FirstColumn = styled(Column)`
 
 const List = styled.ul`
   list-style-type: none;
-  padding-left: 0px;
+  line-height: 1.4;
+  padding: 0;
 `
 
 const Description = styled.div`
