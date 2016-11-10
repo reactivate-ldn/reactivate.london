@@ -107,6 +107,18 @@ const Link = styled.a`
   color: inherit;
 `
 
+const Note = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: ${white.opacity(.5)};
+
+  > span {
+    margin: 0 ${rem(30)} ${rem(10)};
+  }
+`
+
 const location = [ -0.10818421840667725, 51.51801416452366 ]
 
 class Footer extends React.Component {
@@ -146,7 +158,13 @@ class Footer extends React.Component {
 
     return (
       <Container>
-        <TrainDecoration/>
+        <Note>
+          <TrainDecoration/>
+
+          <span>
+            This meetup is proudly sponsored by Trainline. See you at their office!
+          </span>
+        </Note>
 
         <FooterWrapper>
           { !initial && this.renderMap() }
