@@ -9,21 +9,26 @@ import TimelineItem from './item'
 import Train from '../svgs/train'
 import Container from '../base/container'
 
-const Row = styled(Container)`
+const Row = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: ${rem(-30)} auto;
+  margin: ${rem(-30)} 0;
 `
 
 const Line = styled.div`
   position: absolute;
-  left: ${rem(40 + 28)};
-  top: ${rem(40 + 80)};
-  bottom: ${rem(40 + 80)};
+  top: ${rem(80)};
+  left: ${rem(25)};
+  bottom: ${rem(80)};
   width: 3px;
+  margin-left: -1px;
   background: ${slate};
   z-index: 1;
+
+  @media (max-width: 1200px) {
+    left: ${rem(29)};
+  }
 `
 
 const TrainDecoration = styled(Train)`
@@ -60,15 +65,17 @@ const data = [{
 }]
 
 const Timeline = () => (
-  <Row>
-    <Line/>
+  <Container>
+    <Row>
+      <Line/>
 
-    {
-      data.map((item, key) => (
-        <TimelineItem {...item} key={key}/>
-      ))
-    }
-  </Row>
+      {
+        data.map((item, key) => (
+          <TimelineItem {...item} key={key}/>
+        ))
+      }
+    </Row>
+  </Container>
 )
 
 export default Timeline
