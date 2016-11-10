@@ -10,16 +10,18 @@ if (!PRODUCTION) {
   require('dotenv').config({ silent: true })
 }
 
-var replace = {};
+var env = {};
 for (var key in process.env) {
   if (process.env.hasOwnProperty(key)) {
-    replace["process.env." + key] = '"' + process.env[key] + '"';
+    env[key] = JSON.stringify(process.env[key])
   }
 }
 
 var plugins = [
   new ExtractTextPlugin('styles.css'),
-  new webpack.DefinePlugin(replace)
+  new webpack.DefinePlugin({
+    'process.env': env
+  })
 ]
 
 var productionPlugins = [
