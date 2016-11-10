@@ -139,14 +139,19 @@ const Talk = ({ avatar, name, title, text, link }) => (
   </TalkContainer>
 )
 
+/*
+ * avatar: url
+ * link: url
+ * name,
+ * title,
+ * text
+ * [tba]
+ * [free]
+ */
 const data = [{
-  avatar: 'https://pbs.twimg.com/profile_images/792591170899681280/uUXOGmgo.jpg',
-  link: 'https://twitter.com/ken_wheeler',
-  name: 'Ken Wheeler',
-  title: 'My year in open source at Formidable',
-  text: 'In this talk Ken will detail his year in open source at Formidable.\nHe will be showing demos of the fun stuff they are building at Formidable and speaking to what we can expect from them in the future.'
-}, {
   tba: true
+}, {
+  free: true
 }, {
   free: true
 }]
