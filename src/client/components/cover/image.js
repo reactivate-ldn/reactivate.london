@@ -19,6 +19,7 @@ const BackgroundImage = styled.div`
   z-index: -1;
 
   @media (max-width: 850px) {
+    height: 80vw;
     position: absolute;
     opacity: 0.2;
   }

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components'
 
 import rem from '../styles/rem'
-import { mint, navy } from '../styles/colors'
+import { white, mint, navy } from '../styles/colors'
 import { regularWeight, boldWeight, fontSizes } from '../styles/fonts'
 
 import Button from './base/button'
