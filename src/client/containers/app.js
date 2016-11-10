@@ -9,10 +9,12 @@ import Footer from '../components/footer';
 import Container from '../components/base/container';
 
 const Background = styled.div`
+  position: relative;
   background-color: ${navy};
   color: ${white};
   overflow: auto;
   min-height: 100vh;
+  z-index: -2;
 `;
 
 export default class App extends Component {

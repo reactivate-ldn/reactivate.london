@@ -18,7 +18,7 @@ const Button = styled.a`
   transition: all .2s ease-in-out;
 
   color: ${white};
-  font-size: ${fontSizes[4]};
+  font-size: ${rem(34)};
   font-weight: ${boldWeight};
   line-height: ${rem(70)};
   vertical-align: middle;

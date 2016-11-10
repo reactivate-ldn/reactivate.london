@@ -9,43 +9,21 @@ import TimelineItem from './item'
 import Train from '../svgs/train'
 import Container from '../base/container'
 
-const Wrapper = styled.div`
-  width: 100%;
-  padding: ${rem(48)} 0 ${rem(68)};
-`
-
-const InnerWrapper = styled.div`
-  position: relative;
-  width: 100%;
-`
-
 const Row = styled(Container)`
+  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-
-  max-width: ${containerWidth};
-  margin: 0 auto;
-  padding: 0 ${rem(70)};
-
-  @media (max-width: 450px) {
-    padding: 0 ${rem(20)};
-  }
+  flex-direction: column;
+  margin: ${rem(-30)} auto;
 `
 
 const Line = styled.div`
   position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  bottom: 24px;
-  height: 3px;
+  left: ${rem(40 + 28)};
+  top: ${rem(40 + 80)};
+  bottom: ${rem(40 + 80)};
+  width: 3px;
   background: ${slate};
   z-index: 1;
-
-  @media (max-width: 450px) {
-    bottom: 14px;
-  }
 `
 
 const TrainDecoration = styled(Train)`
@@ -82,19 +60,15 @@ const data = [{
 }]
 
 const Timeline = () => (
-  <Wrapper>
-    <InnerWrapper>
-      <TrainTrack/>
+  <Row>
+    <Line/>
 
-      <Row>
-        {
-          data.map((item, key) => (
-            <TimelineItem {...item} key={key}/>
-          ))
-        }
-      </Row>
-    </InnerWrapper>
-  </Wrapper>
+    {
+      data.map((item, key) => (
+        <TimelineItem {...item} key={key}/>
+      ))
+    }
+  </Row>
 )
 
 export default Timeline

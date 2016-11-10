@@ -11,6 +11,7 @@ import Container from './base/container'
 import Headline from './base/headline'
 
 const ColumnWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -24,8 +25,11 @@ const ColumnWrapper = styled.div`
   }
 `
 
+const Level = styled.div`
+  z-index: 1;
+`
+
 const Column = styled.div`
-  flex-grow: 1;
   margin-left: 20px;
 
   @media (max-width: 450px) {
@@ -53,12 +57,12 @@ const Description = styled.div`
   margin-top: ${rem(60)};
 
   @media (max-width: 750px) {
-    font-size: ${fontSizes[4]};
+    font-size: ${rem(36)};
     min-width: 100%;
     width: 100%;
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 450px) {
     font-size: ${rem(30)};
   }
 `
@@ -73,12 +77,12 @@ const Title = styled.h2`
 `
 
 const BackgroundImage = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 20px;
-  height: 65%;
+  height: 65vh;
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.7;
   user-select: none;
   pointer-events: none;
 
@@ -86,6 +90,13 @@ const BackgroundImage = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100% 0%;
+
+  z-index: -1;
+
+  @media (max-width: 850px) {
+    position: absolute;
+    opacity: 0.2;
+  }
 `
 
 const Link = styled.a`
@@ -97,35 +108,38 @@ const Cover = () => (
   <Container>
     <BackgroundImage/>
 
-    <Title>The Reactivate London Meetup</Title>
-    <ColumnWrapper>
-      <FirstColumn>
-        <CoverHeadline>
-          Dec
-          <br/>
-          6th
-        </CoverHeadline>
-      </FirstColumn>
-      <Column>
-        <Strip/>
-        <List>
-          <li>7pm - 8pm</li>
-          <li>(doors open 6pm)</li>
-          <li>Tuesday, December 6th</li>
-          <li>Trainline HQ</li>
-          <li>
-            <Link href="https://citymapper.com/go/gvab8p" target="_blank">
-              Floor 3, 120 Holborn, EC1N 2TD
-            </Link>
-          </li>
-        </List>
-      </Column>
-    </ColumnWrapper>
-    <Button>Join</Button>
-    <Description>
-      Join us for our first meetup with talks ranging from React all the way to JavaScript and Functional Programming.
-      Pizza and drinks on the house, of course!
-    </Description>
+    <Level>
+      <Title>The Reactivate London Meetup</Title>
+
+      <ColumnWrapper>
+        <FirstColumn>
+          <CoverHeadline>
+            Dec
+            <br/>
+            6th
+          </CoverHeadline>
+        </FirstColumn>
+        <Column>
+          <Strip/>
+          <List>
+            <li>7pm - 8pm</li>
+            <li>(doors open 6pm)</li>
+            <li>Tuesday, December 6th</li>
+            <li>Trainline HQ</li>
+            <li>
+              <Link href="https://citymapper.com/go/gvab8p" target="_blank">
+                Floor 3, 120 Holborn, EC1N 2TD
+              </Link>
+            </li>
+          </List>
+        </Column>
+      </ColumnWrapper>
+      <Button>Join</Button>
+      <Description>
+        Join us for our first meetup with talks ranging from React all the way to JavaScript and Functional Programming.
+        Pizza and drinks on the house, of course!
+      </Description>
+    </Level>
   </Container>
 )
 

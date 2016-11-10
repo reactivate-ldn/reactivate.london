@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import rem from '../../styles/rem'
 import { kevin } from '../../styles/colors'
 import { regularWeight, fontSizes } from '../../styles/fonts'
 
@@ -10,12 +11,6 @@ const OuterDot = styled.div`
   height: 51px;
   padding: 17px;
   z-index: 2;
-
-  @media (max-width: 450px) {
-    padding: 9px;
-    width: 31px;
-    height: 31px;
-  }
 `
 
 const InnerDot = styled.div`
@@ -23,11 +18,6 @@ const InnerDot = styled.div`
   border-radius: 50%;
   width: 17px;
   height: 17px;
-
-  @media (max-width: 450px) {
-    width: 13px;
-    height: 13px;
-  }
 `
 
 const Dot = () => (
@@ -38,17 +28,25 @@ const Dot = () => (
 
 const Item = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  flex-basis: 0;
-  flex-grow: 1;
+  height: ${rem(160)};
+`
+
+const ItemContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-left: ${rem(50)};
 `
 
 const ItemLabel = styled.h4`
   font-size: ${fontSizes[3]};
   font-weight: ${regularWeight};
-  text-align: center;
-  margin-bottom: 10px;
+  margin: 0;
 
   @media (max-width: 350px) {
     font-size: ${fontSizes[2]};
@@ -58,8 +56,7 @@ const ItemLabel = styled.h4`
 const ItemTime = styled.span`
   font-size: ${fontSizes[2]};
   font-weight: ${regularWeight};
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 0;
 
   @media (max-width: 350px) {
     font-size: ${fontSizes[1]};
@@ -68,9 +65,12 @@ const ItemTime = styled.span`
 
 const TimelineItem = ({ label, time }) => (
   <Item>
-    <ItemLabel>{label}</ItemLabel>
-    <ItemTime>{time}</ItemTime>
     <Dot/>
+
+    <ItemContent>
+      <ItemLabel>{label}</ItemLabel>
+      <ItemTime>{time}</ItemTime>
+    </ItemContent>
   </Item>
 )
 
