@@ -75,7 +75,7 @@ const Cover = () => (
   <Container>
     <BackgroundImage/>
 
-    <CoverH2>The Futuractive London Meetup</CoverH2>
+    <CoverH2>The Reactivate London Meetup</CoverH2>
     <ColumnWrapper>
       <FirstColumn>
         <CoverH1>Dec</CoverH1>

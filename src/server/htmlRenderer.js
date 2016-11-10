@@ -18,7 +18,7 @@ const renderHtml = (getBundle, appendHead) => {
     <!DOCTYPE html>
     <html lang="en">
       <head>
-        <title>Futuractive London</title>
+        <title>Reactivate London</title>
         <meta charset="UTF-8">
         <meta name="description" content="A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
