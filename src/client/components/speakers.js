@@ -37,6 +37,7 @@ const TalkContainer = styled(Card)`
   @media (max-width: 750px) {
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0 ${rem(15)} ${rem(45)};
   }
 `
 
@@ -47,6 +48,12 @@ const SlotContainer = styled(Slot)`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 ${rem(15)} ${rem(45)};
+  }
 `
 
 const SlotTitle = styled.h1`

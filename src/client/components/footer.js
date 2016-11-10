@@ -7,9 +7,22 @@ import { regularWeight, fontSizes, boldWeight } from '../styles/fonts'
 import { citymapper, white, black } from '../styles/colors';
 
 import Trainline from './svgs/trainline';
-import Container from './base/container';
 import Card from './base/card';
+import Train from './svgs/train'
 import { colorButton } from './base/button';
+
+const Container = styled.div`
+  margin-top: ${rem(50)};
+
+  @media (max-width: 900px) {
+    margin-top: ${rem(30)};
+  }
+`
+
+const TrainDecoration = styled(Train)`
+  width: ${rem(153)};
+  height: ${rem(83)};
+`
 
 const FooterCard = styled(Card)`
   width: ${rem(270)};
@@ -39,7 +52,6 @@ const FooterList = styled.ul`
 `;
 
 const FooterWrapper = styled.div`
-  margin-top: ${rem(70)};
   position: relative;
   height: ${rem(450)};
   max-height: ${rem(450)};
@@ -133,27 +145,31 @@ class Footer extends React.Component {
     const { initial } = this.state;
 
     return (
-      <FooterWrapper>
-        { !initial && this.renderMap() }
+      <Container>
+        <TrainDecoration/>
 
-        <Shadow/>
+        <FooterWrapper>
+          { !initial && this.renderMap() }
 
-        <FooterCard>
-          <Link href="https://thetrainline.com" target="_blank">
-            <TrainlineLogo/>
-          </Link>
+          <Shadow/>
 
-          <FooterList>
-            <li>3rd Floor</li>
-            <li>120 Holborn</li>
-            <li>EC1N 2TD London</li>
-          </FooterList>
+          <FooterCard>
+            <Link href="https://thetrainline.com" target="_blank">
+              <TrainlineLogo/>
+            </Link>
 
-          <CityMapper href="https://citymapper.com/go/gvab8p" target="_blank">
-            Get Directions
-          </CityMapper>
-        </FooterCard>
-      </FooterWrapper>
+            <FooterList>
+              <li>3rd Floor</li>
+              <li>120 Holborn</li>
+              <li>EC1N 2TD London</li>
+            </FooterList>
+
+            <CityMapper href="https://citymapper.com/go/gvab8p" target="_blank">
+              Get Directions
+            </CityMapper>
+          </FooterCard>
+        </FooterWrapper>
+      </Container>
     )
   }
 }

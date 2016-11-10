@@ -6,7 +6,6 @@ import { containerWidth } from '../../styles/dimensions'
 import rem from '../../styles/rem'
 
 import TimelineItem from './item'
-import Train from '../svgs/train'
 import Container from '../base/container'
 
 const Row = styled.div`
@@ -28,19 +27,6 @@ const Line = styled.div`
 
   @media (max-width: 1200px) {
     left: ${rem(29)};
-  }
-`
-
-const TrainDecoration = styled(Train)`
-  position: absolute;
-  bottom: 0;
-  left: ${rem(-20)};
-
-  width: ${rem(153)};
-  height: ${rem(83)};
-
-  @media (max-width: 450px) {
-    display: none;
   }
 `
 
