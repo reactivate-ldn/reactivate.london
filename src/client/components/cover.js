@@ -8,6 +8,7 @@ import { navy } from '../styles/colors'
 import Button from './base/button'
 import Strip from './base/strip'
 import Container from './base/container'
+import Headline from './base/headline'
 
 const ColumnWrapper = styled.div`
   display: flex;
@@ -52,18 +53,17 @@ const Description = styled.div`
   margin-top: ${rem(60)};
 
   @media (max-width: 750px) {
+    font-size: ${fontSizes[4]};
     min-width: 100%;
     width: 100%;
   }
 `
 
-const CoverH1 = styled.h1`
-  font-size: ${fontSizes[6]};
-  line-height: ${fontSizes[6]};
+const CoverHeadline = styled(Headline)`
   margin: 0;
 `
 
-const CoverH2 = styled.h2`
+const Title = styled.h2`
   max-width: ${rem(160)};
   color: ${navy.lighten(0.25)};
 `
@@ -93,11 +93,14 @@ const Cover = () => (
   <Container>
     <BackgroundImage/>
 
-    <CoverH2>The Reactivate London Meetup</CoverH2>
+    <Title>The Reactivate London Meetup</Title>
     <ColumnWrapper>
       <FirstColumn>
-        <CoverH1>Dec</CoverH1>
-        <CoverH1>6th</CoverH1>
+        <CoverHeadline>
+          Dec
+          <br/>
+          6th
+        </CoverHeadline>
       </FirstColumn>
       <Column>
         <Strip/>

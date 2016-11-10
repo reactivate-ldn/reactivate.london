@@ -5,17 +5,11 @@ import rem from '../styles/rem'
 import { mint, navy } from '../styles/colors'
 import { regularWeight, boldWeight, fontSizes } from '../styles/fonts'
 
+import Headline from './base/headline'
 import Strip from './base/strip'
 import Container from './base/container'
 import Card from './base/card'
 import Slot from './base/slot'
-
-const SpeakersH1 = styled.h1`
-  font-size: ${fontSizes[6]};
-  line-height: ${fontSizes[6]};
-  margin: 0;
-  margin-bottom: ${rem(25)};
-`
 
 const Row = styled.div`
   display: flex;
@@ -131,7 +125,7 @@ const data = [{
 
 const Speakers = () => (
   <Container>
-    <SpeakersH1>Speakers</SpeakersH1>
+    <Headline>Speakers</Headline>
     <Strip/>
 
     <Row>
