@@ -6,6 +6,7 @@ import { insetShadow, shallowShadow } from '../../styles/shadows'
 import { regularWeight, fontSizes, boldWeight } from '../../styles/fonts'
 import { citymapper, white, black } from '../../styles/colors';
 
+import NoScript from './noScript';
 import Map from './map';
 import Trainline from '../svgs/trainline';
 import Card from '../base/card';
@@ -119,6 +120,7 @@ const Footer = () => (
     </Note>
 
     <FooterWrapper>
+      <NoScript/>
       <Map/>
       <Shadow/>
 
