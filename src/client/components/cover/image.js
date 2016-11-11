@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import rem from '../../styles/rem'
+
 const BackgroundImage = styled.div`
   position: fixed;
-  right: 0px;
-  top: 20px;
+  top: ${rem(20)};
   height: 65vh;
-  width: 100%;
+  width: 65vh;
+  right: -30vh;
   opacity: 0.7;
   user-select: none;
   pointer-events: none;
 
-  background-image: url('/static/Logo.png');
+  background-image: url('/static/Logo.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100% 0%;
@@ -20,6 +22,8 @@ const BackgroundImage = styled.div`
 
   @media (max-width: 850px) {
     height: 80vw;
+    width: 80vw;
+    right: -37vw;
     position: absolute;
     opacity: 0.2;
   }
