@@ -8,6 +8,7 @@ const Container = styled.div`
   max-width: ${containerWidth};
   margin: 0 auto;
   padding: ${rem(48)} ${rem(40)};
+  overflow: hidden;
 `
 
 export default Container

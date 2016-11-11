@@ -8,7 +8,7 @@ const BackgroundImage = styled.div`
   top: ${rem(20)};
   height: 65vh;
   width: 65vh;
-  right: -30vh;
+  right: 0;
   opacity: 0.7;
   user-select: none;
   pointer-events: none;
@@ -16,16 +16,17 @@ const BackgroundImage = styled.div`
   background-image: url('/static/Logo.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 100% 0%;
+  background-position: right -30vh top;
 
   z-index: -1;
 
   @media (max-width: 850px) {
     height: 80vw;
     width: 80vw;
-    right: -37vw;
+    right: 0;
     position: absolute;
     opacity: 0.2;
+    background-position: right -37vw top;
   }
 `
 
