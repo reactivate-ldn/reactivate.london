@@ -2,6 +2,8 @@ import 'sanitize.css/sanitize.css'
 import './main.css'
 
 if (typeof document === 'object') {
+  require('native-promise-only')
+
   if (process.env.NODE_ENV === 'production') {
     require('./entry/prod')
   } else {
