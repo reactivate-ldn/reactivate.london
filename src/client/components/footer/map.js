@@ -6,8 +6,6 @@ import rem from '../../styles/rem'
 import { shallowShadow } from '../../styles/shadows'
 import { white } from '../../styles/colors'
 
-const GM_API_KEY = process.env.GM_API_KEY
-
 const location = {
   lat: 51.51801416452366,
   lng: -0.10818421840667725
@@ -37,8 +35,8 @@ const EmojiPin = styled.div`
 
 const Map = () => (
   <GoogleMap
-    bootstrapURLKeys={GM_API_KEY && {
-      key: GM_API_KEY,
+    bootstrapURLKeys={{
+      key: 'AIzaSyAgnAH4amOrLwhrLibp4-5xaxguOS0dTo0',
       language: 'en'
     }}
     options={createMapOptions}
