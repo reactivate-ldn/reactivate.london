@@ -27,7 +27,7 @@ const Cover = () => (
     <Level>
       <Title>The Reactivate London Meetup</Title>
       <Header/>
-      <Button href="https://www.meetup.com/Reactivate-London/" target="_blank">
+      <Button href="https://www.meetup.com/Reactivate-London/events/235510096/" target="_blank">
         Join
       </Button>
       <Description/>
