@@ -154,7 +154,7 @@ const data = [
     link: 'https://twitter.com/sericaia',
     name: 'Daniela Borges',
     title: 'React Fiber',
-    text: 'React Fiber is an experiment that aims to be the next version of React. This talk will explain what are the main differences and what the React team is doing to push this forward.'
+    text: 'React Fiber is an experiment that aims to be the next version of React. This talk will explain what the main differences are and what the React team is doing to push this forward.'
   },
   {
     tba: true
