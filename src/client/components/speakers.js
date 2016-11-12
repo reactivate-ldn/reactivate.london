@@ -148,13 +148,21 @@ const Talk = ({ avatar, name, title, text, link }) => (
  * [tba]
  * [free]
  */
-const data = [{
-  tba: true
-}, {
-  free: true
-}, {
-  free: true
-}]
+const data = [
+  {
+    avatar: '/static/Daniela.png',
+    link: 'https://twitter.com/sericaia',
+    name: 'Daniela Borges',
+    title: 'React Fiber',
+    text: 'React Fiber is an experiment that aims to be the next version of React. This talk will explain what are the main differences and what the React team is doing to push this forward.'
+  },
+  {
+    tba: true
+  },
+  {
+    free: true
+  }
+]
 
 const Speakers = () => (
   <Container>
