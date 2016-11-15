@@ -152,7 +152,7 @@ const data = [
   {
     avatar: '/static/Daniela.png',
     link: 'https://twitter.com/sericaia',
-    name: 'Daniela Borges',
+    name: 'Daniela Matos de Carvalho',
     title: 'React Fiber',
     text: 'React Fiber is an ongoing reimplementation of React\'s core algorithm. It is the culmination of over two years of research by the React team. This talk will explain what the main differences are and what the React team is doing to push this forward.'
   },
