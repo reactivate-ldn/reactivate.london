@@ -44,6 +44,7 @@ const renderHtml = (getBundle, appendHead) => {
         <meta name="keywords" content="reactivate,london,meetup,react,javascript,frp">
         <meta name="application-name" content="Reactivate London">
 
+        <meta name="google-site-verification" content="fMwqZHVwcAuZ-QKtiRCQmsvLMkVhj54P9fTS9yfh7oM"/>
         <script type="application/ld+json">${eventDataType}</script>
 
         ${appendHead}
