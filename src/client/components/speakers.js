@@ -117,7 +117,6 @@ const Link = styled.a`
   color: inherit;
   text-decoration: underline;
 `
-
 const Talk = ({ avatar, name, title, text, link }) => (
   <TalkContainer>
     <Avatar src={avatar}/>
@@ -150,14 +149,18 @@ const Talk = ({ avatar, name, title, text, link }) => (
  */
 const data = [
   {
-    avatar: '/static/Daniela.png',
+    avatar: '/static/Daniela.jpg',
     link: 'https://twitter.com/sericaia',
     name: 'Daniela Matos de Carvalho',
     title: 'React Fiber',
     text: 'React Fiber is an ongoing reimplementation of React\'s core algorithm. It is the culmination of over two years of research by the React team. This talk will explain what the main differences are and what the React team is doing to push this forward.'
   },
   {
-    tba: true
+    avatar: '/static/Shaun.jpg',
+    link: 'https://twitter.com/shaundunne',
+    name: 'Shaun Dunne',
+    title: 'The Open Metaverse: VR for the Web',
+    text: 'Unless you\'ve been hiding under a rock for the past few years you\'ve probably heard of VR. This is a talk about WebVR. Yes. VR on the Web, in your browser. Not only is it awesome to experience, it\'s fun and easy to experiment with and has a vast ecosystem already.'
   },
   {
     free: true
