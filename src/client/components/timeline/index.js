@@ -47,7 +47,7 @@ const data = [{
   time: '7:15 PM'
 }, {
   label: 'Mingling',
-  time: '8 PM'
+  time: '8:45 PM'
 }]
 
 const Timeline = () => (
