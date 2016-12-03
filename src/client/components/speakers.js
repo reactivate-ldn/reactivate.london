@@ -163,7 +163,11 @@ const data = [
     text: 'Unless you\'ve been hiding under a rock for the past few years you\'ve probably heard of VR. This is a talk about WebVR. Yes. VR on the Web, in your browser. Not only is it awesome to experience, it\'s fun and easy to experiment with and has a vast ecosystem already.'
   },
   {
-    free: true
+    avatar: '/static/Federico.jpg',
+    link: 'https://twitter.com/framp',
+    name: 'Federico Rampazzo',
+    title: 'Understanding Monads',
+    text: 'Do you want to take your functional programming to the next level? Buckle up then, this talks is going to be a journey through the Fantasyland of Algebraic Data Structures. Never ask yourself how to implement and use Setoids, Functors or Monads again.'
   }
 ]
 
