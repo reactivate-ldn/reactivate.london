@@ -2,6 +2,9 @@ import { config } from 'dotenv'
 import { readFileSync, watchFile } from 'fs'
 import express from 'express'
 import { join } from 'path'
+import { createMemoryHistory, match, RouterContext } from 'react-router';
+import { createStore } from 'redux';
+
 import webpackMiddleware from 'webpack-dev-middleware'
 import hotMiddleware from 'webpack-hot-middleware'
 import webpackConfig from '../../webpack.config'
@@ -98,7 +101,14 @@ if (PRODUCTION) {
   })
 }
 
-const respondWithPage = res => res.status(200).send(renderHtml(global.getBundle, head))
+const respondWithPage = res => {
+    const memoryHistory = createMemoryHistory(req.originalUrl);
+    const store = createStore(state => state);
+    match({}, (error, redirectLocation, renderProps) => {
+      return res.status(200).send(renderHtml(global.getBundle, head));
+    });
+  // return res.status(200).send(renderHtml(global.getBundle, head))
+}
 const respondWithStatic = res => res.status(200).send(noRenderer(head))
 const respondWithError = (res, error) => res.status(500).send(renderError(error))
 
