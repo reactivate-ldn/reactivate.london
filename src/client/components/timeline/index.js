@@ -38,16 +38,16 @@ const TrainTrack = () => (
 
 const data = [{
   label: 'Doors Opening',
-  time: '6 PM'
+  time: '6:15 PM'
 }, {
   label: 'Kickoff',
-  time: '7 PM'
+  time: '6:45 PM'
 }, {
-  label: 'Talks',
-  time: '7:15 PM'
+  label: 'Talks with small breaks',
+  time: '6:50 PM'
 }, {
   label: 'Mingling',
-  time: '8:45 PM'
+  time: '8:20 PM'
 }]
 
 const Timeline = () => (

@@ -15,17 +15,31 @@ const Level = styled.div`
   z-index: 1;
 `
 
+const TitleWrapper = styled.div`
+  display: flex
+`
+
 const Title = styled.h2`
   max-width: ${rem(160)};
+  color: ${navy.lighten(0.25)};
+`
+
+const Edition = styled.h1`
+  font-size: ${rem(64)};
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
   color: ${navy.lighten(0.25)};
 `
 
 const Cover = () => (
   <Container>
     <BackgroundImage/>
-
     <Level>
-      <Title>The Reactivate London Meetup</Title>
+      <TitleWrapper>
+        <Title>The Reactivate London Meetup</Title>
+        <Edition>#2</Edition>
+      </TitleWrapper>
       <Header/>
       <Button href="https://www.meetup.com/Reactivate-London/events/235510096/" target="_blank">
         Join
