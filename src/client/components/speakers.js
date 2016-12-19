@@ -149,25 +149,14 @@ const Talk = ({ avatar, name, title, text, link }) => (
  */
 const data = [
   {
-    avatar: '/static/Daniela.jpg',
-    link: 'https://twitter.com/sericaia',
-    name: 'Daniela Matos de Carvalho',
-    title: 'React Fiber',
-    text: 'React Fiber is an ongoing reimplementation of React\'s core algorithm. It is the culmination of over two years of research by the React team. This talk will explain what the main differences are and what the React team is doing to push this forward.'
+    tba: true
   },
   {
-    avatar: '/static/Shaun.jpg',
-    link: 'https://twitter.com/shaundunne',
-    name: 'Shaun Dunne',
-    title: 'The Open Metaverse: VR for the Web',
-    text: 'Unless you\'ve been hiding under a rock for the past few years you\'ve probably heard of VR. This is a talk about WebVR. Yes. VR on the Web, in your browser. Not only is it awesome to experience, it\'s fun and easy to experiment with and has a vast ecosystem already.'
+    free: true
   },
   {
-    avatar: '/static/Federico.jpg',
-    link: 'https://twitter.com/framp',
-    name: 'Federico Rampazzo',
-    title: 'Understanding Monads',
-    text: 'Do you want to take your functional programming to the next level? Buckle up then, this talks is going to be a journey through the Fantasyland of Algebraic Data Structures. Never ask yourself how to implement and use Setoids, Functors or Monads again.'
+    free: true,
+    lightning: true
   }
 ]
 
@@ -186,19 +175,35 @@ const Speakers = () => (
     <Row>
       {
         data.map((item, key) => {
-          if (item.free) {
+          if (item.free && !item.lightning) {
             return (
               <SlotContainer key={key}>
                 <SlotTitle>?</SlotTitle>
                 <SlotText>
-                  Are you interested in speaking? This slot could be yours!
+                  Are you interested in speaking ? This slot could be yours!
                 </SlotText>
                 <SubmitTalk href="https://www.papercall.io/reactivate-london" target="_blank">
                   Submit your talk
                 </SubmitTalk>
               </SlotContainer>
             )
-          } else if (item.tba) {
+          }
+
+          if (item.free && item.lightning) {
+            return (
+              <SlotContainer key={key}>
+                <SlotTitle>?</SlotTitle>
+                <SlotText>
+                  Are you interested in speaking ? This lightning talk slot could be yours
+                </SlotText>
+                <SubmitTalk href="https://www.papercall.io/reactivate-london" target="_blank">
+                  Submit your talk
+                </SubmitTalk>
+              </SlotContainer>
+            )
+          }
+
+          if (item.tba) {
             return (
               <SlotContainer key={key}>
                 <SlotTitle>TBA</SlotTitle>
