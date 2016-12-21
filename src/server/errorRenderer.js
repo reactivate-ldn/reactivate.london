@@ -1,11 +1,11 @@
-import { createElement } from 'react'
+import React from 'react'
 import { RedBoxError } from 'redbox-react'
 import { renderToString } from 'react-dom/server'
 
 const renderError = error => {
   let html
   try {
-    html = renderToString(createElement(RedBoxError, { error }))
+    html = renderToString(<RedBoxError error={error}/>)
   } catch(err) {
     throw new Error(err)
   }

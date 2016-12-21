@@ -1,4 +1,4 @@
-import { createElement } from 'react'
+import React from 'react'
 import { renderToString } from 'react-dom/server'
 
 const eventDataType = JSON.stringify([{
@@ -16,12 +16,10 @@ const eventDataType = JSON.stringify([{
   endDate: '2016-12-06T20:45:00.000Z'
 }])
 
-const renderHtml = (getBundle, appendHead) => {
-  const { App, StyleSheet } = getBundle()
-
+const createHtmlRenderer = ({ StyleSheet }, element) => {
   let html
   try {
-    html = renderToString(createElement(App))
+    html = renderToString(element)
   } catch(err) {
     console.error('Error on renderToString:', err)
     throw new Error(err)
@@ -29,7 +27,7 @@ const renderHtml = (getBundle, appendHead) => {
 
   const css = StyleSheet.rules().map(rule => rule.cssText).join('\n')
 
-  return `
+  return head => `
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -47,7 +45,7 @@ const renderHtml = (getBundle, appendHead) => {
         <meta name="google-site-verification" content="fMwqZHVwcAuZ-QKtiRCQmsvLMkVhj54P9fTS9yfh7oM"/>
         <script type="application/ld+json">${eventDataType}</script>
 
-        ${appendHead}
+        ${head}
         <style type="text/css">${css}</style>
       </head>
       <body>
@@ -58,4 +56,4 @@ const renderHtml = (getBundle, appendHead) => {
   `
 }
 
-export default renderHtml
+export default createHtmlRenderer

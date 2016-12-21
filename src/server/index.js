@@ -2,16 +2,16 @@ import { config } from 'dotenv'
 import { readFileSync, watchFile } from 'fs'
 import express from 'express'
 import { join } from 'path'
+
+import webpack from 'webpack'
+import webpackConfig from '../../webpack.config'
 import webpackMiddleware from 'webpack-dev-middleware'
 import hotMiddleware from 'webpack-hot-middleware'
-import webpackConfig from '../../webpack.config'
-import webpack from 'webpack'
-import renderHtml from './htmlRenderer'
-import renderError from './errorRenderer'
-import noRenderer from './noRenderer'
 import DiskPlugin from 'webpack-disk-plugin'
 
-import { createElement } from 'react'
+import renderError from './errorRenderer'
+import noRenderer from './noRenderer'
+import renderRoute from './router'
 
 config({ silent: true }) // dotenv
 
@@ -98,7 +98,11 @@ if (PRODUCTION) {
   })
 }
 
-const respondWithPage = res => res.status(200).send(renderHtml(global.getBundle, head))
+const respondWithPage = (req, res) => {
+  const { html, code } = renderHtml(req, global.getBundle, head)
+  res.status(200).send(html)
+}
+
 const respondWithStatic = res => res.status(200).send(noRenderer(head))
 const respondWithError = (res, error) => res.status(500).send(renderError(error))
 
@@ -109,7 +113,8 @@ app.get('*', (req, res) => {
 
   (bundleValid || Promise.resolve())
     .then(() => {
-      respondWithPage(res)
+      const bundle = global.getBundle()
+      renderRoute(bundle, head)(req, res)
     })
     .catch(err => {
       try {

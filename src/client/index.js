@@ -24,9 +24,9 @@ if (typeof document === 'object') {
 } else if (typeof global === 'object') {
   global.getBundle = function getBundle() {
     const StyleSheet = require('styled-components-stylesheet')
-    const App = require('./containers/app').default
+    const Routes = require('./routes').default
 
-    return { App, StyleSheet }
+    return { Routes, StyleSheet }
   }
 }
 
