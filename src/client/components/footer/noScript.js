@@ -19,15 +19,5 @@ const ReplacementMap = styled.div`
   background-image: url('/static/Map.jpg');
 `
 
-const NoScript = () => {
-  if (typeof window === 'undefined') {
-    return (
-      <ReplacementMap key="noscript"/>
-    )
-  }
-
-  return <div key="noscript"/>
-}
-
-export default NoScript
+export default ReplacementMap
 
