@@ -85,6 +85,9 @@ module.exports = {
   module: {
     rules: rules
   },
+  performance: {
+    hints: PRODUCTION ? 'warning' : false
+  },
   output: {
     path: path.join(__dirname, 'static'),
     filename: 'bundle.js',
