@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { navy } from '../../styles/colors'
 
-const ReplacementMap = styled.noscript`
+const ReplacementMap = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -19,11 +19,15 @@ const ReplacementMap = styled.noscript`
   background-image: url('/static/Map.jpg');
 `
 
-const NoScript = () => (
-  <noscript>
-    <ReplacementMap/>
-  </noscript>
-)
+const NoScript = () => {
+  if (typeof window === 'undefined') {
+    return (
+      <ReplacementMap key="noscript"/>
+    )
+  }
+
+  return <div key="noscript"/>
+}
 
 export default NoScript
 
