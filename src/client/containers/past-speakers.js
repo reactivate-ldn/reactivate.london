@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Headline from '../components/base/headline'
+import SubHeadline from '../components/base/subheadline'
 import Strip from '../components/base/strip'
 import Container from '../components/base/container'
 
@@ -16,13 +17,21 @@ export default class PastSpeakers extends Component {
         <Headline>Past Speakers</Headline>
         <Strip/>
 
-        <Row>
-          {
-            pastSpeakersData.map((item, key) => (
-              <Talk {...item} key={key}/>
-            ))
-          }
-        </Row>
+        {
+          pastSpeakersData.map(({ title, talks }, i) => (
+            <div key={i}>
+              <SubHeadline>{title}</SubHeadline>
+
+              <Row>
+                {
+                  talks.map((talk, j) => (
+                    <Talk {...talk} key={j}/>
+                  ))
+                }
+              </Row>
+            </div>
+          ))
+        }
       </Container>
     )
   }
