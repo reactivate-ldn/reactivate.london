@@ -15,11 +15,11 @@ const TitleLink = styled(Link)`
   text-decoration-color: ${navy.lighten(0.25)};
 `
 
-const Title = ({ isLink }) => {
-  const text = (
-    <TitleText>The Reactivate London Meetup</TitleText>
-  )
+const text = (
+  <TitleText>The Reactivate London Meetup</TitleText>
+)
 
+const Title = ({ isLink }) => {
   if (isLink) {
     return (
       <TitleLink href="/">
