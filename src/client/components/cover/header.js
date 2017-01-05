@@ -6,6 +6,7 @@ import { fontSizes, regularWeight } from '../../styles/fonts'
 
 import Strip from '../base/strip'
 import Headline from '../base/headline'
+import Link from '../base/link'
 
 const ColumnWrapper = styled.div`
   position: relative;
@@ -40,11 +41,6 @@ const List = styled.ul`
   list-style-type: none;
   line-height: 1.4;
   padding: 0;
-`
-
-const Link = styled.a`
-  text-decoration: underline;
-  color: inherit;
 `
 
 const CoverHeadline = styled(Headline)`

@@ -63,6 +63,9 @@ var rules = [{
 }, {
   test: /\.svg$/,
   loader: 'svg-inline-loader'
+}, {
+  test: /\.json$/,
+  loader: 'json-loader'
 }]
 
 module.exports = {

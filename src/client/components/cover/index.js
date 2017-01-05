@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import rem from '../../styles/rem'
 import { navy } from '../../styles/colors'
 
+import Container from '../base/container'
 import Button from '../base/button'
 import Strip from '../base/strip'
-import Container from '../base/container'
+import Title from './title'
 import Header from './header'
 import Description from './description'
 import BackgroundImage from './image'
@@ -16,12 +17,7 @@ const Level = styled.div`
 `
 
 const TitleWrapper = styled.div`
-  display: flex
-`
-
-const Title = styled.h2`
-  max-width: ${rem(160)};
-  color: ${navy.lighten(0.25)};
+  display: flex;
 `
 
 const Edition = styled.h1`
@@ -37,7 +33,7 @@ const Cover = () => (
     <BackgroundImage/>
     <Level>
       <TitleWrapper>
-        <Title>The Reactivate London Meetup</Title>
+        <Title/>
         <Edition>#2</Edition>
       </TitleWrapper>
       <Header/>
