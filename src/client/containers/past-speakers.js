@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import Title from '../components/cover/title'
 import Headline from '../components/base/headline'
 import SubHeadline from '../components/base/subheadline'
 import Strip from '../components/base/strip'
@@ -14,6 +15,8 @@ export default class PastSpeakers extends Component {
   render() {
     return (
       <Container>
+        <Title isLink/>
+
         <Headline>Past Speakers</Headline>
         <Strip/>
 
