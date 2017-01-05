@@ -8,7 +8,7 @@ const SpeakersItem = ({ free, lightning, tba, ...talk }) => {
     return (
       <Slot title="?" hasSubmit>
         {
-          `Are you interested in speaking ? This ${lightning ? 'lightning talk' : ''} slot could be yours!`
+          `Are you interested in speaking? This ${lightning ? 'lightning talk' : ''} slot could be yours!`
         }
       </Slot>
     )
