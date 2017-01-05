@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import SmallButton from '../base/small-button'
 import Headline from '../base/headline'
 import Strip from '../base/strip'
 import Container from '../base/container'
@@ -24,6 +25,10 @@ const Speakers = () => (
         ))
       }
     </Row>
+
+    <SmallButton href="/past-speakers">
+      See our past speakers
+    </SmallButton>
   </Container>
 )
 
