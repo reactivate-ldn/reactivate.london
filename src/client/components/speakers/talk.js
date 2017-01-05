@@ -45,8 +45,6 @@ const Text = styled.p`
   margin: 0;
 `
 
-
-
 const Talk = ({ avatar, name, title, text, link }) => (
   <TalkContainer>
     <Avatar src={avatar}/>
