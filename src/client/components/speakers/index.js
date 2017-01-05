@@ -9,27 +9,7 @@ import Contact from './contact'
 import Row from './row'
 import SpeakersItem from './item'
 
-/*
- * avatar: url
- * link: url
- * name,
- * title,
- * text
- * [tba]
- * [free]
- */
-const data = [
-  {
-    tba: true
-  },
-  {
-    free: true
-  },
-  {
-    free: true,
-    lightning: true
-  }
-]
+import speakersData from '../../../assets/speakers.json'
 
 const Speakers = () => (
   <Container>
@@ -39,7 +19,7 @@ const Speakers = () => (
 
     <Row>
       {
-        data.map((item, key) => (
+        speakersData.map((item, key) => (
           <SpeakersItem {...item} key={key}/>
         ))
       }
