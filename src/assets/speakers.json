@@ -1,12 +1,22 @@
 [
   {
-    "tba": true
+    "avatar": "/static/Max.jpg",
+    "link": "https://twitter.com/mxstbr",
+    "name": "Max Stoiber",
+    "title": "Styled Components",
+    "text": "...",
+    "lightning": true
   },
   {
-    "free": true
+    "avatar": "/static/Ken.jpg",
+    "link": "https://twitter.com/ken_wheeler",
+    "name": "Ken Wheeler",
+    "title": "TBD",
+    "text": "...",
+    "lightning": true
   },
   {
-    "free": true,
+    "tba": true,
     "lightning": true
   }
 ]

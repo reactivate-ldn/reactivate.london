@@ -16,7 +16,9 @@ const TitleLink = styled(Link)`
 `
 
 const text = (
-  <TitleText>The Reactivate London Meetup</TitleText>
+  <TitleText>
+    The Reactivate London Meetup
+  </TitleText>
 )
 
 const Title = ({ isLink }) => {

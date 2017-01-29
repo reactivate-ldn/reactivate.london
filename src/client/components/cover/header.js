@@ -51,15 +51,17 @@ const Header = () => (
   <ColumnWrapper>
     <FirstColumn>
       <CoverHeadline>
-        TBA
+        Mar
+        <br/>
+        27th
       </CoverHeadline>
     </FirstColumn>
     <Column>
       <Strip/>
       <List>
-        <li>6:50pm - 8:20pm</li>
+        <li>6:45pm - 9:30pm</li>
         <li>(doors open 6:15pm)</li>
-        <li>February, to be announced</li>
+        <li>Monday, March 27th</li>
         <li>Trainline HQ</li>
         <li>
           <Link href="https://citymapper.com/go/gvab8p" target="_blank">
