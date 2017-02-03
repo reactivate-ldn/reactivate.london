@@ -37,7 +37,7 @@ const Cover = () => (
         {/* <Edition>#2</Edition> */}
       </TitleWrapper>
       <Header/>
-      <Button href="https://www.meetup.com/Reactivate-London/" target="_blank">
+      <Button href="https://www.meetup.com/Reactivate-London/events/237188997/" target="_blank">
         Join
       </Button>
       <Description/>
