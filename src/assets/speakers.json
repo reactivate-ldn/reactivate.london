@@ -14,9 +14,5 @@
     "title": "Spectacle",
     "text": "In this lightning talk Ken is going to show you the awesome Spectacle library for building presentations in React. Furthermore he's going to talk about things that were introduced in the latest version, and things to come.",
     "lightning": true
-  },
-  {
-    "tba": true,
-    "lightning": true
   }
 ]
