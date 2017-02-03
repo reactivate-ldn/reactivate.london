@@ -22,7 +22,7 @@ const Line = styled.div`
   bottom: ${rem(80)};
   width: 3px;
   margin-left: -1px;
-  background: ${slate};
+  background: ${slate.toString()};
   z-index: 1;
 
   @media (max-width: 1200px) {

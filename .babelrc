@@ -1,19 +1,20 @@
 {
   "presets": [
-    "babel-preset-philpl"
+    "babel-preset-react-app"
   ],
   "ignore": [
     "/node_modules/"
   ],
   "plugins": [
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    ["styled-components", {
+      "displayName": false,
+      "ssr": true,
+      "minify": true,
+      "transpileTemplateLiterals": true
+    }]
   ],
   "env": {
-    "commonjs": {
-      "plugins": [
-        "transform-es2015-modules-commonjs"
-      ]
-    },
     "production": {
       "plugins": [
         "transform-react-remove-prop-types",

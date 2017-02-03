@@ -16,7 +16,7 @@ const eventDataType = JSON.stringify([{
   endDate: '2016-12-06T20:45:00.000Z'
 }])
 
-const createHtmlRenderer = ({ StyleSheet }, element) => {
+const createHtmlRenderer = ({ styleSheet }, element) => {
   let html
   try {
     html = renderToString(element)
@@ -25,7 +25,7 @@ const createHtmlRenderer = ({ StyleSheet }, element) => {
     throw new Error(err)
   }
 
-  const css = StyleSheet.rules().map(rule => rule.cssText).join('\n')
+  const css = styleSheet.getCSS()
 
   return head => `
     <!DOCTYPE html>

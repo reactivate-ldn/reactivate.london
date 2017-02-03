@@ -100,7 +100,7 @@ const Note = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  color: ${white.opacity(.5)};
+  color: ${white.opacity(.5).toString()};
 
   > span {
     margin: 0 ${rem(30)} ${rem(10)};

@@ -5,10 +5,10 @@ import createHtmlRenderer from './htmlRenderer'
 import renderError from './errorRenderer'
 
 const renderRoute = (bundle, head) => (req, res) => {
-  const { Routes } = bundle
+  const { routes } = bundle
 
   match({
-    routes: Routes,
+    routes,
     location: req.url
   }, (error, redirectLocation, renderProps) => {
     if (error) {

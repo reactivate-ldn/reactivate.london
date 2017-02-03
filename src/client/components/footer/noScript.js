@@ -15,7 +15,7 @@ const ReplacementMap = styled.div`
 
   background-size: cover;
   background-position: center;
-  background-color: ${navy};
+  background-color: ${navy.toString()};
   background-image: url('/static/Map.jpg');
 `
 

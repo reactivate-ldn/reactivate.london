@@ -5,7 +5,7 @@ import { kevin } from '../../styles/colors'
 import { regularWeight, fontSizes } from '../../styles/fonts'
 
 const OuterDot = styled.div`
-  background: ${kevin.opacity(.2)};
+  background: ${kevin.opacity(.2).toString()};
   border-radius: 50%;
   width: 51px;
   height: 51px;
@@ -14,7 +14,7 @@ const OuterDot = styled.div`
 `
 
 const InnerDot = styled.div`
-  background: ${kevin};
+  background: ${kevin.toString()};
   border-radius: 50%;
   width: 17px;
   height: 17px;

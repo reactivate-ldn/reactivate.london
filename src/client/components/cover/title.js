@@ -12,7 +12,7 @@ const TitleText = styled(SubHeadline)`
 `
 
 const TitleLink = styled(Link)`
-  text-decoration-color: ${navy.lighten(0.25)};
+  text-decoration-color: ${navy.lighten(0.25).toString()};
 `
 
 const text = (

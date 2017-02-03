@@ -28,7 +28,7 @@ const SlotTitle = styled.h1`
 `
 
 const SlotText = styled.h4`
-  color: ${white.opacity(.75)};
+  color: ${white.opacity(.75).toString()};
   font-size: ${fontSizes[3]};
   font-weight: ${regularWeight};
   text-align: center;

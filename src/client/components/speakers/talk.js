@@ -28,14 +28,14 @@ const Name = styled.a`
   font-size: ${fontSizes[3]};
   font-weight: ${boldWeight};
   text-decoration: underline;
-  color: ${mint};
+  color: ${mint.toString()};
   margin: 0;
   margin-bottom: ${rem(9)};
 `
 
 const Title = styled.h5`
   font-size: ${fontSizes[2]};
-  color: ${navy};
+  color: ${navy.toString()};
   margin: 0;
   margin-bottom: ${rem(9)};
 `

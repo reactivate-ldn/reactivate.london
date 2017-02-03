@@ -25,7 +25,7 @@ const Edition = styled.h1`
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 10px;
-  color: ${navy.lighten(0.25)};
+  color: ${navy.lighten(0.25).toString()};
 `
 
 const Cover = () => (

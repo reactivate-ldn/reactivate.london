@@ -7,7 +7,7 @@ EXPOSE 80
 WORKDIR /home
 
 ADD package.json yarn.lock /home/
-RUN yarn install --pure-lockfile --ignore-optional --no-emoji
+RUN yarn install --pure-lockfile --no-emoji
 
 ADD . /home/
 

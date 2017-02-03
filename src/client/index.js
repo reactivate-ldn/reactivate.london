@@ -23,10 +23,10 @@ if (typeof document === 'object') {
   }
 } else if (typeof global === 'object') {
   global.getBundle = function getBundle() {
-    const StyleSheet = require('styled-components-stylesheet')
-    const Routes = require('./routes').default
+    const styleSheet = require('styled-components').styleSheet
+    const routes = require('./routes').default
 
-    return { Routes, StyleSheet }
+    return { routes, styleSheet }
   }
 }
 
