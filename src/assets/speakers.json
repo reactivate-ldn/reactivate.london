@@ -4,15 +4,15 @@
     "link": "https://twitter.com/mxstbr",
     "name": "Max Stoiber",
     "title": "Styled Components",
-    "text": "...",
+    "text": "In this lightning talk you're going to get a quick introduction to styled components, a new way of doing CSS in JS for React, and what you can expect from it in the next iterations.",
     "lightning": true
   },
   {
     "avatar": "/static/Ken.jpg",
     "link": "https://twitter.com/ken_wheeler",
     "name": "Ken Wheeler",
-    "title": "TBD",
-    "text": "...",
+    "title": "Spectacle",
+    "text": "In this lightning talk Ken is going to show you the awesome Spectacle library for building presentations in React. Furthermore he's going to talk about things that were introduced in the latest version, and things to come.",
     "lightning": true
   },
   {
