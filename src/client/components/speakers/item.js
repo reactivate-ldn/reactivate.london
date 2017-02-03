@@ -2,8 +2,13 @@ import React from 'react'
 
 import Slot from './slot'
 import Talk from './talk'
+import Empty from './emptySlot'
 
-const SpeakersItem = ({ free, lightning, tba, ...talk }) => {
+const SpeakersItem = ({ empty, free, lightning, tba, ...talk }) => {
+  if (empty) {
+    return <Empty/>
+  }
+
   if (free) {
     return (
       <Slot title="?" hasSubmit>
