@@ -12,6 +12,8 @@ import SpeakersItem from './item'
 
 import speakersData from '../../../assets/speakers.json'
 
+const _speakersData = [0, 1, 2].map(i => speakersData[i])
+
 const Speakers = () => (
   <Container>
     <Headline>Speakers</Headline>
@@ -20,8 +22,10 @@ const Speakers = () => (
 
     <Row>
       {
-        speakersData.map((item, key) => (
+        _speakersData.map((item, key) => item ? (
           <SpeakersItem {...item} key={key}/>
+        ) : (
+          <SpeakersItem empty key={key}/>
         ))
       }
     </Row>
