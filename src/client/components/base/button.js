@@ -24,7 +24,7 @@ const Button = styled.a`
   vertical-align: middle;
   text-decoration: none;
 
-  border-bottom: 3px solid ${ivy};
+  border-bottom: 3px solid ${ivy.toString()};
   border-radius: ${borderRadius};
   box-shadow: ${shallowShadow};
   user-select: none;
