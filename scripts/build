@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if [ "$NODE_ENV" = "production" ]; then
+  BABEL_ENV="production"
+else
+  BABEL_ENV="development"
+fi
+
+echo "Build Assets..."
+yarn run build:assets > /dev/null
+
+echo "Build Server..."
+yarn run build:server > /dev/null
+
+echo "Build Client..."
+yarn run build:client > /dev/null
+
