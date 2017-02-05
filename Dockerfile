@@ -9,5 +9,6 @@ RUN yarn install --pure-lockfile --no-emoji
 ADD . /home/
 
 RUN yarn run build:production
+ENV NODE_ENV production
 CMD ["node", "./lib/server/index.js"]
 
