@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "goethe": "^2.0.0",
-    "google-map-react": "^0.21.3",
+    "google-map-react": "^0.22.3",
     "native-promise-only": "^0.8.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

@@ -2187,9 +2187,9 @@ goethe@^2.0.0:
   optionalDependencies:
     colors.css "^2.3.0"
 
-google-map-react@^0.21.3:
-  version "0.21.5"
-  resolved "https://registry.yarnpkg.com/google-map-react/-/google-map-react-0.21.5.tgz#fd5673942bc59c1257acd90b1880d5db1af04ad9"
+google-map-react@^0.22.3:
+  version "0.22.3"
+  resolved "https://registry.yarnpkg.com/google-map-react/-/google-map-react-0.22.3.tgz#8a62a6be8137cdb5b330171a7ff77306a2412556"
   dependencies:
     eventemitter3 "^1.1.0"
     fbjs "^0.8.3"
