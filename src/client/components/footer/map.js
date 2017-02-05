@@ -26,7 +26,7 @@ const EmojiPin = styled.div`
   margin-top: ${rem(-18)};
   border-radius: 50%;
 
-  background-color: ${white};
+  background-color: ${white.toString()};
   background-image: url('/static/Marker.png');
   background-size: ${rem(24)} ${rem(24)};
   background-position: center;
