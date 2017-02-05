@@ -7,8 +7,8 @@
   "scripts": {
     "clean": "rm -rf lib static .happypack",
     "build:assets": "rm -rf ./static && cp -R ./src/assets ./static",
-    "build:server": "BABEL_ENV=development babel src/server --out-dir lib/server",
-    "build:client": "BABEL_ENV=production webpack --config webpack.config.js",
+    "build:server": "babel src/server --out-dir lib/server",
+    "build:client": "webpack --config webpack.config.js",
     "production": "NODE_ENV=production ./scripts/server",
     "start": "NODE_ENV=development ./scripts/server"
   },
@@ -32,7 +32,6 @@
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.2.12",
     "babel-preset-react-app": "^2.0.1",
-    "babel-runtime": "^6.22.0",
     "core-js": "^2.4.1",
     "css-loader": "^0.26.1",
     "dotenv": "^2.0.0",
