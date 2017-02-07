@@ -5,6 +5,7 @@ if (typeof document === 'object') {
   require('native-promise-only')
 
   if (process.env.NODE_ENV === 'production') {
+    require('offline-plugin/runtime').install()
     require('./entry/prod')
   } else {
     const PORT = process.env.PORT

@@ -10,7 +10,7 @@
     "build:server": "BABEL_ENV=node babel src/server --out-dir lib/server",
     "build:client": "webpack --config webpack.config.js",
     "build": "NODE_ENV=production run-p build:assets build:server build:client",
-    "dev": "BABEL_ENV=node babel-node lib/server/index.js",
+    "dev": "BABEL_ENV=node babel-node src/server/index.js",
     "start": "NODE_ENV=production node lib/server/index.js"
   },
   "dependencies": {
@@ -47,6 +47,7 @@
     "happypack": "^3.0.2",
     "json-loader": "^0.5.4",
     "npm-run-all": "^4.0.1",
+    "offline-plugin": "^4.6.1",
     "react-hot-loader": "3.0.0-beta.6",
     "redbox-react": "^1.3.3",
     "style-loader": "^0.13.1",

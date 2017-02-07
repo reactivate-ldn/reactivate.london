@@ -2,6 +2,7 @@
 var webpack = require('webpack')
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var OfflinePlugin = require('offline-plugin')
 var HappyPack = require('happypack')
 
 var PRODUCTION = process.env.NODE_ENV === 'production'
@@ -32,7 +33,8 @@ var productionPlugins = [
     compress: {
       warnings: false
     }
-  })
+  }),
+  new OfflinePlugin()
 ]
 
 var developmentPlugins = [
