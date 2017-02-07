@@ -7,11 +7,11 @@ else
 fi
 
 echo "Build Assets..."
-yarn run build:assets
+npm run build:assets
 
 echo "Build Server..."
-yarn run build:server
+npm run build:server
 
 echo "Build Client..."
-yarn run build:client
+npm run build:client
 

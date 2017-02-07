@@ -7,14 +7,14 @@ else
 fi
 
 echo "Build Assets..."
-yarn run build:assets > /dev/null
+npm run build:assets > /dev/null
 
 echo "Build Server..."
-yarn run build:server > /dev/null
+npm run build:server > /dev/null
 
 if [ "$NODE_ENV" = "production" ]; then
   echo "Build Client..."
-  yarn run build:client > /dev/null
+  npm run build:client > /dev/null
 fi
 
 echo "Start Server..."
