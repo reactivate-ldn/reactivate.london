@@ -7,10 +7,10 @@
   "scripts": {
     "clean": "rm -rf lib static .happypack",
     "build:assets": "cp -R ./src/assets ./static",
-    "build:server": "BABEL_ENV=node ./node_modules/.bin/babel src/server --out-dir lib/server",
-    "build:client": "./node_modules/.bin/webpack --config webpack.config.js",
-    "build": "./node_modules/.bin/run-p build:assets build:server build:client",
-    "dev": "BABEL_ENV=node ./node_modules/.bin/babel src/server --out-dir lib/server && node lib/server/index.js",
+    "build:server": "BABEL_ENV=node babel src/server --out-dir lib/server",
+    "build:client": "webpack --config webpack.config.js",
+    "build": "npm run build:assets && npm run build:server && npm run build:client",
+    "dev": "BABEL_ENV=node babel src/server --out-dir lib/server && node lib/server/index.js",
     "start": "node lib/server/index.js"
   },
   "dependencies": {
