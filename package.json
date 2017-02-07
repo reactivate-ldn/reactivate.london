@@ -9,9 +9,9 @@
     "build:assets": "cp -R ./src/assets ./static",
     "build:server": "BABEL_ENV=node babel src/server --out-dir lib/server",
     "build:client": "webpack --config webpack.config.js",
-    "build": "npm run build:assets && npm run build:server && npm run build:client",
-    "dev": "BABEL_ENV=node babel src/server --out-dir lib/server && node lib/server/index.js",
-    "start": "node lib/server/index.js"
+    "build": "NODE_ENV=production run-p build:assets build:server build:client",
+    "dev": "BABEL_ENV=node babel-node lib/server/index.js",
+    "start": "NODE_ENV=production node lib/server/index.js"
   },
   "dependencies": {
     "goethe": "^2.0.0",
