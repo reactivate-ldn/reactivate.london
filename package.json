@@ -9,10 +9,8 @@
     "build:assets": "rm -rf ./static && cp -R ./src/assets ./static",
     "build:server": "babel src/server --out-dir lib/server",
     "build:client": "webpack --config webpack.config.js",
-    "build:production": "NODE_ENV=production ./scripts/build",
-    "build": "NODE_ENV=development ./scripts/build",
-    "start:production": "NODE_ENV=production ./scripts/server",
-    "start": "NODE_ENV=development ./scripts/server"
+    "build": "./scripts/build",
+    "start": "./scripts/server"
   },
   "dependencies": {
     "goethe": "^2.0.0",
