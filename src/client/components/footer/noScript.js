@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { navy } from '../../styles/colors'
 
-const ReplacementMap = styled.div`
+const ReplacementMapImage = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -18,6 +18,12 @@ const ReplacementMap = styled.div`
   background-color: ${navy.toString()};
   background-image: url('/static/Map.jpg');
 `
+
+const ReplacementMap = () => (
+  <noscript>
+    <ReplacementMapImage/>
+  </noscript>
+)
 
 export default ReplacementMap
 
