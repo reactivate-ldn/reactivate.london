@@ -3,8 +3,8 @@
     "avatar": "/static/Max.jpg",
     "link": "https://twitter.com/mxstbr",
     "name": "Max Stoiber",
-    "title": "Styled Components",
-    "text": "In this lightning talk you're going to get a quick introduction to styled components, a new way of doing CSS in JS for React, and what you can expect from it in the next iterations.",
+    "title": "From CSS Preprocessors to Styled Components",
+    "text": "In this lightning talk Max is going to talk about moving from CSS Preprocessors to Styled Components, and how you can achieve more maintainable styling in your React project today.",
     "lightning": true
   },
   {
