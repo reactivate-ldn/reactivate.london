@@ -125,7 +125,7 @@ const Footer = () => (
       <Shadow/>
 
       <FooterCard>
-        <Link href="https://thetrainline.com" target="_blank">
+        <Link href="https://thetrainline.com" target="_blank" rel="noopener">
           <TrainlineLogo/>
         </Link>
 
@@ -135,7 +135,7 @@ const Footer = () => (
           <li>EC1N 2TD London</li>
         </FooterList>
 
-        <CityMapper href="https://citymapper.com/go/gvab8p" target="_blank">
+        <CityMapper href="https://citymapper.com/go/gvab8p" target="_blank" rel="noopener">
           Get Directions
         </CityMapper>
       </FooterCard>

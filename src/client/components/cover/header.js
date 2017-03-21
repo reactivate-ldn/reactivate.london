@@ -64,7 +64,7 @@ const Header = () => (
         <li>Monday, March 27th</li>
         <li>Trainline HQ</li>
         <li>
-          <Link href="https://citymapper.com/go/gvab8p" target="_blank">
+          <Link href="https://citymapper.com/go/gvab8p" target="_blank" rel="noopener">
             Floor 3, 120 Holborn, EC1N 2TD
           </Link>
         </li>

@@ -47,8 +47,8 @@ const Text = styled.p`
 
 const Talk = ({ avatar, name, title, text, link }) => (
   <TalkContainer>
-    <Avatar src={avatar}/>
-    <Name href={link} target="_blank">{name}</Name>
+    <Avatar src={avatar} alt={`Picture of ${name}`}/>
+    <Name href={link} target="_blank" rel="noopener">{name}</Name>
     <Title>{title}</Title>
     <Text>
       {
