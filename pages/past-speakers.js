@@ -9,7 +9,7 @@ import Container from '../components/base/container'
 import Row from '../components/speakers/row'
 import Talk from '../components/speakers/talk'
 
-import pastSpeakersData from '../../assets/pastSpeakers.json'
+import pastSpeakersData from '../assets/pastSpeakers.json'
 
 export default class PastSpeakers extends Component {
   render() {

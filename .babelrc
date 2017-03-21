@@ -1,36 +1,8 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "node": 5,
-        "browsers": ["last 2 versions"]
-      },
-      "modules": false,
-      "loose": true
-    }],
-    "react"
-  ],
-  "ignore": [
-    "/node_modules/"
+    "next/babel"
   ],
   "plugins": [
-    "react-hot-loader/babel",
-    ["styled-components", {
-      "displayName": false,
-      "ssr": true,
-      "minify": true,
-      "transpileTemplateLiterals": true
-    }],
-    "transform-react-remove-prop-types",
-    "transform-react-inline-elements",
-    "transform-react-constant-elements",
-    "transform-object-rest-spread"
-  ],
-  "env": {
-    "node": {
-      "plugins": [
-        "transform-es2015-modules-commonjs"
-      ]
-    }
-  }
+    "inline-react-svg"
+  ]
 }

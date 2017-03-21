@@ -10,7 +10,7 @@ import Contact from './contact'
 import Row from './row'
 import SpeakersItem from './item'
 
-import speakersData from '../../../assets/speakers.json'
+import speakersData from '../../assets/speakers.json'
 
 const _speakersData = [0, 1, 2].map(i => speakersData[i])
 

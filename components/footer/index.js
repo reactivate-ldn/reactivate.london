@@ -8,10 +8,11 @@ import { citymapper, white, black } from '../../styles/colors';
 
 import NoScript from './noScript';
 import Map from './map';
-import Trainline from '../svgs/trainline';
 import Card from '../base/card';
-import Train from '../svgs/train'
 import { colorButton } from '../base/button';
+
+import Train from '../../assets/train.svg'
+import Trainline from '../../assets/trainline.svg';
 
 const Container = styled.div`
   margin-top: ${rem(50)};
