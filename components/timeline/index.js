@@ -26,7 +26,9 @@ export const Line = styled.div`
   z-index: 1;
 
   @media (max-width: 1200px) {
-    left: ${rem(29)};
+    html, body {
+      left: ${rem(29)};
+    }
   }
 `
 

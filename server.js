@@ -22,7 +22,7 @@ const ssrCache = new LRUCache({
 const cachedRender = (req, res, pagePath, queryParams) => {
   const key = `${req.url}`
 
-  if (ssrCache.has(key)) {
+  if (!dev && ssrCache.has(key)) {
     res.append('X-Cache', 'HIT')
     res.send(ssrCache.get(key))
     return
