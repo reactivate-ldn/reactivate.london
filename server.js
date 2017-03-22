@@ -56,6 +56,10 @@ app.prepare()
       cachedRender(req, res, '/past-speakers')
     })
 
+    server.get('/schedule', (req, res) => {
+      cachedRender(req, res, '/schedule')
+    })
+
     server.get('*', (req, res) => {
       const parsedUrl = parse(req.url, true)
       handle(req, res, parsedUrl)
