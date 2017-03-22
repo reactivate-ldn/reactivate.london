@@ -5,17 +5,18 @@
   "description": "A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!",
   "license": "MIT",
   "scripts": {
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "dev": "next dev"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "goethe": "^2.0.0",
     "google-map-react": "^0.22.3",
     "next": "beta",
+    "preact": "^7.2.0",
+    "preact-compat": "^3.14.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^3.0.2",
     "styled-components": "next"
   },
   "devDependencies": {
@@ -23,6 +24,9 @@
     "babel-plugin-inline-react-svg": "^0.4.0",
     "eslint": "^3.9.1",
     "eslint-config-excellence": "^1.17.1",
-    "eslint-plugin-react": "^6.6.0"
+    "eslint-plugin-react": "^6.6.0",
+    "express": "^4.15.2",
+    "lru-cache": "^4.0.2",
+    "module-alias": "^2.0.0"
   }
 }
