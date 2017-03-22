@@ -15,22 +15,24 @@ const TitleLink = styled(Link)`
   text-decoration-color: ${navy.lighten(0.25).toString()};
 `
 
-const text = (
-  <TitleText>
-    The Reactivate London Meetup
-  </TitleText>
-)
+const text = 'The Reactivate London Meetup'
 
-const Title = ({ isLink }) => {
+const Title = ({ isLink, className }) => {
+  const title = (
+    <TitleText className={className}>
+      {text}
+    </TitleText>
+  )
+
   if (isLink) {
     return (
       <TitleLink href="/">
-        {text}
+        {title}
       </TitleLink>
     )
   }
 
-  return text
+  return title
 }
 
 export default Title

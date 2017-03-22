@@ -8,14 +8,14 @@ import rem from '../../styles/rem'
 import TimelineItem from './item'
 import Container from '../base/container'
 
-const Row = styled.div`
+export const Row = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   margin: ${rem(-30)} 0;
 `
 
-const Line = styled.div`
+export const Line = styled.div`
   position: absolute;
   top: ${rem(80)};
   left: ${rem(25)};
@@ -29,12 +29,6 @@ const Line = styled.div`
     left: ${rem(29)};
   }
 `
-
-const TrainTrack = () => (
-  <Line>
-    <TrainDecoration/>
-  </Line>
-)
 
 const data = [{
   label: 'Doors Opening',

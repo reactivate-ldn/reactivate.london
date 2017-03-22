@@ -7,26 +7,27 @@ import { regularWeight, fontSizes } from '../../styles/fonts'
 const OuterDot = styled.div`
   background: ${kevin.opacity(.2).toString()};
   border-radius: 50%;
-  width: 51px;
-  height: 51px;
-  padding: 17px;
+  width: ${props => rem(props.big ? 61 : 51)};
+  height: ${props => rem(props.big ? 61 : 51)};
+  padding: ${props => rem(props.big ? 20 : 17)};
   z-index: 2;
 `
 
 const InnerDot = styled.div`
   background: ${kevin.toString()};
   border-radius: 50%;
-  width: 17px;
-  height: 17px;
+  width: ${props => rem(props.big ? 21 : 17)};
+  height: ${props => rem(props.big ? 21 : 17)};
 `
 
-const Dot = () => (
-  <OuterDot>
-    <InnerDot/>
+export const Dot = ({ big }) => (
+  <OuterDot big={big}>
+    <InnerDot big={big}/>
   </OuterDot>
 )
 
-const Item = styled.div`
+export const Item = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -34,7 +35,7 @@ const Item = styled.div`
   height: ${rem(160)};
 `
 
-const ItemContent = styled.div`
+export const ItemContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +44,7 @@ const ItemContent = styled.div`
   margin-left: ${rem(50)};
 `
 
-const ItemLabel = styled.h4`
+export const ItemLabel = styled.h4`
   font-size: ${fontSizes[3]};
   font-weight: ${regularWeight};
   margin: 0;
@@ -53,7 +54,7 @@ const ItemLabel = styled.h4`
   }
 `
 
-const ItemTime = styled.span`
+export const ItemTime = styled.span`
   font-size: ${fontSizes[2]};
   font-weight: ${regularWeight};
   margin: 0;

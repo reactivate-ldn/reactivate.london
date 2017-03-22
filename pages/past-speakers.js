@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Head from 'next/head'
 
 import Title from '../components/cover/title'
 import Headline from '../components/base/headline'
@@ -15,6 +16,10 @@ export default class PastSpeakers extends Component {
   render() {
     return (
       <Container>
+        <Head>
+          <title>Reactivate London: Past Speakers</title>
+        </Head>
+
         <Title isLink/>
 
         <Headline>Past Speakers</Headline>
