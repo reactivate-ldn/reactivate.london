@@ -34,16 +34,16 @@ export const Line = styled.div`
 
 const data = [{
   label: 'Doors Opening',
-  time: '6:15 PM'
+  time: '5:45 PM'
+}, {
+  label: 'Lightning talks',
+  time: '6:00 PM'
 }, {
   label: 'Workshops',
   time: '6:45 PM'
 }, {
   label: 'Follow ups',
   time: '8:15 PM'
-}, {
-  label: 'Lightning talks',
-  time: '8:45 PM'
 }]
 
 const Timeline = () => (

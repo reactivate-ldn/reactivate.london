@@ -59,8 +59,8 @@ const Header = () => (
     <Column>
       <Strip/>
       <List>
-        <li>6:45pm - 9:30pm</li>
-        <li>(doors open 6:15pm)</li>
+        <li>6:00pm - 8:30pm</li>
+        <li>(doors open 5:45pm)</li>
         <li>Monday, March 27th</li>
         <li>Trainline HQ</li>
         <li>
