@@ -10,7 +10,7 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.1.0",
+    "babel-plugin-styled-components": "1.1.1",
     "goethe": "^2.0.0",
     "google-map-react": "^0.22.3",
     "next": "beta",
