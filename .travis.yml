@@ -1,0 +1,19 @@
+{
+  "language": "node_js",
+  "cache": "yarn",
+  "node_js": [
+    "7"
+  ],
+  "before_install": [
+    "yarn global add now"
+  ],
+  "install": [
+    "yarn"
+  ],
+  "script": [
+    "yarn run build"
+  ],
+  "after_success": [
+    "now --token=$TOKEN"
+  ]
+}
