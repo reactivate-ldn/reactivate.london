@@ -14,15 +14,15 @@
     "alias": "reactivate.london"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "1.1.1",
+    "babel-plugin-styled-components": "^1.1.1",
     "goethe": "^2.0.0",
-    "google-map-react": "^0.22.3",
-    "next": "beta",
-    "preact": "^7.2.0",
+    "google-map-react": "^0.23.0",
+    "next": "^2.0.0",
+    "preact": "^7.2.1",
     "preact-compat": "^3.14.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "styled-components": "2.0.0-9"
+    "styled-components": "2.0.0-10"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.0",
