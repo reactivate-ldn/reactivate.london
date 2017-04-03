@@ -1,5 +1,37 @@
 [
   {
+    "title": "Mar 27th, 2nd Reactivate London Meetup",
+    "talks": [
+      {
+        "avatar": "/static/Max.jpg",
+        "link": "https://twitter.com/mxstbr",
+        "name": "Max Stoiber",
+        "title": "From CSS Preprocessors to Styled Components",
+        "text": "In this lightning talk Max is going to talk about moving from CSS Preprocessors to Styled Components, and how you can achieve more maintainable styling in your React project today.",
+        "lightning": true,
+        "time": "6:00 PM"
+      },
+      {
+        "avatar": "/static/Ken.jpg",
+        "link": "https://twitter.com/ken_wheeler",
+        "name": "Ken Wheeler",
+        "title": "Spectacle",
+        "text": "In this lightning talk Ken is going to show you the awesome Spectacle library for building presentations in React. Furthermore he's going to talk about things that were introduced in the latest version, and things to come.",
+        "lightning": true,
+        "time": "6:15 PM"
+      },
+      {
+        "avatar": "/static/Michele.jpg",
+        "link": "https://twitter.com/MicheleBertoli",
+        "name": "Michele Bertoli",
+        "title": "jest-styled-components",
+        "text": "Michele has recently released a small library that allows you to seamlessly use Styled Components with Jest's snapshot testing. In this lightning talk he's going to demo it.",
+        "lightning": true,
+        "time": "6:30 PM"
+      }
+    ]
+  },
+  {
     "title": "Dec 6th, 1st Reactivate London Meetup",
     "talks": [
       {

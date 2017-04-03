@@ -24,8 +24,7 @@ const DescriptionText = styled.div`
 
 const Description = () => (
   <DescriptionText>
-    Join us for our React London 2017 preparty with fun React workshops for beginners and advanced React coders alike,
-    and awesome lightning talks.
+    Join us for our third meetup with talks ranging from React all the way to JavaScript and Functional Programming.
     Pizza and drinks on the house, of course!
   </DescriptionText>
 )

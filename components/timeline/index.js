@@ -36,14 +36,11 @@ const data = [{
   label: 'Doors Opening',
   time: '5:45 PM'
 }, {
-  label: 'Lightning talks',
-  time: '6:00 PM'
+  label: 'Talks',
+  time: '6:15 PM'
 }, {
-  label: 'Workshops',
-  time: '6:45 PM'
-}, {
-  label: 'Follow ups',
-  time: '8:15 PM'
+  label: 'Mingling',
+  time: '7:15 PM'
 }]
 
 const Timeline = () => (
