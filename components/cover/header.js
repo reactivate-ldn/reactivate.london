@@ -51,7 +51,7 @@ const Header = () => (
   <ColumnWrapper>
     <FirstColumn>
       <CoverHeadline>
-        Mar
+        Apr
         <br/>
         27th
       </CoverHeadline>
@@ -59,7 +59,7 @@ const Header = () => (
     <Column>
       <Strip/>
       <List>
-        <li>6:00pm - 8:30pm</li>
+        <li>6:15pm - 8:00pm</li>
         <li>(doors open 5:45pm)</li>
         <li>Monday, March 27th</li>
         <li>Trainline HQ</li>
