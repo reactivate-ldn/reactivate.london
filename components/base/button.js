@@ -13,18 +13,17 @@ const Button = styled.a`
   min-width: ${rem(268)};
   padding: 0 ${rem(40)};
   cursor: pointer;
-  height: ${rem(70)};
+  height: ${rem(66)};
   text-align: center;
   transition: all .2s ease-in-out;
 
   color: ${white.toString()};
   font-size: ${rem(34)};
   font-weight: ${boldWeight};
-  line-height: ${rem(70)};
+  line-height: ${rem(66)};
   vertical-align: middle;
   text-decoration: none;
 
-  border-bottom: 3px solid ${ivy.toString()};
   border-radius: ${borderRadius};
   box-shadow: ${shallowShadow};
   user-select: none;
@@ -34,7 +33,7 @@ const Button = styled.a`
   }
 
   &:active {
-    border-bottom: 0 solid ${ivy.toString()};
+    background-color: ${fern.darken(0.2).toString()};
   }
 `
 
@@ -42,14 +41,13 @@ export default Button
 
 export const colorButton = color => styled(Button)`
   background-color: ${color.toString()};
-  border-bottom: 3px solid ${color.darken(.2).toString()};
 
   &:hover {
     background-color: ${color.darken(.1).toString()};
   }
 
   &:active {
-    border-bottom: 0 solid ${color.darken(.2).toString()};
+    background-color: ${color.darken(.3).toString()};
   }
 `
 
