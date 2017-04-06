@@ -108,7 +108,7 @@ const Note = styled.div`
   }
 `
 
-const location = [ -0.10818421840667725, 51.51801416452366 ]
+const location = [ -0.086997, 51.527284 ]
 
 const Footer = () => (
   <Container>
@@ -116,12 +116,12 @@ const Footer = () => (
       <TrainDecoration/>
 
       <span>
-        This meetup is proudly sponsored by Trainline. See you at their office!
+        This meetup is proudly sponsored by Trainline. See you at the event!
       </span>
     </Note>
 
     <FooterWrapper>
-      <NoScript/>
+      {/*<NoScript/>*/}
       <Map/>
       <Shadow/>
 
@@ -131,12 +131,12 @@ const Footer = () => (
         </Link>
 
         <FooterList>
-          <li>3rd Floor</li>
-          <li>120 Holborn</li>
-          <li>EC1N 2TD London</li>
+          <li>WeWork Old St.</li>
+          <li>18-21 Corsham Street</li>
+          <li>N1 6DR London</li>
         </FooterList>
 
-        <CityMapper href="https://citymapper.com/go/gvab8p" target="_blank" rel="noopener">
+        <CityMapper href="https://citymapper.com/go/ad21yy" target="_blank" rel="noopener">
           Get Directions
         </CityMapper>
       </FooterCard>

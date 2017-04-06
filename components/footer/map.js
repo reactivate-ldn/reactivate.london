@@ -7,8 +7,8 @@ import { shallowShadow } from '../../styles/shadows'
 import { white } from '../../styles/colors'
 
 const location = {
-  lat: 51.51801416452366,
-  lng: -0.10818421840667725
+  lat: 51.527284,
+  lng: -0.086997
 }
 
 const createMapOptions = maps => ({

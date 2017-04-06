@@ -62,10 +62,10 @@ const Header = () => (
         <li>6:15pm - 8:00pm</li>
         <li>(doors open 5:45pm)</li>
         <li>Monday, March 27th</li>
-        <li>Trainline HQ</li>
+        <li>WeWork Old St.</li>
         <li>
-          <Link href="https://citymapper.com/go/gvab8p" target="_blank" rel="noopener">
-            Floor 3, 120 Holborn, EC1N 2TD
+          <Link href="https://citymapper.com/go/ad21yy" target="_blank" rel="noopener">
+            18-21 Corsham Street, N1 6DR
           </Link>
         </li>
       </List>
