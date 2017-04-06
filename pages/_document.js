@@ -87,6 +87,27 @@ export default class MyDocument extends Document {
 
           <meta name="google-site-verification" content="fMwqZHVwcAuZ-QKtiRCQmsvLMkVhj54P9fTS9yfh7oM"/>
 
+          <link itemprop="url" href="https://reactivate.london/" />
+          <meta itemprop="name" content="Reactivate London"/ >
+          <meta itemprop="description" content="A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!" />
+          <meta itemprop="image" content="/static/Logo.png" />
+
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="@reactivate_ldn" />
+          <meta name="twitter:url" content="https://reactivate.london" />
+          <meta name="twitter:title" content="Reactivate London" />
+          <meta name="twitter:description" content="A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!" />
+          <meta name="twitter:image" content="https://reactivate.london/static/Logo.png" />
+
+          <meta property="og:url" content="https://reactivate.london" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Reactivate London" />
+          <meta property="og:image" content="https://reactivate.london/static/Logo.png" />
+          <meta property="og:image:height" content="1041" />
+          <meta property="og:image:width" content="1041" />
+          <meta property="og:description" content="A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!" />
+          <meta property="og:site_name" content="Reactivate London" />
+
           <style dangerouslySetInnerHTML={{ __html: globalStyles }} />
           <style dangerouslySetInnerHTML={{ __html: style }} />
        </Head>
