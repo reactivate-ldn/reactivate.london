@@ -15,6 +15,7 @@ const DialogContainer = styled.div`
   padding: .4em;
   box-sizing: content-box;
   margin-top: .4em;
+  overflow: hidden;
 `
 
 const Dialog = () => (
@@ -24,7 +25,7 @@ const Dialog = () => (
       style={{
         borderWidth: 0,
         width: '25em',
-        height: '15.5em'
+        height: '15em'
       }}
     />
   </DialogContainer>
@@ -39,7 +40,9 @@ class SlackBadge extends Component {
 
   closeDialog = () => {
     this.setState({ showDialog: false })
+
     window.removeEventListener('click', this.closeDialog, true)
+    window.removeEventListener('touchend', this.closeDialog, true)
   }
 
   toggleDialog = () => {
@@ -48,7 +51,9 @@ class SlackBadge extends Component {
     }
 
     this.setState({ showDialog: true })
+
     window.addEventListener('click', this.closeDialog, true)
+    window.addEventListener('touchend', this.closeDialog, true)
   }
 
   onLoad = () => {
