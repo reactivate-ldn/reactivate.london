@@ -34,13 +34,13 @@ export const Line = styled.div`
 
 const data = [{
   label: 'Doors Opening',
-  time: '5:45 PM'
+  time: '6:00 PM'
 }, {
   label: 'Talks',
-  time: '6:15 PM'
+  time: '6:30 PM'
 }, {
   label: 'Mingling',
-  time: '7:15 PM'
+  time: '7:30 PM'
 }]
 
 const Timeline = () => (
