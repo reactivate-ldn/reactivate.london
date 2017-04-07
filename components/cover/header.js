@@ -7,6 +7,7 @@ import { fontSizes, regularWeight } from '../../styles/fonts'
 import Strip from '../base/strip'
 import Headline from '../base/headline'
 import Link from '../base/link'
+import SlackBadge from '../base/slack-badge'
 
 const ColumnWrapper = styled.div`
   position: relative;
@@ -47,6 +48,10 @@ const CoverHeadline = styled(Headline)`
   margin: 0;
 `
 
+const SlackBadgeWrapper = styled.li`
+  padding-top: ${rem(10)};
+`
+
 const Header = () => (
   <ColumnWrapper>
     <FirstColumn>
@@ -68,6 +73,10 @@ const Header = () => (
             18-21 Corsham Street, N1 6DR
           </Link>
         </li>
+
+        <SlackBadgeWrapper>
+          <SlackBadge />
+        </SlackBadgeWrapper>
       </List>
     </Column>
   </ColumnWrapper>

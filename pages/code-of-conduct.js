@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 
 import Container from '../components/base/container'
 import Strip from '../components/base/strip'
 import Headline from '../components/base/headline'
+import SlackBadge from '../components/base/slack-badge'
 
 import { fontSizes } from '../styles/fonts'
 import rem from '../styles/rem'
@@ -34,6 +36,10 @@ export default class CodeOfConduct extends Component {
   render() {
     return (
       <Container>
+        <Head>
+          <title>Reactivate London: Code of Conduct</title>
+        </Head>
+
         <Headline>Code of Conduct</Headline>
         <Strip />
 
@@ -50,25 +56,29 @@ export default class CodeOfConduct extends Component {
           You have our contact details in the emails we've sent.
         </Text>
 
+        <SlackBadge />
+
         <Heading>The Quick Version</Heading>
 
         <Text>
           Our events are dedicated to providing a harassment-free experience for everyone, regardless of:
+        </Text>
 
-          <ul>
-            <li>gender,</li>
-            <li>gender identity and expression,</li>
-            <li>age,</li>
-            <li>sexual orientation,</li>
-            <li>disability,</li>
-            <li>physical appearance,</li>
-            <li>body size,</li>
-            <li>race,</li>
-            <li>ethnicity,</li>
-            <li>religion (or lack thereof),</li>
-            <li>or technology choices.</li>
-          </ul>
+        <ul>
+          <li>gender,</li>
+          <li>gender identity and expression,</li>
+          <li>age,</li>
+          <li>sexual orientation,</li>
+          <li>disability,</li>
+          <li>physical appearance,</li>
+          <li>body size,</li>
+          <li>race,</li>
+          <li>ethnicity,</li>
+          <li>religion (or lack thereof),</li>
+          <li>or technology choices.</li>
+        </ul>
 
+        <Text>
           We do not tolerate harassment of participants in any form.
           Sexual language and imagery is not appropriate for any event venue, including talks, workshops, parties, and social media.<br />
           Participants violating these rules may be sanctioned or expelled from the event, or even all future events,
@@ -79,29 +89,29 @@ export default class CodeOfConduct extends Component {
 
         <Text>
           Harassment includes:
-
-          <ul>
-            <li>offensive verbal comments related to genderc,</li>
-            <li>gender identity and expression,</li>
-            <li>age,</li>
-            <li>sexual orientation,</li>
-            <li>disability,</li>
-            <li>physical appearance,</li>
-            <li>body size,</li>
-            <li>race,</li>
-            <li>ethnicity,</li>
-            <li>religion,</li>
-            <li>technology choices,</li>
-            <li>sexual images in public spaces,</li>
-            <li>deliberate intimidation,</li>
-            <li>stalking,</li>
-            <li>following,</li>
-            <li>harassing photography or recording,</li>
-            <li>sustained disruption of talks or other events,</li>
-            <li>inappropriate physical contact,</li>
-            <li>and unwelcome sexual attention.</li>
-          </ul>
         </Text>
+
+        <ul>
+          <li>offensive verbal comments related to genderc,</li>
+          <li>gender identity and expression,</li>
+          <li>age,</li>
+          <li>sexual orientation,</li>
+          <li>disability,</li>
+          <li>physical appearance,</li>
+          <li>body size,</li>
+          <li>race,</li>
+          <li>ethnicity,</li>
+          <li>religion,</li>
+          <li>technology choices,</li>
+          <li>sexual images in public spaces,</li>
+          <li>deliberate intimidation,</li>
+          <li>stalking,</li>
+          <li>following,</li>
+          <li>harassing photography or recording,</li>
+          <li>sustained disruption of talks or other events,</li>
+          <li>inappropriate physical contact,</li>
+          <li>and unwelcome sexual attention.</li>
+        </ul>
 
         <Text>
           Participants asked to stop any harassing behavior are expected to comply immediately.
