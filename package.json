@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.0",
-    "babel-plugin-inline-react-svg": "^0.4.0",
     "eslint": "^3.9.1",
     "eslint-config-excellence": "^1.17.1",
     "eslint-plugin-react": "^6.6.0",

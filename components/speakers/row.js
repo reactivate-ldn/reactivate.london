@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import rem from '../../styles/rem'
 
 const Row = styled.div`
-  display: flex; flex-direction: row;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   margin: ${rem(30)} ${rem(-15)};

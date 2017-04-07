@@ -6,13 +6,9 @@ import { insetShadow, shallowShadow } from '../../styles/shadows'
 import { regularWeight, fontSizes, boldWeight } from '../../styles/fonts'
 import { citymapper, white, black } from '../../styles/colors';
 
-import NoScript from './noScript';
 import Map from './map';
 import Card from '../base/card';
 import { colorButton } from '../base/button';
-
-import Train from '../../assets/train.svg'
-import Trainline from '../../assets/trainline.svg';
 
 const Container = styled.div`
   margin-top: ${rem(50)};
@@ -20,11 +16,6 @@ const Container = styled.div`
   @media (max-width: 900px) {
     margin-top: ${rem(30)};
   }
-`
-
-const TrainDecoration = styled(Train)`
-  width: ${rem(153)};
-  height: ${rem(83)};
 `
 
 const FooterCard = styled(Card)`
@@ -39,10 +30,13 @@ const FooterCard = styled(Card)`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: left;
 
   @media (max-width: 750px) {
     left: 50%;
     margin-left: ${rem(-135)};
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -73,12 +67,6 @@ const Shadow = styled.div`
   box-shadow: ${insetShadow};
 `
 
-const TrainlineLogo = styled(Trainline)`
-  width: ${rem(128)};
-  height: ${rem(30)};
-  margin-bottom: ${rem(10)};
-`
-
 const CityMapper = styled(colorButton(citymapper))`
   font-size: ${fontSizes[2]};
   font-weight: ${regularWeight};
@@ -90,46 +78,15 @@ const CityMapper = styled(colorButton(citymapper))`
   margin-top: ${rem(15)};
 `
 
-const Link = styled.a`
-  display: block;
-  text-decoration: none;
-  color: inherit;
-`
-
-const Note = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  color: ${white.opacity(.5).toString()};
-
-  > span {
-    margin: 0 ${rem(30)} ${rem(10)};
-  }
-`
-
 const location = [ -0.086997, 51.527284 ]
 
 const Footer = () => (
   <Container>
-    <Note>
-      <TrainDecoration/>
-
-      <span>
-        This meetup is proudly sponsored by Trainline. See you at the event!
-      </span>
-    </Note>
-
     <FooterWrapper>
-      {/*<NoScript/>*/}
       <Map/>
       <Shadow/>
 
       <FooterCard>
-        <Link href="https://thetrainline.com" target="_blank" rel="noopener">
-          <TrainlineLogo/>
-        </Link>
-
         <FooterList>
           <li>WeWork Old St.</li>
           <li>18-21 Corsham Street</li>

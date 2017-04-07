@@ -7,7 +7,7 @@ import { containerWidth } from '../../styles/dimensions'
 const Container = styled.div`
   max-width: ${containerWidth};
   margin: 0 auto;
-  padding: ${rem(48)} ${rem(40)};
+  padding: ${rem(52)} ${rem(40)};
   overflow: hidden;
 `
 

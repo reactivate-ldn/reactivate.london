@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import SmallButton from '../base/small-button'
 import Headline from '../base/headline'
