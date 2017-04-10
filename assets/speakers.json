@@ -8,8 +8,12 @@
     "time": "6:15 PM"
   },
   {
+    "avatar": "/static/Marcel.jpg",
+    "link": "https://twitter.com/marcelcutts",
+    "name": "Marcel Cutts",
+    "title": "A pragmatist's guide to ReasonML",
+    "text": "What is ReasonML, and why does it seem to keep dripping into our React ecosystem? Is this just one of those crazy hipster things? Should I learn it now, later, or never at all? These questions and more will be answered in this talk.",
     "lightning": true,
-    "free": true,
     "time": "6:45 PM"
   },
   {
