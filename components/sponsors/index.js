@@ -31,8 +31,8 @@ const Sponsors = () => (
         <Logo src="/static/Trainline.png" />
       </a>
 
-      <a href="https://formidable.com/" target="_blank" rel="noopener">
-        <Logo src="/static/Formidable.png" />
+      <a href="https://pusher.com/" target="_blank" rel="noopener">
+        <Logo src="/static/Pusher.png" />
       </a>
     </Row>
   </Container>
