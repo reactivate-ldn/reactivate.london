@@ -9,6 +9,7 @@ import { citymapper, white, black } from '../../styles/colors';
 import Map from './map';
 import Card from '../base/card';
 import { colorButton } from '../base/button';
+import { venue } from '../../assets/meta.json'
 
 const Container = styled.div`
   margin-top: ${rem(50)};
@@ -78,8 +79,6 @@ const CityMapper = styled(colorButton(citymapper))`
   margin-top: ${rem(15)};
 `
 
-const location = [ -0.086997, 51.527284 ]
-
 const Footer = () => (
   <Container>
     <FooterWrapper>
@@ -88,12 +87,12 @@ const Footer = () => (
 
       <FooterCard>
         <FooterList>
-          <li>WeWork Old St.</li>
-          <li>18-21 Corsham Street</li>
-          <li>N1 6DR London</li>
+          <li>{venue.name}</li>
+          <li>{venue.street}</li>
+          <li>{venue.postcode} {venue.city}</li>
         </FooterList>
 
-        <CityMapper href="https://citymapper.com/go/ad21yy" target="_blank" rel="noopener">
+        <CityMapper href={venue.citymapperLink} target="_blank" rel="noopener">
           Get Directions
         </CityMapper>
       </FooterCard>

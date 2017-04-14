@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import rem from '../../styles/rem'
 import { shallowShadow } from '../../styles/shadows'
 import { white } from '../../styles/colors'
+import { venue } from '../../assets/meta.json'
 
 const location = {
-  lat: 51.527284,
-  lng: -0.086997
+  lng: venue.geo[0],
+  lat: venue.geo[1]
 }
 
 const createMapOptions = maps => ({

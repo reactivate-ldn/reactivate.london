@@ -8,6 +8,7 @@ import Strip from '../base/strip'
 import Headline from '../base/headline'
 import Link from '../base/link'
 import SlackBadge from '../base/slack-badge'
+import { date, details, venue } from '../../assets/meta.json'
 
 const ColumnWrapper = styled.div`
   position: relative;
@@ -52,25 +53,36 @@ const SlackBadgeWrapper = styled.li`
   padding-top: ${rem(10)};
 `
 
+// Don't judge :P
+const dateMarkup = {
+  __html: date
+    .split(' ')
+    .join('<br />')
+}
+
 const Header = () => (
   <ColumnWrapper>
     <FirstColumn>
-      <CoverHeadline>
-        Apr
-        <br/>
-        27th
-      </CoverHeadline>
+      <CoverHeadline dangerouslySetInnerHTML={dateMarkup} />
     </FirstColumn>
     <Column>
       <Strip/>
       <List>
-        <li>6:30pm - 8:30pm</li>
-        <li>(doors open 6:00pm)</li>
-        <li>Monday, March 27th</li>
-        <li>WeWork Old St.</li>
+        {
+          details.map((text, i) => (
+            <li key={i}>{text}</li>
+          ))
+        }
+
+        <li>{venue.name}</li>
+
         <li>
-          <Link href="https://citymapper.com/go/ad21yy" target="_blank" rel="noopener">
-            18-21 Corsham Street, N1 6DR
+          <Link
+            href={venue.citymapperLink}
+            target="_blank"
+            rel="noopener"
+          >
+            {venue.street}, {venue.postcode}
           </Link>
         </li>
 

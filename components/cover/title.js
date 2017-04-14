@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 import rem from '../../styles/rem'
 import { navy } from '../../styles/colors'
-
 import SubHeadline from '../base/subheadline'
 import Link from '../base/link'
+import { title } from '../../assets/meta.json'
 
 const TitleText = styled(SubHeadline)`
   max-width: ${rem(160)};
@@ -15,24 +15,22 @@ const TitleLink = styled(Link)`
   text-decoration-color: ${navy.lighten(0.25).toString()};
 `
 
-const text = 'The Reactivate London Meetup'
-
 const Title = ({ isLink, className }) => {
-  const title = (
+  const element = (
     <TitleText className={className}>
-      {text}
+      {title}
     </TitleText>
   )
 
   if (isLink) {
     return (
       <TitleLink href="/">
-        {title}
+        {element}
       </TitleLink>
     )
   }
 
-  return title
+  return element
 }
 
 export default Title
