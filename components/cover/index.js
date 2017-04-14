@@ -11,6 +11,7 @@ import Title from './title'
 import Header from './header'
 import Description from './description'
 import BackgroundImage from './image'
+import { meetupLink } from '../../assets/meta.json'
 
 const Level = styled.div`
   z-index: 1;
@@ -37,7 +38,7 @@ const Cover = () => (
         {/* <Edition>#2</Edition> */}
       </TitleWrapper>
       <Header/>
-      <Button href="https://www.meetup.com/Reactivate-London/events/238933957/" target="_blank" rel="noopener">
+      <Button href={meetupLink} target="_blank" rel="noopener">
         Join
       </Button>
       <Description/>

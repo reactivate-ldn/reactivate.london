@@ -1,0 +1,34 @@
+{
+  "title": "The Reactivate London Meetup",
+  "description": "Join us for our third meetup with talks ranging from React all the way to JavaScript and Functional Programming. Pizza and drinks on the house, of course!",
+  "date": "Apr 27th",
+  "details": [
+    "6:30pm - 8:30pm",
+    "(doors open 6:00pm)",
+    "Thursday, April 27th"
+  ],
+  "venue": {
+    "name": "Pusher HQ",
+    "street": "28 Scrutton St",
+    "postcode": "EC2A 4RP",
+    "city": "London",
+    "citymapperLink": "https://citymapper.com/go/9rsko2",
+    "geo": [
+      -0.082709,
+      51.523151
+    ]
+  },
+  "meetupLink": "https://www.meetup.com/Reactivate-London/events/238933957/",
+  "timeline": [
+    {
+      "label": "Doors Opening",
+      "time": "6:00 PM"
+    }, {
+      "label": "Talks",
+      "time": "6:30 PM"
+    }, {
+      "label": "Mingling",
+      "time": "7:30 PM"
+    }
+  ]
+}

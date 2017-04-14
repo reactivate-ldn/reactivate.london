@@ -7,6 +7,7 @@ import rem from '../../styles/rem'
 
 import TimelineItem from './item'
 import Container from '../base/container'
+import { timeline } from '../../assets/meta.json'
 
 export const Row = styled.div`
   position: relative;
@@ -32,24 +33,13 @@ export const Line = styled.div`
   }
 `
 
-const data = [{
-  label: 'Doors Opening',
-  time: '6:00 PM'
-}, {
-  label: 'Talks',
-  time: '6:30 PM'
-}, {
-  label: 'Mingling',
-  time: '7:30 PM'
-}]
-
 const Timeline = () => (
   <Container>
     <Row>
       <Line/>
 
       {
-        data.map((item, key) => (
+        timeline.map((item, key) => (
           <TimelineItem {...item} key={key}/>
         ))
       }

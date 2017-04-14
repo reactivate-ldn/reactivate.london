@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import rem from '../../styles/rem'
 import { fontSizes, regularWeight } from '../../styles/fonts'
+import { description } from '../../assets/meta.json'
 
 const DescriptionText = styled.div`
   font-size: ${fontSizes[4]};
@@ -24,8 +25,7 @@ const DescriptionText = styled.div`
 
 const Description = () => (
   <DescriptionText>
-    Join us for our third meetup with talks ranging from React all the way to JavaScript and Functional Programming.
-    Pizza and drinks on the house, of course!
+    {description}
   </DescriptionText>
 )
 
