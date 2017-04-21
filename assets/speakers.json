@@ -17,8 +17,12 @@
     "time": "6:45 PM"
   },
   {
+    "avatar": "/static/Tasveer.jpg",
+    "link": "http://twitter.com/tazsingh",
+    "name": "Tasveer Singh",
+    "title": "React Native Web: 6 in 1",
+    "text": "It's been a dream to support multiple platforms from one codebase, and to abstract their differences in UX to unify development. Taz has uncovered the holy grail of development for Web, Mac, Windows, Linux, iOS, and Android.",
     "lightning": true,
-    "free": true,
     "time": "7:00 PM"
   }
 ]
