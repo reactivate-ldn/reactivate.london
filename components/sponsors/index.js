@@ -30,10 +30,6 @@ const Sponsors = () => (
       <a href="https://engineering.thetrainline.com/" target="_blank" rel="noopener">
         <Logo src="/static/Trainline.png" />
       </a>
-
-      <a href="https://pusher.com/" target="_blank" rel="noopener">
-        <Logo src="/static/Pusher.png" />
-      </a>
     </Row>
   </Container>
 )

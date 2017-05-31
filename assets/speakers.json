@@ -3,26 +3,8 @@
     "avatar": "/static/Jani.jpg",
     "link": "https://twitter.com/jevakallio",
     "name": "Jani Eväkallio",
-    "title": "Redux Offline",
-    "text": "How do you go offline with your app? In this talk Jani is going to show you how to utilise Redux Offline, to make your app offline-first. Optimistic updates, background synchronisation, and more...",
-    "time": "6:15 PM"
-  },
-  {
-    "avatar": "/static/Marcel.jpg",
-    "link": "https://twitter.com/marcelcutts",
-    "name": "Marcel Cutts",
-    "title": "A pragmatist's guide to ReasonML",
-    "text": "What is ReasonML, and why does it seem to keep dripping into our React ecosystem? Is this just one of those crazy hipster things? Should I learn it now, later, or never at all? These questions and more will be answered in this talk.",
-    "lightning": true,
-    "time": "6:45 PM"
-  },
-  {
-    "avatar": "/static/Tasveer.jpg",
-    "link": "http://twitter.com/tazsingh",
-    "name": "Tasveer Singh",
-    "title": "6 in 1",
-    "text": "It's been a dream to support multiple platforms from one codebase, and to abstract their differences in UX to unify development. Taz has uncovered the holy grail of development for Web, Mac, Windows, Linux, iOS, and Android.",
-    "lightning": true,
-    "time": "7:00 PM"
+    "title": "React Native Workshop",
+    "text": "Ever dreamed about building a native app? Your dream could become a reality, since in this workshop Jani is going to teach you the intricacies of building a React Native app. Let's see if we can build the next unicorn. A Snapchat app... For cats.",
+    "time": "6:30 PM"
   }
 ]
