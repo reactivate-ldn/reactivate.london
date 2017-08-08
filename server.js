@@ -1,5 +1,6 @@
 const dev = process.env.NODE_ENV !== 'production'
 const moduleAlias = require('module-alias')
+const path = require('path')
 
 if (!dev) {
   moduleAlias.addAlias('react', 'preact-compat')
@@ -59,6 +60,12 @@ app.prepare()
     server.get('/schedule', (req, res) => {
       cachedRender(req, res, '/schedule')
     })
+
+    server.use('/static', express.static('./static', {
+      maxage: '48h',
+      index: false,
+      redirect: false
+    }))
 
     server.get('*', (req, res) => {
       const parsedUrl = parse(req.url, true)

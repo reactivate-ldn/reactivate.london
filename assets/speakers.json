@@ -1,10 +1,15 @@
 [
   {
-    "avatar": "/static/Jani.jpg",
-    "link": "https://twitter.com/jevakallio",
-    "name": "Jani Eväkallio",
-    "title": "React Native Workshop",
-    "text": "Ever dreamed about building a native app? Your dream could become a reality, since in this workshop Jani is going to teach you the intricacies of building a React Native app. Let's see if we can build the next unicorn. A Snapchat app... For cats.",
+    "lightning": true,
+    "free": true,
     "time": "6:30 PM"
+  },
+  {
+    "avatar": "/static/Johannes.jpg",
+    "link": "https://twitter.com/frostney_",
+    "name": "Johannes Stein",
+    "title": "Let's develop a React-powered game!",
+    "text": "This talk is about React-powered game development where Johannes will be live coding a PIRATE game throughout his talk. With each example he will be implementing a new feature towards a playable prototype.",
+    "time": "7:40 PM"
   }
 ]
