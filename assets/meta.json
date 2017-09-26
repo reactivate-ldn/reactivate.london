@@ -1,11 +1,11 @@
 {
   "title": "The Reactivate London Meetup",
-  "description": "Join us for our fifth meetup with talks ranging from React to this instalment's special topic: Games! Pizza and drinks on the house, of course.",
-  "date": "Aug 15th",
+  "description": "Join us for our sixth meetup with an Elm talk and our first Reactivate quiz! Food and drinks on the house, of course.",
+  "date": "Oct 3rd",
   "details": [
     "7:00pm - 8:30pm",
     "(doors open 6:30pm)",
-    "Tuesday, August 15th"
+    "Tuesday, October 3rd"
   ],
   "venue": {
     "name": "Trainline Office",
@@ -18,17 +18,23 @@
       51.5180697
     ]
   },
-  "meetupLink": "https://www.meetup.com/Reactivate-London/events/242377973/",
+  "meetupLink": "https://www.meetup.com/Reactivate-London/events/243576288/",
   "timeline": [
     {
       "label": "Doors Opening",
       "time": "6:30 PM"
-    }, {
-      "label": "Talks",
+    },
+    {
+      "label": "Talk",
       "time": "7:00 PM"
-    }, {
-      "label": "Mingling",
-      "time": "8:20 PM"
+    },
+    {
+      "label": "Food and drinks",
+      "time": "7:40 PM"
+    },
+    {
+      "label": "Reactivate quiz",
+      "time": "8:00 PM"
     }
   ]
 }
