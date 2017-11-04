@@ -5,11 +5,19 @@
     "time": "7:00 PM"
   },
   {
-    "avatar": "/static/Mario.jpg",
-    "link": "https://twitter.com/realmario",
-    "name": "Mario Rogic",
-    "title": "Building unbreakable webapps fast: crash course with Elm",
-    "text": "Elm is a delightful functional language for reliable web apps. It compiles to JavaScript, has great performance, no runtime exceptions, and can be embeded easily into existing JS projects without the need for huge rewrites or time investment. We'll be taking a practically focused crash course tour of Elm, ideally you'll walk away being able to put Elm into production either from scratch or in an existing project. We'll do our best to have some hands-on hacking together. The audience will also engage interactively with live feedback/reactions powered by the presentation, which is an Elm app itself!",
-    "time": "7:40 PM"
+    "avatar": "/static/Claudia.jpg",
+    "link": "https://claudiamatosa.com",
+    "name": "Claudia Matosa",
+    "title": "Oh, frameworks!",
+    "text": "What happens to a React developer when they are dropped into an Ember project?",
+    "time": "7:00 PM"
+  },
+  {
+    "avatar": "/static/JamesS.jpeg",
+    "link": "https://unop.uk/",
+    "name": "James Singleton",
+    "title": "React + ASP.NET Core = 👍",
+    "text": "Learn about ASP.NET Core, Microsoft's cross-platform and open-source web app framework, and how we can integrate a React app with an ASP.NET Core back-end, including server-side pre-rendering!",
+    "time": "7:45 PM"
   }
 ]

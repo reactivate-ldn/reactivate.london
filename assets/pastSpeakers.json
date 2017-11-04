@@ -1,5 +1,18 @@
 [
   {
+    "title": "Oct 3rd, 6th Reactivate London Meetup",
+    "talks": [
+      {
+        "avatar": "/static/Mario.jpg",
+        "link": "https://twitter.com/realmario",
+        "name": "Mario Rogic",
+        "title": "Building unbreakable webapps fast: crash course with Elm",
+        "text": "Elm is a delightful functional language for reliable web apps. It compiles to JavaScript, has great performance, no runtime exceptions, and can be embeded easily into existing JS projects without the need for huge rewrites or time investment. We'll be taking a practically focused crash course tour of Elm, ideally you'll walk away being able to put Elm into production either from scratch or in an existing project. We'll do our best to have some hands-on hacking together. The audience will also engage interactively with live feedback/reactions powered by the presentation, which is an Elm app itself!",
+        "time": "7:40 PM"
+      }
+    ]
+  },
+  {
     "title": "Aug 15th, 5th Reactivate London Meetup",
     "talks": [
       {
@@ -54,7 +67,8 @@
         "time": "7:00 PM"
       }
     ]
-  }, {
+  },
+  {
     "title": "Mar 27th, 2nd Reactivate London Meetup",
     "talks": [
       {

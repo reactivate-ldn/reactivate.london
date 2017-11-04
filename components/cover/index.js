@@ -29,8 +29,34 @@ const Edition = styled.h1`
   color: ${navy.lighten(0.25).toString()};
 `
 
+const XmasDecor = styled.div`
+  position: fixed;
+  top: 0;
+  left: 40vw;
+  height: 45vh;
+  width: 35vh;
+  opacity: 0.8;
+  user-select: none;
+  pointer-events: none;
+
+  background-image: url('/static/ChristmasOrnaments.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  z-index: -1;
+
+  @media (max-width: 850px) {
+    height: 50vw;
+    width: 40vw;
+    left: 40vw;
+    position: absolute;
+    opacity: 1;
+}
+`
+
 const Cover = () => (
   <Container>
+    <XmasDecor/>
     <BackgroundImage/>
     <Level>
       <TitleWrapper>

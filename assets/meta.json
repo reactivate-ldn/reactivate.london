@@ -1,11 +1,11 @@
 {
   "title": "The Reactivate London Meetup",
-  "description": "Join us for our sixth meetup with an Elm talk and our first Reactivate quiz! Food and drinks on the house, of course.",
-  "date": "Oct 3rd",
+  "description": "Join us for our 7th meetup and Christmas spectacular to hear tales about how React plays well with others! Food and drinks on the house, of course.",
+  "date": "Dec 7th",
   "details": [
-    "7:00pm - 8:30pm",
+    "7:00pm - 9:00pm",
     "(doors open 6:30pm)",
-    "Tuesday, October 3rd"
+    "Thursday, December 7th"
   ],
   "venue": {
     "name": "Trainline Office",
@@ -18,23 +18,31 @@
       51.5180697
     ]
   },
-  "meetupLink": "https://www.meetup.com/Reactivate-London/events/243576288/",
+  "meetupLink": "https://www.meetup.com/Reactivate-London/events/244692515",
   "timeline": [
     {
       "label": "Doors Opening",
       "time": "6:30 PM"
     },
     {
-      "label": "Talk",
+      "label": "Talk #1 ",
       "time": "7:00 PM"
     },
     {
-      "label": "Food and drinks",
-      "time": "7:40 PM"
+      "label": "Food and drinks break",
+      "time": "7:30 PM"
     },
     {
-      "label": "Reactivate quiz",
+      "label": "Talk #2",
+      "time": "7:45 PM"
+    },
+    {
+      "label": "Talk #3",
       "time": "8:00 PM"
+    },
+    {
+      "label": "Hanging Out",
+      "time": "8:20 PM"
     }
   ]
 }
