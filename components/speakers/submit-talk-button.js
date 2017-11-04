@@ -6,7 +6,7 @@ import rem from '../../styles/rem'
 import { regularWeight, fontSizes } from '../../styles/fonts'
 
 const SubmitTalkButton = () => (
-  <SmallButton href="https://www.papercall.io/reactivate-london" target="_blank" rel="noopener">
+  <SmallButton href="http://bit.ly/SubmitReactivate" target="_blank" rel="noopener">
     Submit your talk
   </SmallButton>
 )
