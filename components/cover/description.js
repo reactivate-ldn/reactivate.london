@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import rem from '../../styles/rem'
 import { fontSizes, regularWeight } from '../../styles/fonts'
 import { description } from '../../assets/meta.json'
+import Button from '../base/button';
+import Link from '../base/link';
 
 const DescriptionText = styled.div`
   font-size: ${fontSizes[4]};
@@ -23,9 +25,14 @@ const DescriptionText = styled.div`
   }
 `
 
+const CoCButton = styled(Button) `
+
+`
+
 const Description = () => (
   <DescriptionText>
     {description}
+    <Link href="/code-of-conduct">Please read our Code of Conduct</Link>
   </DescriptionText>
 )
 

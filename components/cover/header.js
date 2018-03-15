@@ -34,8 +34,7 @@ const Column = styled.div`
   }
 `
 
-const FirstColumn = styled(Column)`
-  max-width: ${rem(200)};
+const FirstColumn = styled(Column) `
   margin-left: 0px;
 `
 
@@ -45,7 +44,7 @@ const List = styled.ul`
   padding: 0;
 `
 
-const CoverHeadline = styled(Headline)`
+const CoverHeadline = styled(Headline) `
   margin: 0;
 `
 
@@ -66,7 +65,7 @@ const Header = () => (
       <CoverHeadline dangerouslySetInnerHTML={dateMarkup} />
     </FirstColumn>
     <Column>
-      <Strip/>
+      <Strip />
       <List>
         {
           details.map((text, i) => (

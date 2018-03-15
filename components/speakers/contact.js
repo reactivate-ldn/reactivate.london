@@ -12,8 +12,8 @@ const Text = styled.p`
 
 const Contact = () => (
   <Text>
-    We're always stoked to listen to great talks.<br/>
-    <Link href="https://www.papercall.io/reactivate-london" target="_blank" rel="noopener">
+    We're always stoked to listen to great talks.<br />
+    <Link href="http://bit.ly/SubmitReactivate" target="_blank" rel="noopener">
       If you want to become a speaker, submit your talk to us!
     </Link>
   </Text>

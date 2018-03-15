@@ -1,12 +1,11 @@
 {
   "title": "The Reactivate London Meetup",
-  "description": "Join us for our 7th meetup and Christmas spectacular to hear tales about how React plays well with others! Food and drinks on the house, of course.",
-  "date": "Dec 7th",
+  "description": "Join us for our 8th installment March meetup! Food and drinks on the house, of course. ",
+  "date": "March 26th",
   "details": [
-    "Ugly jumpers encouraged!",
-    "7:00pm - 9:00pm",
-    "(doors open 6:30pm)",
-    "Thursday, December 7th"
+    "6:30pm - 9:00pm",
+    "(doors open 6:20pm)",
+    "Monday, March 26th"
   ],
   "venue": {
     "name": "Trainline Office",
@@ -19,7 +18,7 @@
       51.5180697
     ]
   },
-  "meetupLink": "https://www.meetup.com/Reactivate-London/events/244692515",
+  "meetupLink": "https://www.meetup.com/Reactivate-London/events/248768241",
   "timeline": [
     {
       "label": "Doors Opening",
