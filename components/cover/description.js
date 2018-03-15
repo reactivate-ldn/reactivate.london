@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import rem from '../../styles/rem'
 import { fontSizes, regularWeight } from '../../styles/fonts'
 import { description } from '../../assets/meta.json'
-import Button from '../base/button';
 import Link from '../base/link';
 
 const DescriptionText = styled.div`
@@ -23,10 +22,6 @@ const DescriptionText = styled.div`
   @media (max-width: 450px) {
     font-size: ${rem(30)};
   }
-`
-
-const CoCButton = styled(Button) `
-
 `
 
 const Description = () => (
