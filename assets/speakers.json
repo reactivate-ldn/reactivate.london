@@ -1,26 +1,10 @@
 [
   {
-    "avatar": "/static/Claudia.jpg",
-    "link": "https://claudiamatosa.com",
-    "name": "Claudia Matosa",
-    "title": "Oh, frameworks!",
-    "text": "What happens to a React developer when they are dropped into an Ember project?",
-    "time": "7:00 PM"
+    "lightning": false,
+    "free": true
   },
   {
-    "avatar": "/static/JamesS.jpeg",
-    "link": "https://unop.uk/",
-    "name": "James Singleton",
-    "title": "React + ASP.NET Core = 👍",
-    "text": "Learn about ASP.NET Core, Microsoft's cross-platform and open-source web app framework, and how we can integrate a React app with an ASP.NET Core back-end, including server-side pre-rendering!",
-    "time": "7:45 PM"
-  },
-  {
-    "avatar": "/static/Paul.jpeg",
-    "link": "https://myitcv.io/",
-    "name": "Paul Jolly",
-    "title": "Go, React, Go!",
-    "text": "Let’s learn how we can use the Go programming language to make fast, scalable and maintainable web apps using React! We’ll see some of the benefits including backend code reuse, code generation, fun language tools, and integration with existing backend services.",
-    "time": "8:00 PM"
+    "lightning": false,
+    "free": true
   }
 ]

@@ -56,18 +56,17 @@ const XmasDecor = styled.div`
 
 const Cover = () => (
   <Container>
-    <XmasDecor/>
-    <BackgroundImage/>
+    <BackgroundImage />
     <Level>
       <TitleWrapper>
-        <Title/>
+        <Title />
         {/* <Edition>#2</Edition> */}
       </TitleWrapper>
-      <Header/>
+      <Header />
       <Button href={meetupLink} target="_blank" rel="noopener">
         Join
       </Button>
-      <Description/>
+      <Description />
     </Level>
   </Container>
 )
