@@ -1,7 +1,11 @@
 [
   {
-    "lightning": false,
-    "free": true
+    "avatar": "/static/mariko.jpeg",
+    "link": "https://twitter.com/kosamari",
+    "name": "Mariko Kosaka",
+    "title": "",
+    "text": "Mariko is a web engineer working at Google who likes to fiddle with browser and yarn. She uses code to help her design textiles and organize a local JavaScript meetup in New York City called BrooklynJS.",
+    "time": "7:00 PM"
   },
   {
     "lightning": false,
