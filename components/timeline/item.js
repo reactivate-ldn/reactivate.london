@@ -22,7 +22,7 @@ const InnerDot = styled.div`
 
 export const Dot = ({ big }) => (
   <OuterDot big={big}>
-    <InnerDot big={big}/>
+    <InnerDot big={big} />
   </OuterDot>
 )
 
@@ -32,7 +32,7 @@ export const Item = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: ${rem(160)};
+  height: ${rem(120)};
 `
 
 export const ItemContent = styled.div`
@@ -66,7 +66,7 @@ export const ItemTime = styled.span`
 
 const TimelineItem = ({ label, time }) => (
   <Item>
-    <Dot/>
+    <Dot />
 
     <ItemContent>
       <ItemLabel>{label}</ItemLabel>
