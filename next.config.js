@@ -1,26 +1,35 @@
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 module.exports = {
-  webpack: function (config, { dev }) {
+  assetPrefix:
+    process.env.NODE_ENV === "production" ? "/reactivate.london/" : "",
+  exportPathMap: () => ({
+    "/": { page: "/index" },
+    "/code-of-conduct": { page: "/code-of-conduct" },
+    "/past-speakers": { page: "/past-speakers" },
+    "/schedule": { page: "/schedule" }
+  }),
+  webpack: function(config, { dev }) {
     config.plugins.push(
       new BundleAnalyzerPlugin({
-        analyzerMode: 'disabled',
+        analyzerMode: "disabled",
         // For all options see https://github.com/th0r/webpack-bundle-analyzer#as-plugin
         generateStatsFile: true,
         // Will be available at `.next/stats.json`
-        statsFilename: 'stats.json'
+        statsFilename: "stats.json"
       })
-    )
+    );
 
     if (dev) {
-      return config
+      return config;
     }
 
     config.resolve.alias = {
-      'react': 'preact-compat/dist/preact-compat',
-      'react-dom': 'preact-compat/dist/preact-compat'
-    }
+      react: "preact-compat/dist/preact-compat",
+      "react-dom": "preact-compat/dist/preact-compat"
+    };
 
-    return config
+    return config;
   }
-}
+};

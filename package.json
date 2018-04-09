@@ -2,11 +2,13 @@
   "name": "reactivate.london",
   "version": "0.1.0",
   "private": true,
-  "description": "A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!",
+  "description":
+    "A brand new meetup for all things React, JavaScript and Functional (Reactive) Programming!",
   "license": "MIT",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
+    "export": "next export",
     "start": "NODE_ENV=production node server.js"
   },
   "now": {
@@ -16,12 +18,12 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.1.7",
     "goethe": "^2.0.0",
-    "google-map-react": "^0.23.0",
-    "next": "https://github.com/styled-components/styled-components-website/blob/master/vendor/next-v2.4.8.tgz?raw=true",
+    "google-map-react": "^0.34.0",
+    "next": "^5.1.0",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.0.0",
     "styled-components": "^2.1.2"
   },
   "devDependencies": {
