@@ -1,5 +1,26 @@
 [
   {
+    "title": "March 26th, 8th Reactivate London Meetup",
+    "talks": [
+      {
+        "avatar": "/static/ian.jpg",
+        "link": "https://twitter.com/ianfeather",
+        "name": "Ian Feather",
+        "title": "Buzzfeed",
+        "text": "Ian leads the front end infrastructure team at BuzzFeed working on performance, testing, automation and resilience. He is particularly fond of working on problems relating to scale: both of sites and of teams. ",
+        "time": "7:00 PM"
+      },
+      {
+        "avatar": "/static/mariko.jpeg",
+        "link": "https://twitter.com/kosamari",
+        "name": "Mariko Kosaka",
+        "title": "Google",
+        "text": "Mariko is a web engineer working at Google who likes to fiddle with browser and yarn. She uses code to help her design textiles and organize a local JavaScript meetup in New York City called BrooklynJS.",
+        "time": "8:00 PM"
+      }
+    ]
+  },
+  {
     "title": "Dec 7th, 7th Reactivate London Meetup",
     "talks": [
       {
