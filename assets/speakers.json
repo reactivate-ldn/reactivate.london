@@ -8,8 +8,12 @@
     "time": "7:00 PM"
   },
   {
-    "lightning": false,
-    "free": true
+    "avatar": "/static/Jani2.jpg",
+    "link": "https://twitter.com/jevakallio",
+    "name": "Jani Eväkallio",
+    "title": "Formidable",
+    "text": "Jani is probably the last person who hasn't yet written a React state management library, but he's got opinions",
+    "time": "7:45 PM"
   },
   {
     "lightning": true,
