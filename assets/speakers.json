@@ -1,22 +1,50 @@
 [
   {
-    "avatar": "/static/mattia.png",
-    "link": "http://github.com/mattia46",
-    "name": "Mattia Assogna",
-    "title": "DAZN",
-    "text": "Mattia Assogna is a software engineer at DAZN. He is passionate about technology and open source and he is always trying to find a better and more efficient ways to solve problems. Mattia will be speaking about key concepts of Reactive Programming and how MobX and MobX State tree allow you to create a reactive application with no hustle",
-    "time": "7:00 PM"
+    "avatar": "/static/lili.jpg",
+    "link": "https://twitter.com/lilianakastilio",
+    "name": "Liliana Kastilio",
+    "title": "Snyk",
+    "text": "npm install disater-waiting-to-happen\n\nHow do you know that the open source package you just added to your project is not going to cause your customers data ending up for sale on the dark web?",
+    "lightning": true
+  },
+  {
+    "avatar": "/static/zooeym.jpg",
+    "link": "https://twitter.com/zooey_miller",
+    "name": "Zooey Miller",
+    "title": "YLD",
+    "text": "Javascript in the State of Nature: On Readability\n\nAn examination of the way social contracts affect our programming.\n\nZooey is a Software Engineer at YLD who enjoys functional programming, climbing and the philosophy of programming.",
+    "lightning": true
   },
   {
     "avatar": "/static/Jani2.jpg",
     "link": "https://twitter.com/jevakallio",
     "name": "Jani Eväkallio",
-    "title": "Formidable",
-    "text": "Jani is probably the last person who hasn't yet written a React state management library, but he's got opinions",
-    "time": "7:45 PM"
+    "title": "Formidable Labs",
+    "text": "Build Your Own IDE: How To Become A 10x Programmer With This One Simple Trick\n\nJani is a 0.75x programmer (on a good day)",
+    "lightning": true
   },
   {
-    "lightning": true,
-    "free": true
+    "avatar": "/static/samw.jpg",
+    "link": "https://twitter.com/_2xAA",
+    "name": "Sam Wray",
+    "title": "Creative Technologist",
+    "text": "WOAH! Is that OffscreenCanvas?\n\nExplanation and demo of the NEW AND IMPROVED* Canvas: OffscreenCanvas(*limitations included)\n\nSam is a musician and creative coder, he uses JavaScript to create live performances",
+    "lightning": true
+  },
+  {
+    "avatar": "/static/clairem.jpg",
+    "link": "https://twitter.com/claireinez",
+    "name": "Claire Mitchell",
+    "title": "Deliveroo",
+    "text": "Why You Should Code your Slides\n\nYou need to give a presentation so you turn to Powerpoint or, if you’re more techy, Google Slides. But you’re an engineer -- why not use all the tools you’re already familiar with to give an awesome presentation?\n\nClaire is a web engineer at Deliveroo and organiser of Node Girls, who is always up for getting bubble tea.",
+    "lightning": true
+  },
+  {
+    "avatar": "/static/richardw.jpg",
+    "link": "",
+    "name": "Richard Westenra",
+    "title": "QuantumBlack / McKinsey",
+    "text": "Developing Delightful Dataviz for Diverse Devices with D3 (and React)\n\nWhen you want to make a chart, you’re faced with an overwhelming number of different platforms, frameworks and technologies to use as your canvas (including not least, HTML5 Canvas). In this talk I’ll help you chart a course through the different options.\n\nRichard is a creative front-end engineer at QuantumBlack / McKinsey, and codebar organiser. He once won a blind coding competition, but he also once took down a client's homepage overnight when he deployed to the wrong endpoint at 5pm, so overall he reckons he's roughly breaking even",
+    "lightning": true
   }
 ]

@@ -11,21 +11,21 @@ import SpeakersItem from './item'
 
 import speakersData from '../../assets/speakers.json'
 
-const _speakersData = [0, 1, 2].map(i => speakersData[i])
+const _speakersData = [0, 1, 2, 3, 4, 5].map(i => speakersData[i])
 
 const Speakers = () => (
   <Container>
     <Headline>Speakers</Headline>
-    <Strip/>
-    <Contact/>
+    <Strip />
+    <Contact />
 
     <Row>
       {
         _speakersData.map((item, key) => item ? (
-          <SpeakersItem {...item} key={key}/>
+          <SpeakersItem {...item} key={key} />
         ) : (
-          <SpeakersItem empty key={key}/>
-        ))
+            <SpeakersItem empty key={key} />
+          ))
       }
     </Row>
 

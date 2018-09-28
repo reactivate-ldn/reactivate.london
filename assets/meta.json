@@ -1,11 +1,11 @@
 {
   "title": "The Reactivate London Meetup",
-  "description": "Join us for our 9th Reactivate May meetup! Food and drinks on the house, of course. ",
-  "date": "May 10th",
+  "description": "Join us for our Reactivate X meetup! Food and drinks on the house, of course.",
+  "date": "Oct 8th",
   "details": [
     "6:30pm - 9:00pm",
-    "(doors open 6:15pm)",
-    "Thursday, May 10th"
+    "(doors open 6:20pm)",
+    "Monday, Oct 8th"
   ],
   "venue": {
     "name": "Trainline Office",
@@ -22,10 +22,10 @@
   "timeline": [
     {
       "label": "Doors Opening",
-      "time": "6:30 PM"
+      "time": "6:20 PM"
     },
     {
-      "label": "Talk #1 ",
+      "label": "Talks Block #1 ",
       "time": "7:00 PM"
     },
     {
@@ -33,7 +33,7 @@
       "time": "7:30 PM"
     },
     {
-      "label": "Talk #2",
+      "label": "Talk Blocks #2",
       "time": "7:45 PM"
     },
     {

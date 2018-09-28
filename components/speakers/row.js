@@ -6,13 +6,14 @@ import rem from '../../styles/rem'
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
   margin: ${rem(30)} ${rem(-15)};
 
   @media (min-width: 751px) {
     > div {
-      flex-basis: 0;
+      flex-basis: 30%;
       flex-grow: 1;
     }
   }

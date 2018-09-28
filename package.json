@@ -17,7 +17,7 @@
     "babel-plugin-styled-components": "^1.1.7",
     "goethe": "^2.0.0",
     "google-map-react": "^0.23.0",
-    "next": "https://github.com/styled-components/styled-components-website/blob/master/vendor/next-v2.4.8.tgz?raw=true",
+    "next": "2.4.8",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",
     "react": "^15.6.1",
