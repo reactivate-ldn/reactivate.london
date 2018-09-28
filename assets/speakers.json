@@ -41,7 +41,7 @@
   },
   {
     "avatar": "/static/richardw.jpg",
-    "link": "",
+    "link": "https://twitter.com/RichardWestenra",
     "name": "Richard Westenra",
     "title": "QuantumBlack / McKinsey",
     "text": "Developing Delightful Dataviz for Diverse Devices with D3 (and React)\n\nWhen you want to make a chart, you’re faced with an overwhelming number of different platforms, frameworks and technologies to use as your canvas (including not least, HTML5 Canvas). In this talk I’ll help you chart a course through the different options.\n\nRichard is a creative front-end engineer at QuantumBlack / McKinsey, and codebar organiser. He once won a blind coding competition, but he also once took down a client's homepage overnight when he deployed to the wrong endpoint at 5pm, so overall he reckons he's roughly breaking even",

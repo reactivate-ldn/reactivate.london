@@ -26,10 +26,9 @@ const DescriptionText = styled.div`
 
 const Description = () => (
   <DescriptionText>
-    {description}
+    {description + ' '}
     <Link href="/code-of-conduct">Please read our Code of Conduct</Link>
   </DescriptionText>
 )
 
 export default Description
-
